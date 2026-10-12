@@ -1,0 +1,252 @@
+# AI Documentation Template Idea Backlog
+
+This is the lightweight intake for reusable improvements to this source
+template. It is separate from every derived-project roadmap. Capturing an idea
+does not approve implementation, create a project commitment or authorize a
+cross-repository change.
+
+Derived projects do not require an `IDEAS.md` by default. Project-specific
+findings belong in that project's roadmap or Decision Record process. A
+retrospective running in this source-template repository may capture a
+candidate under normal authorized in-scope edit rules. A derived-project
+transfer may enter only with exact cross-repository control-word authorization;
+otherwise it remains a `Pending Idea Transfer`.
+
+## Status Model
+
+- **Captured** — retained for later review; no implementation decision exists.
+- **Exploring** — alternatives, evidence or constraints are being assessed.
+- **Promoted** — accepted into an identified roadmap or decision process.
+- **Deferred** — retained but intentionally inactive.
+- **Rejected** — closed with a short rationale.
+
+## Entry Format
+
+```markdown
+### IDEA-NNNN: Short title
+
+- **Status:** Captured | Exploring | Promoted | Deferred | Rejected
+- **Source:** Optional approved project or template evidence
+- **Opportunity:** Problem or useful outcome
+- **Recurrence:** Why this may matter beyond one project
+- **Reusable elements:** Existing patterns or artifacts to assess
+- **Benefit:** Expected value
+- **Risk:** Adoption or transfer risk
+- **Boundaries:** Access, domain and non-goals
+- **Next decision:** Smallest maintainer-owned decision
+- **References:** Optional durable evidence or promoted destination
+```
+
+## Ideas
+
+### IDEA-0001: Multi-document projects and add-document workflow
+
+- **Status:** Promoted
+- **Source:** AGIT Windows Guides documentation-structure retrospective on
+  2026-08-27, using maintainer-provided non-sensitive workflow evidence
+- **Opportunity:** Treat projects derived from the Documentation Template as
+  multi-document projects by design even when initialization creates only one
+  initial document. Add an explicit `$add-document` skill that establishes a
+  bounded scope and lifecycle for each additional maintained document without
+  reinitializing the repository.
+- **Recurrence:** Documentation projects commonly grow beyond their initial
+  guide or report. Without a document-level setup workflow, later documents can
+  inherit unsuitable project-wide assumptions or introduce inconsistent
+  audience, language, output, review and navigation decisions.
+- **Reusable elements:** Build on `$start-project`, `PROJECT_CONTEXT.md`,
+  `DOCS_SETUP.md`, the document catalog and lifecycle model, document-type
+  profiles and the existing render, revision and review skills. The setup
+  contract could capture the document purpose and boundaries, maintainer-owned
+  audience statement, authoritative language or bilingual relationship,
+  primary and permitted output formats, source and sensitivity constraints,
+  navigation placement, validation expectations, initial lifecycle status and
+  next action.
+- **Benefit:** Makes additional documents predictable, independently scoped and
+  compatible with shared project governance while allowing a small project to
+  remain a one-document project for as long as that is sufficient.
+- **Risk:** A document-level setup contract could duplicate project
+  initialization, create conflicting authorities or burden small additions with
+  unnecessary metadata. Implicit defaults could also conceal decisions that
+  belong to the maintainer.
+- **Boundaries:** `$add-document` must not rerun project initialization, invent
+  documentation intent, force creation of multiple documents, overwrite an
+  existing document or automatically render, publish, commit or push. Project-
+  wide authority remains in the established repository guidance; document-
+  local scope may refine but must not silently contradict it.
+- **Next decision:** Implemented in `DOCUMENTS.md` and the explicit-only
+  `$add-document` skill; validate the contract in derived-project use before
+  changing its required fields.
+- **References:** `$start-project`, `PROJECT_SETUP.md`, `DOCS_SETUP.md`,
+  `PROJECT_CONTEXT.md`, `DOCUMENTS.md`, `DOCUMENTATION_PROCESS.md` and
+  `DOCUMENTATION_TYPE_PROFILES.md`.
+
+### IDEA-0002: Explicit reusable visual-inspection skill
+
+- **Status:** Promoted
+- **Source:** AGIT Windows Guides documentation-validation retrospective on
+  2026-08-27, using maintainer-provided non-sensitive workflow evidence
+- **Opportunity:** Provide a reusable `$visual-inspection` skill at the
+  Documentation Template level. It replaces prompt-shaped visual-QA routing
+  with an explicitly invoked inspection workflow and remains separate from
+  rendering and routine technical output validation.
+- **Recurrence:** Derived documentation projects may need actual inspection of
+  rendered HTML, PDF or DOCX surfaces, but the required document and format
+  scope varies by task. Automatic milestone inspection can therefore perform
+  unnecessary work or inspect formats the maintainer did not select.
+- **Reusable elements:** Reuse the existing visual criteria and evidence model,
+  Browser-based inspection for HTML, rendered-page image inspection for PDF or
+  DOCX and the format-specific output locations established by
+  `$render-document`. Retain truthful reporting of inspected pages, viewports,
+  formats, findings and limitations.
+- **Benefit:** Gives derived projects one consistent opt-in workflow for visual
+  review while keeping format selection maintainer-owned and preventing visual
+  inspection from being inferred merely from a milestone or visual change.
+- **Risk:** Existing milestone and visual-QA guidance may continue to trigger
+  inspection automatically unless all affected references are migrated.
+  Inspection could also be mistaken for accessibility validation, technical
+  correctness or publication approval.
+- **Boundaries:** Configure the skill with
+  `allow_implicit_invocation: false`. Run it only when the maintainer explicitly
+  invokes `$visual-inspection`, and inspect only named current renders in the
+  formats selected for the document. The skill must not render missing output,
+  infer additional formats, change source files automatically or grant
+  accessibility, disclosure or publication approval.
+- **Next decision:** Implemented as the self-contained explicit-only
+  `$visual-inspection` workflow; validate the contract in derived-project use
+  before changing its scope fields, criteria or format methods.
+- **References:** `$visual-inspection`, `$render-document`, `AGENTS.md`,
+  `COLLABORATION.md` and `DOCUMENTATION_PROCESS.md`.
+
+### IDEA-0003: Explicit-only maintained-document rendering
+
+- **Status:** Promoted
+- **Source:** Maintainer-directed retrospective from the derived
+  `agit-admin-guides` project on 2026-09-01, reviewing the first document-review
+  and example-file revision cycle from 2026-08-28 through 2026-09-01
+- **Opportunity:** Stop automatically routing every maintained QMD change
+  through `render-document`. Keep the skill available, and allow the assistant
+  to recommend rendering when it would provide useful evidence, but invoke it
+  only after an explicit maintainer request. Ensure that `AGENTS.md`,
+  `COLLABORATION.md`, `DOCUMENTATION_PROCESS.md`, `revise-document`,
+  `commit-changes` and `commit-milestone` do not reintroduce an implicit nested
+  render path.
+- **Recurrence:** Documentation work often includes several small wording or
+  metadata revisions before a maintainer wants a new review artifact. The
+  current automatic established-rendering route can regenerate every configured
+  format after each QMD edit even when source-level checks are sufficient.
+- **Reusable elements:** Change skill routing from automatic to explicit;
+  retain the current narrow-render, output-location and technical-inspection
+  contract after invocation; add a concise suggestion rule based on changed
+  structure, executable content, cross-references, layout-sensitive content or
+  a requested review artifact; and record rendering as pending or not requested
+  without implying failure. Decide how a separately explicit milestone request
+  interacts with required render evidence instead of silently treating
+  milestone invocation as render authorization.
+- **Benefit:** Gives the maintainer direct control over artifact generation,
+  reduces repeated Quarto/LaTeX execution and output carried in context, and
+  supports batching several source edits into one deliberate review render.
+- **Risk:** Syntax, reference or layout defects may remain undiscovered longer,
+  and a maintainer may expect a current PDF when only the QMD changed. Explicit
+  status reporting and clear render suggestions are needed to prevent stale
+  artifacts from being mistaken for current output.
+- **Boundaries:** Do not weaken source-level checks that are indispensable for
+  the change, claim an old render represents current sources, perform visual
+  inspection without its own trigger or treat a rendering suggestion as
+  authorization. Capture does not approve immediate changes to the skill or
+  template routing.
+- **Next decision:** None for the accepted rollout. TVDR-0028 makes rendering
+  explicit or evidence-driven, keeps visual inspection separately explicit and
+  reserves comprehensive artifact evidence for applicable milestone closure.
+- **References:** `.agents/skills/render-document/SKILL.md`, `AGENTS.md`,
+  `COLLABORATION.md`, `DOCUMENTATION_PROCESS.md`, and the derived project
+  retrospective recorded through `perform-retrospective`.
+
+### IDEA-0004: Optional grilling path for add-document
+
+- **Status:** Promoted
+- **Source:** Maintainer-directed idea from the derived `agit-admin-guides`
+  project on 2026-09-02, reviewing the current `$add-document` contract and the
+  optional grilling path adopted for project initialization
+- **Opportunity:** When `$add-document` is explicitly invoked, offer one concise
+  choice between the normal lean document-setup path and a detailed
+  `$grill-me` interview. Keep the lean path as the default while allowing the
+  maintainer to request deeper exploration for a complex document.
+- **Recurrence:** Additional documents vary substantially in novelty, audience,
+  source constraints, language relationships, outputs and review needs. A
+  compact setup is sufficient for many additions, while unfamiliar or
+  consequential documents may benefit from systematically exploring dependent
+  decisions before catalog or source changes begin.
+- **Reusable elements:** Reuse the explicit opt-in routing established by
+  `$start-project`, the repository-local `$grill-me` and `grilling` skills, and
+  the existing `$add-document` document-local decision contract. Preserve the
+  current collision, authority, catalog, source and validation safeguards after
+  either route reaches shared understanding.
+- **Benefit:** Keeps routine document additions efficient while giving
+  maintainers a consistent way to stress-test complex scope, audience,
+  language, source, navigation and review decisions before implementation.
+- **Risk:** An additional routing question could add friction to simple
+  additions, and grilling could be mistaken for permission to inspect sources
+  or create files. A long interview could also duplicate established project
+  defaults instead of focusing on genuinely document-local decisions.
+- **Boundaries:** The lean path remains the normal default. Invoke grilling only
+  after the maintainer selects it; allow a return to the lean path; do not act
+  on interview results before shared understanding is confirmed; and never
+  treat route selection as source-access, rendering, versioning, publication or
+  protected-action authority. `$add-document` must retain all existing
+  non-goals and must not reinitialize the project.
+- **Next decision:** None for the accepted implementation. TVDR-0049 adopts
+  an optional document-local interview in `$add-document`, preserving reviewed
+  project defaults and confirmation before edits. Observe derived-project use
+  before changing its scope or stopping rule.
+- **References:** `.agents/skills/add-document/SKILL.md`,
+  `.agents/skills/start-project/SKILL.md`, `.agents/skills/grill-me/SKILL.md`,
+  `.agents/skills/grilling/SKILL.md`, `PROJECT_SETUP.md` and `DOCUMENTS.md`;
+  Governance TVDR-0049 records the accepted document-local opt-in contract.
+
+### IDEA-0005: Adversarial document review with review-document
+
+- **Status:** Promoted
+- **Source:** Maintainer proposal on 2026-10-11; explicitly authorized backlog
+  capture, followed by selected implementation under Governance TVDR-0057
+- **Opportunity:** Add a `review-document` skill that critically examines an
+  entire document or a selected section without requiring an external feedback
+  document. Adopt an adversarial reviewer perspective inspired by `grill-me`:
+  actively look for substantive weaknesses in content, reasoning, logical
+  coherence, assumptions, structure, presentation, audience fit and language.
+  For technical documentation, also examine technical correctness against
+  available authorized evidence, completeness, prerequisites, terminology,
+  procedural order and whether the intended reader can follow the explanation
+  or instructions successfully.
+- **Recurrence:** Documentation needs independent critique before external
+  review and during revisions, for individual sections and complete documents
+  across different audiences and document types.
+- **Reusable elements:** Assess the critical questioning stance of `grill-me`
+  and `grilling`, document-local contracts and audience/style guidance, and
+  `revise-document`'s distinction between feedback and accepted revisions.
+  Produce prioritized, passage-specific findings explaining the weakness and
+  offering actionable improvements, optionally including example wording or
+  a clearer information structure. Identify missing context and evidence
+  needed to resolve uncertain findings.
+- **Benefit:** Exposes misleading explanations, gaps, contradictions and
+  unclear language early, with concrete options to improve the document.
+- **Risk:** An adversarial stance can invent objections, confuse preference
+  with error or claim technical verification without supporting evidence.
+  Reviewing one section can miss context supplied elsewhere in the document.
+- **Boundaries:** Criticism should be rigorous, fair and grounded in the
+  selected text, not hostile or manufactured to fill a quota. Distinguish
+  demonstrated problems, plausible concerns and preferences; state scope and
+  limits. Use only authorized sources and keep technical truth and publication
+  decisions with the maintainer. Review produces feedback; maintained-source
+  edits require a separately requested revision. `revise-document` remains the
+  route for evaluating annotated external feedback and transferring accepted
+  changes. The analogy to grilling does not invoke either grilling skill.
+  Content review does not imply rendering or visual inspection; the existing
+  separate invocation boundaries remain. The implemented skill requires explicit
+  maintainer invocation and grants no additional access or publication authority.
+- **Next decision:** None for the selected implementation. Governance TVDR-0057
+  adopts the dimensions, prioritized finding format and bounded pass/recheck
+  defaults in the implemented skill. Actual document use remains a later task.
+- **References:** [review-document](.agents/skills/review-document/SKILL.md),
+  Governance TVDR-0057, `.agents/skills/revise-document/SKILL.md`,
+  `.agents/skills/grill-me/SKILL.md`, `.agents/skills/grilling/SKILL.md`,
+  `DOCUMENTS.md`, `AGENTS.md` and `COLLABORATION.md`

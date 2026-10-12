@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: output/html
+  render:
+    - docs/**/*.qmd
+
+website:
+  title: "TBD Documentation"
+  navbar:
+    left:
+      - href: docs/index.qmd
+        text: English
+      - href: docs/index.de.qmd
+        text: Deutsch
+
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme: cosmo
+
+# Enable PDF output in derived projects when a TeX toolchain is available.
+# format:
+#   html:
+#     toc: true
+#     number-sections: true
+#     theme: cosmo
+#   pdf:
+#     toc: true
+#     number-sections: true

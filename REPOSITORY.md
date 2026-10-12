@@ -1,0 +1,144 @@
+# Repository Model
+
+This repository follows a repository-first documentation workflow. Durable context, decisions, and documentation files should be versioned whenever they are part of the project record.
+
+Use `start-task` for lean bounded entry and `TASK_HANDOFF.md` for current task
+state. Invoke `$review-project` explicitly to reconcile comprehensive project,
+documentation and read-only Git evidence.
+
+## Expected structure
+
+- `README.md`: Repository overview.
+- `README.de.md`: German overview.
+- `AGENTS.md`: Automatic AI-agent entry point.
+- `COLLABORATION.md`: AI collaboration model.
+- `PROJECT_SETUP.md`: Initialization workflow.
+- `DOCS_SETUP.md`: Documentation setup checklist.
+- `DOCUMENTS.md`: Maintained document catalog and document-local contracts.
+- `PROJECT_CONTEXT.md`: Project-specific context template.
+- `DOCUMENTATION_PROCESS.md`: Ongoing process.
+- `AUDIENCE.md`: Audience model.
+- `STYLE_GUIDE.md`: Documentation style guide.
+- `SCREENSHOTS.md`: Screenshot policy.
+- `LINKS.md`: Link and reference rules.
+- `decisions/`: Decision Records, including DDRs, PDRs and ADRs.
+- `CHANGELOG.md`: Version history.
+- `VERSION`: Current template or project version.
+- `_quarto.yml`: Quarto project configuration.
+- `input/`: Intake and catalog for unchanged external files and sources.
+- `docs/`: Maintained Quarto source files.
+- `materials/versioned/`: Maintained binary documentation material approved
+  for Git, including reviewed screenshots and figures.
+- `styles/`: Maintained presentation source when needed.
+- `output/`: Ignored generated outputs separated by format.
+- `review/`: Ignored returned annotated review files.
+
+## Project introductions and inherited workflow guides
+
+New project initialization follows the four-file contract in `PROJECT_SETUP.md`:
+`README.md` and `README.de.md` introduce the project; `TEMPLATE_README.md` and
+`TEMPLATE_README.de.md` retain adapted workflow and skill guidance. Both language
+pairs are required and link to one another by role and language. Project README
+badge policy applies to the project pair; retained guides omit inherited badges.
+Keep guides aligned with actual retained files and skills and local accepted
+rules. Selected upstream README updates map to the guides through `sync-template`
+without replacing the project introductions. Source maintenance checkouts retain
+their own README pair; the extra files exist only after project initialization.
+
+## README badge policy
+
+Use a compact badge block directly below the README title and before the AI
+Collaboration Note. The standard order is status, version and license, followed
+only by badges for real documentation automation such as a site build or link
+check.
+
+Status links to `VERSION`, version links to `CHANGELOG.md` and license links to
+`LICENSE`. Public templates may use dynamic GitHub metadata. Avoid a
+last-commit badge because activity does not establish documentation quality or
+publication readiness.
+
+Derived documentation projects adapt the badges to their own documented
+status, completed version, actual license and available workflows. They must
+not retain the Documentation Template version as their project version or show
+automation that does not exist. English and German badge blocks remain
+identical for the required project README pair; retained guides omit inherited badges.
+
+## External files, maintained documentation and outputs
+
+Use `input/intake/`, `input/restricted/`, `input/local/` and
+`input/versioned/` to classify external screenshots, logs, exports, tickets,
+source documents and operational data. Record safe provenance and handling
+status in `input/CATALOG.md`; use the ignored `input/CATALOG.local.md` for
+sensitive names, paths or details.
+
+Maintained Quarto and Markdown sources belong in `docs/`, approved versioned
+binary documentation material in `materials/versioned/`, presentation source
+in `styles/`, and returned annotated review files in `review/`. Generated HTML,
+PDF, DOCX and other results belong below ignored `output/` in a directory named
+for their format. Moving an approved file into a maintained location records
+its Git and project role but does not grant publication rights.
+
+Assistant access, Git versioning and publication or other sharing are separate
+decisions. Before preparing a commit, review new and untracked files for
+personal data, internal system details, secrets, confidential information,
+licensing restrictions and unredacted visuals.
+
+Rendered pages, screenshots, tables, interactive elements, embedded resources,
+archives and file metadata may disclose sensitive information even when raw
+sources are absent. Review them before versioning or publication. Automated
+checks may identify risks, but a clean result does not authorize access,
+versioning or publication.
+
+## Temporary working files
+
+`temp/` is fully ignored and never versioned. All contents outside
+`temp/restricted/` are assistant-readable disposable documentation intermediates; assistants must not
+enumerate or read `temp/restricted/`. Promote retained files to `materials/`.
+
+## Project materials
+
+Keep `input/` content unchanged. Store retained OCR text, transformed
+screenshots, converted references and other working foundations in
+`materials/`, with provenance and `local`, `versioned` or `external` storage
+recorded in `materials/CATALOG.md`. Every registered material is
+assistant-readable, but versioning and publication remain separate decisions.
+Move accepted textual content to `docs/`. Move reviewed binary documentation
+material to `materials/versioned/` only after Git versioning is approved; keep
+presentation source in `styles/`. Publication remains a separate decision.
+
+## Git workflow
+
+Use small, reviewable changes. Keep unrelated work out of the same commit.
+
+Every commit should include a concise summary and a meaningful description that
+matches the actual diff. Regular commits use an exact direct prefix such as
+`docs:`, `feat:`, `fix:`, `chore:`, `refactor:` or `test:` and represent one
+logical documentation step. Do not use scoped forms such as `docs(site):`.
+Use real line breaks in the description and never literal `\n` escape text.
+
+A milestone should normally be built through multiple regular commits when
+structure, drafting, review and correction can be separated meaningfully.
+Milestone commits should omit the prefix, be descriptive, include the completed
+version number and primarily close already reviewed work. They must not hide
+unreviewed content or bundle a whole separable milestone into one change.
+
+Staging and unstaging are index operations and do not require a control word.
+They require a specific maintainer request or authorization of the corresponding
+commit, and existing staged selections and unrelated changes must be preserved.
+
+The assistant must not commit, amend, tag, push, pull, merge, rebase, reset,
+switch branches, manipulate stashes, rewrite history or perform another
+protected Git action unless the maintainer instruction for that specific action
+contains a recognized control word: `explicit` or `explicitly` in English, or
+the German word family `explizit`, including `explizite`, `expliziten`,
+`expliziter` and `explizites`.
+
+Within `commit-changes`, repository-specific explicit commit authorization
+includes the normal push to the verified existing upstream unless excluded.
+Within `commit-milestone`, explicit milestone commit authorization also includes
+one matching annotated version tag and its exact upstream push (TVDR-0053).
+"Commit only" excludes tags and pushes; "no push" retains a local commit/tag;
+"no tag" excludes tag creation/push; "no tag push" retains the local tag.
+Skill invocation alone grants no Git authority. Force-push, other refs, remote
+changes, tag movement/replacement and release publication remain separately
+controlled. This changes neither content-access nor publication rules.

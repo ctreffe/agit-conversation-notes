@@ -1,0 +1,26 @@
+---
+title: "TBD Documentation"
+lang: en
+---
+
+# Overview
+
+This file is a Quarto Markdown template for the English documentation entry point.
+
+Replace this page with the project-specific documentation structure during initialization.
+
+## Documentation context
+
+- Documentation type: TBD
+- Audience: TBD
+- Starting point, for tutorials: TBD
+- Goal, for tutorials: TBD
+- Primary output format: TBD
+
+## Next steps
+
+- Complete `PROJECT_CONTEXT.md`.
+- Complete `DOCS_SETUP.md`.
+- Define the documentation type profile.
+- Define the bilingual documentation model.
+- Replace this placeholder page with project documentation.

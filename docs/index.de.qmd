@@ -1,0 +1,26 @@
+---
+title: "TBD Dokumentation"
+lang: de
+---
+
+# Ueberblick
+
+Diese Datei ist eine Quarto-Markdown-Vorlage fuer den deutschen Einstiegspunkt der Dokumentation.
+
+Ersetze diese Seite bei der Initialisierung durch die projektspezifische Dokumentationsstruktur.
+
+## Dokumentationskontext
+
+- Dokumentationstyp: TBD
+- Zielgruppe: TBD
+- Ausgangspunkt, bei Anleitungen: TBD
+- Ziel, bei Anleitungen: TBD
+- Primaeres Ausgabeformat: TBD
+
+## Naechste Schritte
+
+- `PROJECT_CONTEXT.md` ausfuellen.
+- `DOCS_SETUP.md` ausfuellen.
+- Dokumentationstyp-Profil festlegen.
+- Zweisprachiges Dokumentationsmodell festlegen.
+- Diese Platzhalterseite durch Projektdokumentation ersetzen.
