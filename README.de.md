@@ -1,467 +1,70 @@
-# AI Documentation Template
-
-[![Status](https://img.shields.io/badge/status-stable-green)](VERSION)
-[![Version](https://img.shields.io/github/v/tag/ctreffe/ai-template-docs?label=version)](CHANGELOG.md)
-[![License](https://img.shields.io/github/license/ctreffe/ai-template-docs)](LICENSE)
+# AGIT Conversation Notes
 
 > [!NOTE]
 > **KI-Zusammenarbeit**
 >
-> Dieses Repository pflegt das AI Documentation Template.
->
-> Das AI Documentation Template ist die dokumentationsorientierte Spezialisierung der AI-Template-Familie.
->
-> Das Kollaborationsmodell dokumentiert Dokumentationspraktiken, KI-gestützte Dokumentationsworkflows, Link- und visuelle Inspektionsdisziplin sowie Repository-Konventionen für Dokumentationsprojekte.
->
-> Das Kollaborationsmodell wird in [COLLABORATION.md](COLLABORATION.md) gepflegt.
+> KI unterstützt Workflowkonzeption und Projektdokumentation. Transkriptbasierte
+> Entwürfe und Review bilden den vorgesehenen Ablauf.
+> [COLLABORATION.md](COLLABORATION.md) dokumentiert Maintainer-Autorität,
+> Quellennachweise, Revisionspraxis und die externe Speichergrenze.
 
-<br>
+[English](README.md)
 
-**[Link to the English README](README.md)**
+## Workflows und Skills
 
-<br>
+Der [Workflowleitfaden](TEMPLATE_README.de.md) beschreibt verfügbare Skills und
+Regeln. [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) enthält den aktuellen Stand.
+Die Initialisierung ist abgeschlossen; weitere abgegrenzte Arbeit nutzt start-task.
 
-## Inhalt
+## Zweck
 
-- [Überblick](#überblick)
-- [Kernprinzip](#kernprinzip)
-- [AI Templateverse](#ai-templateverse)
-- [Wann dieses Template geeignet ist](#wann-dieses-template-geeignet-ist)
-- [Projektinitialisierung](#projektinitialisierung)
-- [Skills für die Zusammenarbeit](#skills-für-die-zusammenarbeit)
-- [Externe Dateien und Quellen](#externe-dateien-und-quellen)
-- [Temporäre Arbeitsdateien](#temporäre-arbeitsdateien)
-- [Projektmaterialien](#projektmaterialien)
-- [Empfohlene Workflows](#empfohlene-workflows)
-- [Git-Index und geschützte Git-Aktionen](#git-index-und-geschützte-git-aktionen)
-- [Decision Records](#decision-records)
-- [Repository-Struktur](#repository-struktur)
-- [Template- und abgeleitete Projektdateien](#template--und-abgeleitete-projektdateien)
-- [Verwendung dieses Templates](#verwendung-dieses-templates)
-- [Tool-Setup für Maintainer](#tool-setup-für-maintainer)
-- [Kontinuierliche Verbesserung](#kontinuierliche-verbesserung)
-- [Lizenz](#lizenz)
+KI-gestützter Workflow zur Aufbereitung sprecherzugeordneter Transkripte in
+strukturierte Gesprächsnotizen mit Quarto-Ausgaben und nachvollziehbarer Revision.
+Whisper-v3 der Uni liefert JSON aus einvernehmlich aufgezeichneten Gesprächen.
+Transkription und Sprecherzuordnung können fehlerhaft sein.
 
-## Überblick
+Ziel ist eine ausführliche deutsche thematische Aufbereitung der besprochenen
+Inhalte, zunächst als persönliche Gedächtnisstütze. Wer welchen Satz gesagt hat,
+bestimmt nicht die Struktur. Transkriptstellen ermöglichen Überprüfung; Namen
+sind nur relevant, wo sie nötig sind, etwa für bestätigte Aufgaben.
 
-Das AI Documentation Template ist ein Ausgangspunkt für technische Dokumentationsprojekte, die expliziten Kontext, klare Zuständigkeiten, reproduzierbare Zusammenarbeit, dokumentierte Entscheidungen und prüfbare Publikations-Milestones benötigen. Es unterstützt Benutzer- und Administrationshandbücher, Tutorials, Betriebsanweisungen, Migrations- und Fehlerbehebungsleitfäden, technische Konzepte, Architekturdokumentation und gemischte Dokumentationswebsites.
+## Geplanter Ablauf
 
-Quarto Markdown ist das bevorzugte gepflegte Quellformat. Die Baseline rendert eine bilinguale HTML-Website und kann für DOCX- oder PDF-Review-Outputs angepasst werden. Links, Screenshots, Diagramme und erzeugte Outputs werden als Dokumentationsdateien mit Provenienz, Sensitivitätsprüfung und Qualitätssicherung behandelt.
+Externe JSON -> externe QMD -> externe DOCX zur Durchsicht -> akzeptierte
+Kommentare/Änderungen zurück in die maßgebliche QMD -> geprüfter Neurender.
 
-## Kernprinzip
+Der geplante Skill draft-conversation-notes soll Ergebnisse, Beschlüsse, Aufgaben
+und offene Fragen unterscheiden, Nachweise erhalten und Unsicherheiten markieren.
+Vorschläge dürfen nicht zu Beschlüssen und fehlende Angaben nicht erfunden werden.
+Skill und Protokollschema werden gemeinsam konzipiert; sie sind nicht implementiert.
 
-Der Maintainer verantwortet Zweck, Umfang, Struktur, technische Korrektheit, Zielgruppenpassung und Veröffentlichungsentscheidungen der Dokumentation. Der Assistant kann beim Entwerfen, Umstrukturieren, Konsistenzprüfen, Planen von Visualisierungen und Prüfen von Outputs helfen, ersetzt aber weder das Maintainer-Urteil noch trifft er Veröffentlichungsentscheidungen.
+## Dauerhafte Speichergrenze
 
-Gepflegte Repository-Quellen sind maßgeblich. Gerenderte Websites, DOCX-Dateien, PDFs und annotierte Rückläufe sind Outputs oder Review-Dateien, bis akzeptiertes Feedback in die Quelle zurückübertragen und dort validiert wurde.
+Alle Gesprächsdateien bleiben außerhalb von Git und dauerhaft unversioniert:
+JSON, Derivate, QMD, DOCX/PDF/HTML, kommentierte Kopien, Nachweise, Zwischenstände
+und fiktive Testdateien. Externe QMD bleibt maßgeblich. Git enthält nur Skills,
+Skripte, generische Vorlagen, Konfiguration und gesprächsfreie Projektdokumentation.
 
-## AI Templateverse
+[CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md) definiert diese bewusste
+Docs-Template-Abweichung. Die ignorierte CONVERSATION_PATHS.local.md ordnet
+externe Speicherorte zu und steht auf Unset. Konkreter Zugriff, externe
+Schreibaktionen, Sync-Übermittlung, Weitergabe und Veröffentlichung bleiben
+getrennte Entscheidungen. Sync-Einrichtung erfolgt später.
 
-Die öffentlichen AI-Templates bilden ein kleines Templateverse: eine Familie verwandter Templates, die ein Repository-zentriertes, vom Maintainer geführtes Modell der Mensch-KI-Zusammenarbeit teilen und es für unterschiedliche Projekttypen spezialisieren.
+## Stand und nächster Schritt
 
-- Das [AI Project Template](https://github.com/ctreffe/ai-template-project) ist der generische Ausgangspunkt für strukturierte Projektarbeit, Forschung, Planung, Konzeptarbeit, Prozessgestaltung und gemischte Projekte.
-- Das [AI Dev Template](https://github.com/ctreffe/ai-template-dev) ist für entwicklungsorientierte Projekte gedacht, in denen Code, Skripte, Automatisierung, Validierung, Architektur oder Release-Workflows zentral sind.
-- Das [AI Documentation Template](https://github.com/ctreffe/ai-template-docs) ist für technische Dokumentationsprojekte wie Benutzer- und Administrationshandbücher, Betriebsanweisungen, Tutorials, Migrationsleitfäden und Dokumentationswebsites gedacht.
+Projektregeln und externe Render-/Revisionsanweisungen sind eingerichtet.
+Quarto 1.9.38/Pandoc 3.8.3 sind vorhanden. Die separat freigegebene lokale
+Validator-Umgebung enthält Python 3.12.14/PyYAML 6.0.3; beide Skills sind validiert.
+Keine Verarbeitung realer Dateien, Gesprächsrenders, Git-Schreibaktion oder
+Veröffentlichung erfolgte. Keine Projektversion/Etappe ist abgeschlossen.
 
-## Wann dieses Template geeignet ist
-
-Verwende dieses Template, wenn Zielgruppe, Struktur, Aufgabenführung, Links, Screenshots, visuelle Inspektion und Publikationsformat von Beginn an zentral sind. Es ist besonders nützlich, wenn Dokumentation über Sprachen, Ausgabeformate oder Feedbackzyklen hinweg prüfbar bleiben muss.
-
-Verwende das generische Project Template, wenn Dokumentation nur ein Teil eines breiteren Projekts ist. Verwende das Dev Template, wenn der Implementierungslebenszyklus primär ist und Dokumentation hauptsächlich Softwareverhalten begleitet.
-
-## Projektinitialisierung
-
-Nach dem Erzeugen des Repositorys ruft der Maintainer `$start-project` auf. Der Skill liest das Repository und alle Setup-Leitlinien und führt anschließend durch die vollständige Dokumentationsinitialisierung. Der Maintainer muss `PROJECT_SETUP.md` oder `DOCS_SETUP.md` nicht selbst öffnen oder ausführen.
-
-Die einfachste Anweisung an den Agenten lautet:
-
-> `$start-project`
-
-Es muss kein Initialisierungs-Prompt geöffnet oder in die Unterhaltung kopiert werden.
-Vor dem normalen Frageblock bietet der Agent eine knappe Wahl zwischen dem
-üblichen schlanken Weg und dem expliziten `$grill-me`-Weg für detaillierte
-Dokumentationsplanung an. Die Wahl erteilt keine Quellenzugriffs-, Render- oder
-Publikationsbefugnis.
-
-Der Agent:
-
-1. liest die Kollaborations-, Dokumentations-, Setup-, Repository- und Entscheidungsregeln;
-2. prüft die Baseline, ohne die Git-Historie zu verändern;
-3. folgt dem gewählten Weg und stellt auf dem schlanken Weg höchstens sechs
-   unbeantwortete Grundfragen zu Dokumentationszweck, Zielgruppe und Nutzung,
-   erstem nützlichem Dokumentergebnis und dessen Nachweis, aktuellem Umfang und
-   Nicht-Zielen, Quellenzugriff und Sensitivität sowie nur jetzt nötigen
-   Bedingungen;
-4. wahrt Quellen-, Screenshot-, Feedback-, Render- und Publikationsgrenzen und
-   lässt nicht wesentliche Entscheidungen ausdrücklich offen;
-5. passt nur die Setup-, Zielgruppen-, README-, Quarto-, Quellen- und Navigationsdateien an, die für das erste nützliche Ergebnis nötig sind;
-6. hält dessen ersten Dokumentvertrag in `DOCUMENTS.md` sowie die aktuelle Quellengrenze und Template-Provenienz in `PROJECT_CONTEXT.md` fest;
-7. rendert oder inspiziert visuell nur, wenn das angeforderte Artefakt oder ein notwendiger Nachweis dies erfordert; und
-8. übergibt den initialisierten Stand mit angemessenen Prüfungen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
-
-`PROJECT_SETUP.md` und `DOCS_SETUP.md` bleiben Checklisten des Agenten und dokumentieren die Methode der Initialisierung. `$start-project` ist der einzige ausführbare Einstiegspunkt, der sie aktiviert.
-
-Soll ein Projekt lokal bleiben und keinen Remote erhalten, rufe in diesem
-ausgecheckten Template ausdrücklich `$create-local-project` auf. Der Skill
-erzeugt einen unabhängigen lokalen Clone ohne Remote und ruft anschließend
-`$start-project` auf.
-Nach erfolgreicher Initialisierung wird die geerbte Template-Historie in
-`CHANGELOG.md` und `TASK_HANDOFF.md` durch projektspezifischen Zustand ersetzt.
-Das reine Template-`IDEAS.md`, die Projektkopie von `$create-local-project` und
-ihre Verweise werden entfernt, sofern nicht bewusst ein projekteigener
-Ideenbestand eingerichtet wird. Die Initialisierungsdateien bleiben als
-Provenienz erhalten.
-
-Bei der Initialisierung werden die geerbten `README.md` und `README.de.md`
-zu `TEMPLATE_README.md` und `TEMPLATE_README.de.md`. Sie bleiben als angepasste
-Anleitungen für Workflows, Skills und Repository-Konventionen erhalten. Neue
-Projekt-READMEs in beiden Sprachen stellen das konkrete Projekt vor und verlinken
-früh unter "Workflows und Skills" auf die zugehörige Anleitung. Jedes Paar hat
-eigene Sprachlinks; die Anleitungen verlinken zurück zur Projektbeschreibung.
-
-Die Anleitungen beschreiben die verbleibenden Dateien und Skills, enthalten
-keine geerbten Badges und unterscheiden Template-Provenienz von Projektidentität
-und Lizenzierung. Spätere ausgewählte `$sync-template`-Aktualisierungen bilden
-die Quell-READMEs auf diese Anleitungen ab und bewahren Projektanpassungen sowie
-Projektbeschreibungen. Bestehende Projekte übernehmen diese Struktur nur durch
-bewusste Pflege. Dieses Quell-Repository behält sein ursprüngliches README-Paar.
-[PROJECT_SETUP.md](PROJECT_SETUP.md) beschreibt die Initialisierung und die
-Fortsetzung nach unterbrochenem Setup.
-
-## Gepflegte Dokumente hinzufügen
-
-Ein initialisiertes Projekt kann ein Ein-Dokument-Projekt bleiben oder zu einem
-Multi-Dokument-Satz wachsen. Rufe `$add-document` für jedes zusätzliche
-gepflegte Dokument oder jeden sprachlich verknüpften Dokumentensatz ausdrücklich
-auf. Der Ablauf bestätigt dessen dokumentlokalen Vertrag in `DOCUMENTS.md`,
-weist Pfad- und ID-Kollisionen zurück und aktualisiert vereinbarte
-Quellgerüste oder Navigation, ohne die Projektinitialisierung erneut
-auszuführen. Rendering, Publikation und Git-Aktionen bleiben getrennt.
-
-Wähle den normalen schlanken Weg oder ausdrücklich ein `grill-me`-Interview
-für das neue Dokument. Das Interview behandelt nur unbeantwortete Entscheidungen
-zum Dokument und bewusste Abweichungen von geprüften Projektvorgaben. Du kannst
-zum schlanken Weg zurückkehren; Änderungen warten auf ein bestätigtes gemeinsames
-Verständnis.
-
-## Skills für die Zusammenarbeit
-
-Skills sind abgegrenzte Arbeitsabläufe in [`.agents/skills/`](.agents/skills/).
-Sie führen den Agenten durch eine bestimmte Aufgabe und laden dafür die
-passenden Repository-Leitlinien. Rufe einen Skill im Chat mit `$skill-name`
-auf, zum Beispiel `$review-project`. Die verlinkten Skill-Dateien beschreiben
-den vollständigen Ablauf.
-
-- **Agent oder explizit:** Der Agent darf den Skill bei einer passenden
-  Aufgabe selbst auswählen; du kannst ihn auch direkt aufrufen.
-- **Explizit:** Der Skill braucht einen bewussten Aufruf oder eine
-  ausdrückliche Auswahl durch den Maintainer. Ein Vorschlag des Agenten
-  aktiviert ihn noch nicht.
-- **Aufgabenabhängig oder explizit:** Rendering darf aus einem Renderauftrag
-  oder notwendiger Validierung folgen; freie implizite Skill-Auswahl ist
-  ausgeschlossen. Ein direkter Aufruf bleibt möglich.
-
-Die Auswahl eines Skills erteilt keine zusätzliche Freigabe für geschützte
-Git-Aktionen, Installation, externe Übertragung oder Veröffentlichung. Die
-lokalen Zugriffs- und Fachregeln gelten für jeden Ablauf.
-
-In `commit-changes` umfasst eine explizite Commit-Freigabe den normalen Push zum
-verifizierten bestehenden Upstream dieses Repositorys. In `commit-milestone`
-umfasst eine explizite Meilenstein-Commit-Freigabe zusätzlich einen passenden
-annotierten Versionstag und dessen gezielten Upstream-Push. „Nur Commit“ schließt
-Tags und Pushes aus; „kein Push“ behält Commit/Tag lokal; „kein Tag“ schließt Tags
-aus; „kein Tag-Push“ behält den Tag lokal. Andere Git-Aktionen, Tag-Verschiebung/
-Ersetzung und Release-Publikation brauchen weiterhin eine eigene Freigabe.
-
-`reuse-fixes` liest und ergänzt ausschließlich das Fehlerwissen dieses
-Repositorys. Der Skill sammelt keine Erfahrungen über Repositories hinweg
-und führt kein globales Fehlergedächtnis.
-Aktive Lösungen stehen mit 4–8 Zeilen pro Fall in `TROUBLESHOOTING.md`.
-[Ausführliche Belege](TROUBLESHOOTING_DETAILS.md) bleiben getrennt erhalten;
-lies bei Bedarf nur den passenden Detailabschnitt.
-
-| Skill | Aufruf | Zweck |
-| --- | --- | --- |
-| [`start-task`](.agents/skills/start-task/SKILL.md) | Agent oder explizit | Rekonstruiert nur den Kontext für eine neue abgegrenzte Aufgabe. |
-| [`handoff-task`](.agents/skills/handoff-task/SKILL.md) | Agent oder explizit | Sichert Ergebnis, Evidenz und nächsten Schritt kompakt in `TASK_HANDOFF.md`. |
-| [`commit-changes`](.agents/skills/commit-changes/SKILL.md) | Agent oder explizit | Erstellt einen regulären abgegrenzten Commit und führt den normalen Upstream-Push mit expliziter Commit-Freigabe aus, sofern der Push nicht ausgeschlossen wurde. |
-| [`record-decision`](.agents/skills/record-decision/SKILL.md) | Agent oder explizit | Dokumentiert eine dauerhafte Entscheidung im passenden Record-Typ; Entscheidungen des Quelltemplates werden an Governance geroutet. |
-| [`reuse-fixes`](.agents/skills/reuse-fixes/SKILL.md) | Agent oder explizit | Verwendet bestätigte Lösungen dieses Repositorys wieder, hält knappe Vorbeugung fest und fragt nur bei fehlender Freigabe oder blockierenden Entscheidungen nach. |
-| [`start-project`](.agents/skills/start-project/SKILL.md) | Explizit | Initialisiert ein neues, noch nicht eingerichtetes abgeleitetes Projekt anhand der erhaltenen Setup-Leitlinien. |
-| [`review-project`](.agents/skills/review-project/SKILL.md) | Explizit | Erstellt eine umfassende neutrale Bestandsaufnahme des Projektzustands und der Evidenzlücken. |
-| [`manage-external-storage`](.agents/skills/manage-external-storage/SKILL.md) | Explizit | Richtet optionalen externen Speicher ein, bindet einen Host an oder prüft ausgewählte lokale Dateien. |
-| [`sync-template`](.agents/skills/sync-template/SKILL.md) | Explizit | Vergleicht ein abgeleitetes Projekt mit seinem verifizierten Quelltemplate und übernimmt ausgewählte Änderungen unter Erhalt der Projektanpassungen. |
-| [`check-consistency`](.agents/skills/check-consistency/SKILL.md) | Explizit | Diagnostiziert interne Widersprüche zwischen Intention, Roadmap, Entscheidungen, Inhalten und Dokumentation und entwickelt abgegrenzte Optionen. |
-| [`perform-retrospective`](.agents/skills/perform-retrospective/SKILL.md) | Explizit | Wertet Zusammenarbeitsevidenz aus und trennt Projektbefunde von wiederverwendbaren Template- oder Familienkandidaten. |
-| [`create-local-project`](.agents/skills/create-local-project/SKILL.md) | Explizit | Erzeugt ein lokales abgeleitetes Repository aus diesem Quelltemplate und übergibt es an die Initialisierung; wird nach erfolgreichem Projektsetup entfernt. |
-| [`add-document`](.agents/skills/add-document/SKILL.md) | Explizit | Ergänzt ein gepflegtes Dokument oder verknüpfte Sprachfassungen einschließlich Katalogmetadaten und Navigation. |
-| [`render-document`](.agents/skills/render-document/SKILL.md) | Aufgabenabhängig oder explizit | Rendert gepflegte Quarto-Quellen in den benötigten Formaten und prüft technische Ergebnisse und Ablage. |
-| [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explizit | Wertet freigegebenes kommentiertes DOCX- oder PDF-Feedback aus und überträgt akzeptierte Revisionen in gepflegte Quellen. |
-| [`review-document`](.agents/skills/review-document/SKILL.md) | Explizit | Prüft ein Dokument oder einen Abschnitt kritisch auf Korrektheit, erfolgreiche Bearbeitung der Leseraufgaben und Verständlichkeit; liefert belegte Befunde und Verbesserungsvorschläge. |
-| [`visual-inspection`](.agents/skills/visual-inspection/SKILL.md) | Explizit | Prüft benannte aktuelle HTML-, PDF- oder DOCX-Renderings visuell und berichtet genauen Prüfumfang und Grenzen. |
-| [`commit-milestone`](.agents/skills/commit-milestone/SKILL.md) | Explizit | Schließt einen geprüften Meilenstein mit Metadaten, umfassenden Prüfungen, Commit, annotiertem Versionstag und gezielten Upstream-Pushes ab, sofern nicht ausgeschlossen. |
-
-### Optionale Planungsskills
-
-`grill-me` und `grilling` sind übernommene MIT-lizenzierte Skills von Matt
-Pocock. Sie ergänzen die eigenen Repository-Skills und werden ausschließlich
-nach ausdrücklicher Auswahl verwendet. Der normale schlanke
-Initialisierungsweg bleibt verfügbar.
-
-| Skill | Aufruf | Zweck |
-| --- | --- | --- |
-| [`grill-me`](.agents/skills/grill-me/SKILL.md) | Explizit | Startet das optionale intensive Planungsinterview und leitet an `grilling` weiter. |
-| [`grilling`](.agents/skills/grilling/SKILL.md) | Explizit | Prüft einen Plan, eine Entscheidung oder Idee in ausführlichen Interviewrunden; nur nach ausdrücklicher Auswahl. |
-
-## Externe Dateien und Quellen
-
-Lege neu erhaltene Screenshots, Exporte, Logs, Tickets, Referenzdokumente und andere externe Dateien zunächst in `input/intake/` ab. Dokumentiere sichere Metadaten, Provenienz und Klassifizierung in `input/CATALOG.md`; verwende die ignorierte Datei `input/CATALOG.local.md`, wenn Dateinamen, Pfade oder Details selbst sensibel sind.
-
-Katalogisiere unveränderte externe Dienste, Datensätze und URLs auch dann, wenn
-ihre Inhalte außerhalb des Repositorys bleiben. Nutze stabile öffentliche URLs
-direkt und löse logische private oder gerätespezifische Orte über die ignorierte
-`input/PATHS.local.md` auf.
-
-- **`input/intake/`** ist der ignorierte Eingangsbereich für noch nicht klassifizierte Dateien. Ihre bloße Anwesenheit erlaubt keinen Zugriff durch den Assistant.
-- **`input/restricted/`** ist ignoriert und für Dateien bestimmt, die nur der Maintainer oder ausdrücklich freigegebene lokale Prüfungen lesen dürfen.
-- **`input/local/`** ist ignoriert und enthält Dateien, die der Assistant lokal verarbeiten darf, die aber nicht in Git gelangen dürfen.
-- **`input/versioned/`** enthält geprüfte externe Dateien, die versioniert werden dürfen.
-
-Assistant-Zugriff, Git-Versionierung und Veröffentlichung sind getrennte
-Entscheidungen. Eine Verschiebung dokumentiert die Klassifizierung, erweitert
-aber keine Berechtigung. Verschiebe akzeptierte Textinhalte nach `docs/`, für
-Git freigegebenes binäres Dokumentationsmaterial nach `materials/versioned/`
-und zurückgegebene annotierte Review-Dateien nach `review/`; bewahre die
-Provenienz im jeweiligen Katalog.
-
-Für große, nicht in Git versionierte Dateien, die auf mehreren Rechnern
-verfügbar bleiben müssen, gilt der anbieterneutrale Workflow in
-[SYNCHRONIZED_STORAGE.md](SYNCHRONIZED_STORAGE.md). Synchronisierte Dateien
-bleiben externer Speicher; Synchronisierung ist weder Git-Versionierung,
-Backup, Assistant-Zugriff noch Publikationsfreigabe.
-
-## Temporäre Arbeitsdateien
-
-Verwende `temp/` für wegwerfbare Dokumentations-Zwischendateien. Alle Inhalte
-außerhalb von `temp/restricted/` sind für den Assistant lesbar; dieses
-Restricted-Verzeichnis darf weder aufgelistet noch gelesen werden. Sämtliche temporären Inhalte werden
-ignoriert, dürfen niemals versioniert werden und werden nicht katalogisiert.
-Überführe dauerhafte Dateien nach `materials/`, bevor sie später zu gepflegter
-Dokumentation werden.
-
-## Projektmaterialien
-
-Dateien in `input/` bleiben inhaltlich unverändert. OCR-Text, zugeschnittene
-oder annotierte Screenshots, konvertierte Referenzen und andere bearbeitete
-Kopien sind neue Projektmaterialien. `materials/` bewahrt diese für den
-Assistant lesbaren Arbeitsgrundlagen auf, bis sie verworfen, in textuelle
-Dokumentation überführt oder als gepflegtes binäres Dokumentationsmaterial für
-Git freigegeben werden.
-
-Registriere jede dauerhafte Datei in `materials/CATALOG.md` mit Zweck,
-Transformation und `Based on`-Provenienz. Nutze das ignorierte
-`materials/local/` für **`local`**, `materials/versioned/` für **`versioned`**
-und einen stabilen logischen Ort im Katalog für **`external`**. Löse externe
-Orte je Rechner in der ignorierten `materials/PATHS.local.md` auf, ausgehend
-von `materials/PATHS.local.example.md`.
-
-Assistant-Zugriff autorisiert weder Git-Versionierung noch Veröffentlichung.
-Verschiebe akzeptierte Textinhalte nach `docs/` und geprüftes binäres
-Dokumentationsmaterial erst nach Git-Freigabe nach `materials/versioned/`.
-Darstellungsquellen bleiben in `styles/`, zurückgegebene annotierte
-Review-Dateien in `review/` und erzeugte Outputs unter `output/`.
-
-Nicht die Erzeugungsweise, sondern die aktuelle Projektrolle bestimmt den
-Ablageort. Bewahre eine erzeugte Datei in `materials/` auf, wenn sie als
-dauerhafte Arbeits- oder Quelldatei in weitere Dokumentationsschritte eingeht.
-Lege sie in `output/<format>/` ab, wenn sie als erzeugtes Projektergebnis zur
-Nutzung, Prüfung, Übergabe, Veröffentlichung oder Auslieferung bestimmt ist.
-Wegwerfbare Erzeugungszwischenstände bleiben in `temp/`; gepflegte Quellen in
-`docs/`, `materials/versioned/` und `styles/` behalten ihre maßgeblichen Orte.
-
-## Render-Validierung und visuelle Inspektion
-
-Die routinemäßige Render- und Output-Validierung darf Quarto ausführen und das
-erzeugte HTML technisch prüfen, ohne den Browser-Skill zu öffnen. Sie prüft je
-nach Relevanz Build-Erfolg, Warnungen, erforderliche Dateien, HTML-Struktur,
-Links, referenzierte Assets und offensichtlich nicht gerenderte Quellinhalte.
-Das zählt nicht als visuelle Inspektion.
-
-Rufe `$visual-inspection` ausdrücklich auf, wenn der Agent benannte aktuelle
-Renders in durch den Maintainer gewählten Formaten inspizieren soll. Der Skill
-öffnet gerendertes HTML mit dem Browser-Skill oder prüft ausgewählte PDF-/DOCX-
-Seiten als Seitenbilder. Ein Milestone, Render oder eine visuelle Änderung löst
-diesen Ablauf nicht aus. Fehlender Output wird weder gerendert noch ersetzt;
-der Bericht benennt geprüfte Seiten, Routen, Viewports, Befunde und Grenzen.
-Die visuelle Inspektion bestätigt weder Barrierefreiheit, technische
-Korrektheit, Offenlegungsfreigabe noch Publikationsreife.
-
-## Empfohlene Workflows
-
-### Dokumentationsworkflow
-
-```text
-Setup -> Struktur -> Quellen -> Entwurf -> Visualisierungen -> Review -> QA -> Milestone-Abschluss
-```
-
-Definiere Ausgangspunkt, Ziel und Voraussetzungen der Leser:innen, bevor eine Tutorial-Anleitung geschrieben wird. Entwirf in kleinen Abschnitten, validiere technische Wahrheit und Navigation, prüfe Links und Visualisierungen und halte aktuelle Dokumentation von historischer Erklärung getrennt.
-
-Der vollständige laufende Prozess ist in [DOCUMENTATION_PROCESS.md](DOCUMENTATION_PROCESS.md) dokumentiert; Profile befinden sich in [DOCUMENTATION_TYPE_PROFILES.md](DOCUMENTATION_TYPE_PROFILES.md).
-
-### Feedback-Workflows
-
-Das Projekt unterstützt komplementäre Review-Kanäle:
-
-1. **Direktes Quellenreview:** Maintainer bearbeiten oder kommentieren Quarto- oder Markdown-Quellen direkt.
-2. **Maintainer-DOCX-Review:** Kommentare und Änderungsverfolgung werden in die gepflegte Quelle zurückübertragen, wenn ihre Intention eindeutig ist.
-3. **Externes DOCX-Review:** Nicht kuratiertes externes Feedback wird als nummerierte Punkte dargestellt, bis der Maintainer es akzeptiert, ablehnt, qualifiziert oder zurückstellt.
-4. **Annotiertes PDF-Review:** Layout-, Paginierungs-, Tabellen-, Abbildungs- und Druckprobleme werden auf ihre Quellstellen abgebildet; die geänderte Quelle wird gerendert und technisch validiert, während die visuelle Inspektion durch den Agenten ein separater, ausdrücklich aufgerufener Ablauf bleibt.
-5. **Website-Review:** Jede Review-Datei benennt die abgedeckte Seite, das Kapitel, Bundle oder den Snapshot; ein mehrdeutiger Export gilt nicht als Review der gesamten Website.
-
-Assistant-Zugriff, Git-Versionierung und Veröffentlichung von Review-Dateien sind getrennte Entscheidungen. [FEEDBACK_WORKFLOW.md](FEEDBACK_WORKFLOW.md) beschreibt den vollständigen nachvollziehbaren Review-Zyklus.
-
-## Git-Index und geschützte Git-Aktionen
-
-Der Maintainer kontrolliert die Git-Historie. Assistants dürfen Status, Diffs und Logs prüfen, Dokumentationsänderungen vorbereiten sowie Commit-Grenzen und -Metadaten vorschlagen.
-
-Staging und Unstaging sind Indexoperationen. Sie benötigen kein Kontrollwort, dürfen aber nur nach einer konkreten Maintainer-Anweisung oder Autorisierung des zugehörigen Commits erfolgen. Bestehende Staging-Auswahlen und nicht zusammenhängende Änderungen müssen erhalten bleiben.
-
-Geschützte Aktionen umfassen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases, Resets, Branch-Wechsel, Stash-Manipulationen und andere Operationen an der Git-Historie. Ein Assistant darf eine bestimmte geschützte Aktion nur ausführen, wenn die Anweisung für genau diese Aktion `explicit` oder `explicitly` auf Englisch oder die deutsche Wortfamilie `explizit` enthält. Die Freigabe von Dateiänderungen autorisiert keine Änderung der Git-Historie; andere geschützte Aktionen brauchen weiterhin eine eigene Freigabe, mit den oben beschriebenen Commit-Abläufen als gezielten Ausnahmen.
-
-Wenn diese Regel eine Autorisierung verlangt, schlägt der Assistant eine
-minimal abgegrenzte, kopierfertige Anweisung vor, die genaue Aktion,
-Repository und wesentliche Konsequenz benennt. Der Vorschlag selbst ist keine
-Autorisierung.
-
-Reguläre Dokumentations-Commits verwenden normalerweise `docs:` oder ein anderes passendes Conventional-Commit-Präfix. Milestone-Commits verzichten auf das Präfix, enthalten die abgeschlossene Version und schließen Dokumentation ab, die bereits in regulären Schritten entworfen, geprüft und korrigiert wurde.
-
-## Decision Records
-
-Wähle den Record-Typ nach dem Entscheidungsgegenstand:
-
-- **DDR — Documentation Decision Record:** Informationsarchitektur, Zielgruppenannahmen, Terminologie, bilinguales Modell, Screenshot-Richtlinien, Linkmodell, visuelle Standards, Publikationsworkflow oder Milestone-Umfang.
-- **PDR — Project Decision Record:** Projektumfang, Roadmap, Zusammenarbeit, Datenschutz, Quellen-Governance oder Repository-Struktur.
-- **ADR — Architecture Decision Record:** Quarto-Struktur, Build-Pipeline, Tooling, Output-Modell, Automatisierung oder eine andere dauerhafte Entscheidung zum technischen Dokumentationssystem.
-
-Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, wenn Begründung und Konsequenzen für künftige Maintainer relevant bleiben; gewöhnliche Formulierungsänderungen und Routinekorrekturen benötigen keinen.
-
-## Repository-Struktur
-
-### Einstiegspunkte und Projektgedächtnis
-
-- **`README.md` und `README.de.md`** erklären Template, initiales Setup und laufende Nutzung auf Englisch und Deutsch.
-- **`PROJECT_CONTEXT.md`** hält Dokumentationszweck, Zielgruppe, Quellen- und Sensitivitätsmodell, aktuelle Arbeit, Roadmap, Review-Zustand und nächste Sitzung fest. Sie ist der primäre Wiedereinstiegspunkt und kein Ersatz für die Dokumentation selbst.
-- **`DOCUMENTS.md`** katalogisiert jedes gepflegte Dokument oder jeden
-  sprachlich verknüpften Satz, seine geprüfte Übernahme von Projekt-Defaults,
-  seinen Lebenszyklus und seine nächste Aktion.
-- **`CHANGELOG.md` und `VERSION`** dokumentieren abgeschlossene Template- oder Dokumentations-Milestones. Sie sollen einen geprüften Zustand abbilden und nicht Arbeit, die lediglich begonnen wurde.
-
-### Zusammenarbeit, Setup und Prozess
-
-- **`AGENTS.md`** ist der kompakte residente Sicherheits- und Routingvertrag für KI-Agenten.
-- **`COLLABORATION.md`** definiert providerneutrale Dokumentationsautorität, Evidenz, Feedback und Publikationsgrenzen.
-- **`PROJECT_SETUP.md` und `DOCS_SETUP.md`** legen Repository-Identität, Dokumentationstyp, Zielgruppe, Sprachen, Quellenmodell, Quarto-System und QA-Erwartungen fest. `PROJECT_SETUP.md` bleibt als Initialisierungsprovenienz erhalten.
-- **`.agents/skills/`** enthält die im Abschnitt
-  [Skills für die Zusammenarbeit](#skills-für-die-zusammenarbeit) beschriebenen
-  Arbeitsabläufe und ihre Aufrufregeln.
-- **`TROUBLESHOOTING.md`** hält bestätigte Korrekturen und knappe Vorbeugung
-  für `reuse-fixes` in diesem Repository fest. Hostfakten bleiben ignoriert in
-  `TROUBLESHOOTING.local.md`. Andere Repositories werden nicht einbezogen.
-- **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
-  über Sitzungen und Rechner hinweg.
-- **`IDEAS.md`** ist ein Source-Template-Backlog für wiederverwendbare
-  Dokumentationskandidaten und wird bei normaler Projektinitialisierung
-  entfernt, sofern nicht bewusst ein projekteigener Ideenbestand erhalten bleibt.
-
-### Dokumentationsregeln und Entscheidungen
-
-- **`DOCUMENTATION.md` und `DOCUMENTATION_PROCESS.md`** definieren Dokumentrollen und den laufenden Weg von Setup über Entwurf, Review und QA bis zum Milestone-Abschluss.
-- **`DOCUMENTATION_TYPE_PROFILES.md`** passt Struktur, Tiefe, Ton, Beispiele und Prüfungen an Tutorials, Guides, Referenzen, Konzepte und andere Dokumentationstypen an.
-- **`AUDIENCE.md` und `STYLE_GUIDE.md`** machen Leserwissen, Aufgaben, Risiken, Terminologie und Schreiberwartungen explizit.
-- **`LINKS.md` und `SCREENSHOTS.md`** regeln Navigation, externe Nachweise, visuelle Erfassung, Sensitivität und visuelle Quellenregeln; `$visual-inspection` enthält seine Kriterien für gerenderte Oberflächen direkt.
-- **`FEEDBACK_WORKFLOW.md`** definiert quellenmaßgebliche DOCX-, PDF- und Website-Review-Zyklen sowie den Umgang mit Maintainer- und externem Feedback.
-- **`decisions/`** enthält DDR-, PDR- und ADR-Vorlagen sowie akzeptierte dauerhafte Entscheidungen in abgeleiteten Projekten.
-
-### Quarto-Quellen, Materialien, Outputs und Review-Dateien
-
-- **`_quarto.yml`** definiert Dokumentationswebsite, Navigation, Output-Verzeichnis und Renderumfang. Abgeleitete Projekte passen Titel, Seiten, Sprachen und erforderliche Formate an.
-- **`docs/`** enthält die gepflegten Quarto-Dokumentationsquellen einschließlich englischer und deutscher Einstiegsseiten in der Baseline. Diese Quellen sind gegenüber gerenderten Outputs maßgeblich.
-- **`input/`** klassifiziert eingehende externe Dateien und dokumentiert ihre Provenienz, bevor sie in gepflegte Dokumentationsworkflows gelangen.
-- **`materials/`** katalogisiert dauerhafte, für den Assistant lesbare
-  Dokumentations-Arbeitsdateien in lokaler, versionierter oder externer
-  Speicherung.
-- **`temp/`** enthält ignorierte, niemals versionierte
-  Dokumentations-Zwischenstände; `temp/restricted/` bildet die nicht
-  zugängliche Ausnahme.
-- **`materials/versioned/`** enthält geprüftes binäres Dokumentationsmaterial
-  mit Git-Freigabe. Jede Datei benötigt Zweck, Provenienz und
-  Sensitivitätsstatus; die Veröffentlichung bleibt getrennt.
-- **`styles/`** enthält bei Bedarf gepflegte Darstellungsquellen.
-- **`output/`** enthält ignorierte, nach Format getrennte erzeugte Ergebnisse,
-  etwa `output/html/`, `output/pdf/` oder `output/docx/`.
-- **`review/`** enthält direkt die ignorierten zurückgegebenen annotierten
-  Review-Dateien; erzeugte Review-Outputs bleiben unter `output/<format>/`.
-
-## Template- und abgeleitete Projektdateien
-
-In einem abgeleiteten Dokumentationsprojekt:
-
-- ersetze Platzhalter für Identität, Zielgruppe und Dokumentationsseiten durch konkrete Projektinhalte;
-- behalte `AGENTS.md` als automatischen Agenten-Einstiegspunkt und passe die Datei an;
-- vervollständige `DOCS_SETUP.md`, `AUDIENCE.md`, `PROJECT_CONTEXT.md` und den
-  initialen Eintrag in `DOCUMENTS.md`;
-- passe `_quarto.yml`, `docs/`, Stil-, Link-, Screenshot- und Leitlinien zur visuellen Inspektion an;
-- behalte `PROJECT_SETUP.md` als Initialisierungsprovenienz;
-- behalte die anwendbaren Repository-Skills für spätere Abläufe;
-- rufe `$add-document` für jedes spätere gepflegte Dokument oder jeden
-  sprachlich verknüpften Dokumentensatz ausdrücklich auf;
-- rufe `$visual-inspection` nur für benannte aktuelle Renders und durch den
-  Maintainer gewählte Formate ausdrücklich auf;
-- pflege `DOCUMENTATION.md`, `REPOSITORY.md` und `FEEDBACK_WORKFLOW.md` als aktive Projektregeln;
-- halte erzeugte Outputs und zurückgegebene annotierte Review-Dateien
-  standardmäßig lokal und versioniere sie erst nach bewusster Prüfung;
-- erstelle echte Decision Records nur für dauerhafte Projekt-, Dokumentations- oder Architekturentscheidungen.
-
-Halte initiale Template-Version und -Commit, letzte Harmonisierungs-Baseline, Lebenszyklusstatus und beabsichtigte Abweichungen in `PROJECT_CONTEXT.md` fest. Konkrete Zielgruppenentscheidungen und akzeptierte Decision Records bleiben gegenüber späteren generischen Template-Änderungen maßgeblich.
-
-## Verwendung dieses Templates
-
-1. Erzeuge ein Repository aus dem Template und rufe `$start-project` auf.
-2. Wähle den normalen schlanken Weg oder ausdrücklich `$grill-me`; beantworte
-   auf dem schlanken Weg höchstens sechs unbeantwortete Dokumentations-
-   Grundfragen, während der Agent die erhaltenen Setup-Leitlinien automatisch
-   anwendet.
-3. Prüfe den initialisierten Dokumentationsstand, die Render-Prüfungen und den vorgeschlagenen ersten Commit.
-4. Wähle das Dokumentationstyp-Profil und bestätige mit dem Agenten Zielgruppen-, Sprach- und Publikationsanforderungen.
-5. Lege Quelleninventar und Sensitivitätsgrenzen fest, bevor Screenshots, Logs, Exporte, Tickets oder Betriebsdaten geöffnet werden.
-6. Definiere die Informationsarchitektur vor umfangreichem Entwurf und entwirf, rendere und prüfe anschließend in kleinen Schritten.
-7. Verbinde jede Visualisierung und jeden Link mit einer realen Leseraufgabe oder einem Nachweisbedarf.
-8. Übertrage akzeptiertes Feedback zurück in die gepflegte Quelle und validiere es dort erneut.
-9. Dokumentiere folgenreiche Entscheidungen, halte `PROJECT_CONTEXT.md`
-   aktuell und verwende `start-task` mit `TASK_HANDOFF.md` für spätere Aufgaben.
-10. Schließe Milestones erst nach technischer, Zielgruppen-, Link-, visueller, Render- und Offenlegungs-QA ab.
-
-## Tool-Setup für Maintainer
-
-Für den Standard-Quarto-Workflow:
-
-1. Installiere die [Quarto CLI](https://quarto.org/docs/get-started/) und prüfe sie mit `quarto --version`.
-2. Öffne das Repository als aktiven lokalen Workspace und führe `quarto render` aus, um die HTML-Baseline zu validieren.
-3. Folge Quartos [Hinweisen zu TinyTeX und PDF-Engines](https://quarto.org/docs/output-formats/pdf-engine) nur, wenn direkter PDF-Output erforderlich ist.
-4. Installiere [LibreOffice](https://www.libreoffice.org/download/instructions/), wenn ein ausdrücklich gewählter aktueller DOCX-Output für `$visual-inspection` in Seitenbilder umgewandelt werden muss.
-5. Verwende [R](https://cran.r-project.org/) und [RStudio](https://posit.co/downloads/) nur, wenn die Dokumentation R-Code, Datenanalysen, Plots oder R-basierte Quarto-Erweiterungen enthält; für gewöhnliche Markdown-Dokumentation sind sie nicht erforderlich.
-
-Halte erzeugte Websites, Previews, ungeprüfte Captures und Review-Dateien in den durch `.gitignore` definierten ignorierten Orten, sofern das Projekt nicht bewusst eine versionierte Datei oder einen versionierten Output freigibt.
-
-## Kontinuierliche Verbesserung
-
-Nutze `$sync-template`, um ein abgeleitetes Dokumentationsprojekt mit seiner verifizierten Source-Template-Baseline zu vergleichen und ausgewählte Entwicklungen zu übernehmen. Verwende `$check-consistency` getrennt für Widersprüche zwischen Zielgruppenbedürfnissen, gepflegten Quellen, Outputs und Roadmap und `$perform-retrospective` für Zusammenarbeit, Übergaben und Review-Praktiken.
-
-Behandle Feedback-Muster, Navigationsprobleme, Renderfehler, Befunde visueller Inspektionen und Publikationserfahrungen als Evidenz für mögliche Verbesserungen. Eine einzelne Projektbeobachtung ist nicht automatisch eine Template-Regel; prüfe Zielgruppe, Dokumentationstyp, Ausgabeformat und Wartungskosten, bevor Du sie verallgemeinerst.
-
-Der Maintainer koordiniert die templateübergreifende Weiterentwicklung in einem privaten Governance-Repository namens `ai-templateverse`. Es dokumentiert gemeinsame Konventionen, bewusste Spezialisierungen und Evidenz aus abgeleiteten Projekten. Das Repository wird bewusst nicht verlinkt, da Template-Nutzer:innen keinen Zugriff darauf benötigen.
-
-Die Governance-Koordination erzeugt keine verborgenen Dokumentationsanforderungen. Jede Änderung, die dieses Template betrifft, muss hier durch gepflegte Leitlinien, gegebenenfalls Documentation Decision Records, den Changelog und die Release-Historie abgebildet werden. Wiederverwendbare Verbesserungen sollen in betroffene Quellen-, Feedback-, Render- und QA-Leitlinien integriert werden; Publikationsentscheidungen verbleiben beim Maintainer.
+Als Nächstes Skill/Schema gemeinsam konzipieren, dann einen kleinen fiktiven
+Ausschnitt mit externer Speicherung, DOCX-Review und Korrekturrückführung prüfen.
+Der generische Testvertrag steht in [DOCUMENTS.md](DOCUMENTS.md), Voraussetzungen
+in [DOCS_SETUP.md](DOCS_SETUP.md). Repository-docs/ enthält nur Workflowleitlinien.
 
 ## Lizenz
 
-Dieses Template steht unter der [MIT-Lizenz](LICENSE).
+[MIT](LICENSE). Bestehende Copyright-/Herkunftshinweise bleiben erhalten.
+Die Repository-Lizenz erlaubt keinen Zugriff oder Austausch von Gesprächsdateien.

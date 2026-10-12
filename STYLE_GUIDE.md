@@ -54,3 +54,12 @@ Before finalizing a section, check whether it is:
 - Specific enough to act on.
 - Free of unnecessary jargon.
 - Consistent with terminology and links elsewhere.
+
+## Conversation summaries
+
+Default to German thematic preparation with detail for personal recall, rather
+than speaker-by-speaker narration. Distinguish results, decisions, tasks, open
+questions and proposals. Preserve uncertainty/use actual evidence; never invent
+missing facts, owners or deadlines. Mention people only where substantively
+needed. Schema is deferred. Concrete examples/content and review traces stay
+external; repository examples describe rules only.

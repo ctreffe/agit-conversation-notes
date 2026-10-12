@@ -1,134 +1,48 @@
 # Documentation Setup
 
-Use this checklist to define the documentation project before substantive drafting begins.
+AGIT Conversation Notes was configured starting 2026-10-12 and initialization
+completed on 2026-10-13; see [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).
 
-## Documentation identity
+## Confirmed fundamentals
 
-- Documentation title: TBD
-- Documentation type: TBD
-- Product, system, process, or topic covered: TBD
-- Intended publication context: TBD
-- Maintainer-approved status model: draft, review, stable, archived, or other.
+- Purpose: detailed thematic preparation of discussed content as a personal
+  memory aid; no speaker-by-speaker narrative.
+- Document language: German. Repository introductions/guides: English/German.
+- Type: conversation summary; detailed project-specific profile deferred.
+- Lifecycle: planned, draft, review, stable, archived. Initial trial: planned.
+- Source: university Whisper-v3 JSON; fallible recognition and speaker attribution.
+- Output: external DOCX for maintainer comments/Track Changes, then accepted
+  corrections back to authoritative external QMD.
+- Access: no real files selected; exact files/actions need scoped approval.
+- Publication, sharing, transmission and sync setup: separate decisions.
+- Only the separately approved local validator setup was installed; no Git
+  writes, sync setup or other installations are authorized.
 
-## Documentation type
+## Intentional Docs Template deviation
 
-Select one or more and record the selected profile in `PROJECT_CONTEXT.md`. Use `DOCUMENTATION_TYPE_PROFILES.md` for profile-specific structure and QA guidance. If the project is a tutorial, define the starting point, goal, reader task, expected result, and verification standard before drafting.
+All conversation sources, working files, QMD, outputs, review copies and traces
+remain permanently external and unversioned, including fictional trial files.
+Use ignored CONVERSATION_PATHS.local.md, never repository fallback folders.
+External QMD remains authoritative. See
+[CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md) and
+[PDR-0001](decisions/PDR-0001-external-conversation-files.md).
+Repository docs/ contains only conversation-free workflow documentation.
+Protocol schema and the proposed drafting skill are deferred.
 
-Select one or more:
+## Minimum trial evidence
 
-- User guide.
-- Admin guide.
-- Developer documentation.
-- API reference.
-- Technical concept.
-- Architecture documentation.
-- Migration guide.
-- Troubleshooting guide.
-- Operating procedure.
-- Release documentation.
-- Training or onboarding material.
-- Mixed documentation set.
+After joint schema/skill design and external destination approval, use a small
+fictional excerpt externally. Verify thematic structure, source references,
+uncertainty and proposal/decision distinctions. Render DOCX externally, map a
+clear maintainer correction back to QMD, retain external baseline evidence,
+re-render and check changed content. No conversation data enters Git.
+Visual inspection remains separately explicit.
 
-## Audience
+## Tooling checkpoint
 
-Audience definition is a first-order documentation decision, especially for tutorials and guides for less experienced users. Define the audience before deciding detail level, screenshots, terminology, or procedure depth.
-
-Define:
-
-- Primary audience.
-- Secondary audience.
-- Required prior knowledge.
-- Tasks the documentation must support.
-- Decisions the documentation must enable.
-- Misunderstandings the documentation must prevent.
-
-## Source material
-
-Identify:
-
-- Existing documentation.
-- Source repositories.
-- Tickets or issue threads.
-- Screenshots or recordings.
-- Logs, exports, or configuration examples.
-- External references.
-
-Before the assistant reads raw material, check whether it may contain sensitive information.
-
-## Visual material
-
-Decide:
-
-- When screenshots are necessary.
-- Which screen states must be captured.
-- Whether screenshots need redaction.
-- Whether diagrams are needed.
-- Where maintained binary visual material and presentation source should live.
-- Which current renders and formats may be selected for explicit
-  `$visual-inspection`, and which project-specific criteria apply.
-
-## Link model
-
-Decide:
-
-- Internal navigation conventions.
-- External reference conventions.
-- Link text standards.
-- Link check cadence.
-- Handling of private or unstable URLs.
-
-## Language model
-
-Define:
-
-- Primary working language.
-- Publication languages.
-- Whether German and English are maintained in parallel. The default is parallel files, for example `topic.qmd` and `topic.de.qmd`.
-- Whether one language is authoritative.
-- How terminology and screenshots are checked across languages.
-
-## Quarto model
-
-Define:
-
-- Whether Quarto is used as the internal source format.
-- Whether the project is a website, single document, book, or mixed Quarto project.
-- Required output formats, usually HTML and/or PDF.
-- Format-specific generated-output directories below ignored `output/`, such
-  as `output/html/`, `output/pdf/` or `output/docx/`.
-- Whether `docs/index.qmd` and `docs/index.de.qmd` remain parallel entry points. This is the default bilingual structure.
-- Required Quarto CLI installation and PATH status.
-- Required R, Python, LaTeX, TinyTeX, or Quarto extensions. If PDF output is required, confirm TeX/TinyTeX during setup.
-- Whether `quarto render` should be part of milestone QA.
-
-## Feedback model
-
-Define the review model according to `FEEDBACK_WORKFLOW.md`:
-
-- Expected feedback channels: direct source review, annotated DOCX, annotated
-  PDF, or a project-specific alternative.
-- Which pages, chapters, selected bundles or named snapshots may be exported
-  for review. Do not leave the scope of a website DOCX review implicit.
-- Whether DOCX comments and Track Changes are expected for content review.
-- Whether annotated PDFs are expected for layout, table, figure or print QA.
-- How external feedback will be curated by the maintainer, including whether
-  `Maintainer:` comments will be used.
-- Which generated review outputs belong below `output/<format>/` and which
-  returned annotated files belong directly below `review/`.
-- Which review files the assistant may inspect, which may be versioned and
-  which may be published or shared.
-- How review decisions and closed feedback will be traced.
-
-## Initial output
-
-Before the first substantive documentation milestone, the repository should contain:
-
-- Completed `PROJECT_CONTEXT.md`.
-- Completed initial document contract in `DOCUMENTS.md`.
-- Selected documentation type profile and language model.
-- Confirmed Quarto model and output formats.
-- Confirmed feedback channels, file scope and review-handling rules.
-- Adapted audience, style, screenshot, link and visual-inspection rules.
-- Initial documentation structure.
-- Any required DDRs.
-- Updated changelog and version information if a milestone is reached.
+Quarto 1.9.38 and Pandoc 3.8.3 are present. Plain DOCX needs no TeX/R/Python.
+The separately approved ignored .venv provides Python 3.12.14 and PyYAML 6.0.3.
+Both adapted skills passed Test-CodexSkill.ps1. Reproduce on another clone through
+[VALIDATION.md](VALIDATION.md), obtaining installation approval there.
+No DOCX round-trip/render has been run. Revision-extraction libraries are
+selected during concrete tooling design; PDF and visual tooling are deferred.

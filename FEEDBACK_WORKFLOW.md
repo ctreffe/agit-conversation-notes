@@ -1,117 +1,33 @@
 # Feedback Workflow
 
-This workflow defines how maintainer and external review feedback is transferred
-back into a documentation project without weakening source control, traceability
-or maintainer authority.
+## Authoritative source and storage
 
-## Source of truth
-
-Maintained repository sources, normally Quarto files in `docs/`, remain
-authoritative. Rendered DOCX and PDF files are review copies. Comments,
-tracked changes and annotations are not complete until the accepted change has
-been applied to the maintained source and validated there.
-
-For website projects, every review file must have an explicit scope. Use a
-single page, chapter, selected bundle or named snapshot; do not treat an
-ambiguous DOCX export as a review of the whole website.
-
-## Feedback channels
-
-### Direct source review
-
-The maintainer may edit or comment on the maintained source directly. This is
-the shortest path when no rendered context is needed. Ambiguous or
-consequential comments still require clarification.
-
-In Quarto or Markdown source, use a non-rendered comment such as:
-
-```markdown
-<!-- Maintainer: Clarify which permissions are required before this step. -->
-```
-
-Clear maintainer comments may be implemented directly. Remove resolved
-comments after their intent has been incorporated, unless they preserve durable
-rationale that belongs in the maintained text or a DDR.
-
-### Maintainer DOCX review
-
-Use DOCX comments and Track Changes primarily for wording, structure,
-terminology and local content flow. A maintainer-authored change may be
-transferred directly when its intent and source location are unambiguous.
-
-The assistant may inspect a supplied annotated DOCX only after assistant access
-has been approved. It should reconcile comments and tracked changes with the
-current source rather than replacing the source file with the reviewed export.
-
-### External DOCX review
-
-External comments and tracked changes are review input, not automatic
-instructions. The maintainer may curate them in the reviewed document with a
-comment beginning `Maintainer:`. Such a comment records the maintainer's
-instruction or qualification; the underlying external proposal alone does not.
-
-Uncurated external feedback must be presented as concise numbered issues for
-maintainer acceptance, rejection, qualification or deferral before it is
-implemented.
-
-### Annotated PDF review
-
-Use PDF annotations primarily for layout, pagination, tables, figures,
-captions, print output and other rendered presentation issues. PDF annotations
-are less reliably connected to editable source structure than DOCX comments or
-tracked changes. The assistant should therefore map annotations to source
-locations and present uncertain or external findings as numbered issues before
-editing.
-
-Clear maintainer-authored PDF annotations may be implemented directly when the
-requested source change is unambiguous. After changing the source, re-render
-and technically validate the relevant format. The maintainer performs routine
-visual inspection. The assistant inspects the selected current render only
-when the maintainer explicitly invokes `$visual-inspection`.
+External conversation QMD remains authoritative despite being unversioned.
+Rendered formats and annotations are review evidence. All review files, extracts,
+baseline snapshots and decisions stay external; repository review/, output/ and
+temp/ are never conversation storage. Follow
+[CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md).
+Repository-documentation feedback concerns only conversation-free workflow rules.
 
 ## Review cycle
 
-1. Define the review purpose, authoritative source, file scope and expected
-   feedback channel.
-2. Render or export the named review scope and record the source state or commit
-   from which it was produced.
-3. Store newly generated review files in the applicable format directory below
-   `output/`. Store returned annotated files directly below `review/`; both
-   locations are ignored by default.
-4. Confirm separately whether the assistant may inspect the file, whether
-   it may be versioned and whether it may be published or shared.
-5. Classify feedback as clear maintainer instruction, maintainer-curated
-   external feedback, unresolved external feedback or clarification required.
-6. Present unresolved decisions as a concise numbered list and record the
-   maintainer's accept, reject, qualify or defer decision.
-7. Apply accepted changes to the maintained source in small reviewable steps.
-8. Re-render and perform the relevant content, link and disclosure checks.
-   Do not treat this as agent visual inspection. That remains a separate,
-   explicitly invoked `$visual-inspection` workflow.
-9. Update `PROJECT_CONTEXT.md` with the active review state and next action.
-   Record durable documentation or workflow decisions in a DDR when needed.
+1. Select exact source/review file, scope, external destinations and permitted
+   actions. Mapping/non-sensitive classification alone grants no access or writes.
+2. Render externally; retain the QMD snapshot/hash and output relationship in
+   external trace/. Git commit IDs do not identify an external source baseline.
+3. Keep returned copies unchanged in external review/. Identify reviewer and
+   reconcile changes since export before incorporation.
+4. Extract comments/Track Changes locally into external temporary storage.
+   Never put conversation extracts or decisions into repository records/logs.
+5. Clear maintainer instructions may be applied when intent/source is unambiguous.
+   Uncurated external feedback needs acceptance, rejection, qualification or
+   deferral; a Maintainer: comment may curate it. Clarify ambiguous evidence.
+6. Apply accepted changes to external QMD with external source mapping and
+   revision evidence; do not replace QMD with the edited DOCX export.
+7. Re-render and technically verify changes; record unresolved/rejected/deferred
+   items externally. Repository status reports generic workflow progress only.
 
-## Traceability
-
-At minimum, keep enough context to identify:
-
-- The reviewed source scope and source state.
-- The rendered file and output format.
-- The feedback author or review role.
-- Accepted, rejected, qualified, deferred and unresolved items.
-- The source changes and validation that closed the review.
-
-A permanent review ledger is optional unless the project requires one. The
-current review state belongs in `PROJECT_CONTEXT.md`; durable rationale belongs
-in Decision Records or maintained documentation.
-
-## Sensitivity and repository handling
-
-Review files may contain comments, author identities, hidden metadata,
-internal URLs, screenshots, document history or unpublished content. Treat
-them as potentially sensitive until reviewed.
-
-Assistant access, Git versioning and publication are separate maintainer
-decisions. The default ignored locations prevent accidental staging but do not
-make a file safe. Version a review file only after a deliberate need,
-sensitivity review and corresponding ignore exception have been established.
+Direct source comments remain possible. Optional PDF annotations require careful
+source mapping. Visual inspection remains separately explicit.
+Access, sharing, transmission and publication are separate decisions.
+Conversation review files are permanently excluded from Git without exceptions.

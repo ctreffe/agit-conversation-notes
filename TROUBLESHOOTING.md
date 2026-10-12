@@ -53,3 +53,13 @@ the preserved historical schema is not the current workflow. Further detail is o
 - **Prevent or limit:** Do not first provoke `.git/index.lock`; keep reads sandboxed.
   Never delete locks or change ACLs/trust to bypass this; action authority remains separate.
 - [Evidence](TROUBLESHOOTING_DETAILS.md#ki-0005-default-sandbox-blocks-an-authorized-git-metadata-write)
+
+## KI-0006: Windows sandbox temp blocks ensurepip during local venv setup
+
+- **Recognize:** Approved clone-local venv creation stops in ensurepip with a
+  PermissionError writing its bundled pip wheel to the platform temp directory.
+- **Fix:** Reuse the partial clone venv; request narrow platform escalation for
+  ensurepip and the already approved pinned dependency installation.
+- **Prevent or limit:** No global Python/ACL/temp-policy changes; action and
+  download authority remain separate. Verify the original skill-validation
+  outcome with Test-CodexSkill.ps1, not merely successful package import.

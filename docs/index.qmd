@@ -1,26 +1,18 @@
 ---
-title: "TBD Documentation"
+title: "AGIT Conversation Notes — Workflow"
 lang: en
 ---
 
-# Overview
+# Workflow
 
-This file is a Quarto Markdown template for the English documentation entry point.
+This page documents the generic project workflow without conversation content.
+The project plans German thematic summaries for personal recall from fallible
+university Whisper-v3 JSON.
 
-Replace this page with the project-specific documentation structure during initialization.
+All conversation files, including authoritative QMD and fictional trial data,
+remain permanently external and unversioned. DOCX is the initial review format;
+accepted corrections return to external QMD. The drafting skill and schema will
+be jointly designed after initialization.
 
-## Documentation context
-
-- Documentation type: TBD
-- Audience: TBD
-- Starting point, for tutorials: TBD
-- Goal, for tutorials: TBD
-- Primary output format: TBD
-
-## Next steps
-
-- Complete `PROJECT_CONTEXT.md`.
-- Complete `DOCS_SETUP.md`.
-- Define the documentation type profile.
-- Define the bilingual documentation model.
-- Replace this placeholder page with project documentation.
+Repository introductions and retained guides contain binding storage/access
+rules. No conversation trial or publication has occurred.

@@ -105,3 +105,12 @@ Documentation is ready for review when maintained sources reflect verified
 technical evidence, audience and structure are coherent, links and affected
 formats are checked, disclosure risks are reported and generated artifacts are
 clearly distinguished from sources. A successful render alone is insufficient.
+
+## AGIT Conversation Notes exception
+
+External, permanently unversioned QMD is authoritative for conversation notes.
+Git holds generic workflow rules/tools only. All artifacts and revision evidence,
+including fictional trials, stay external under CONVERSATION_STORAGE.md and
+ignored CONVERSATION_PATHS.local.md. No concrete content enters tracked catalogs,
+decisions, handoffs or status. The maintainer wants thematic German preparation
+for personal recall. Access, outside writes, transmission/publication stay separate.

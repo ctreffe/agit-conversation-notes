@@ -1,250 +1,113 @@
 # Project Context
 
-This file is a template. In a derived documentation project, replace the placeholders with project-specific context.
-
-## Template lineage and initialization
-
-- Repository role: derived project
-- Source template: AI Documentation Template
-- Initial template baseline: `<template version and commit hash>`
-- Initialization status: `<not started | in progress | completed>`
-- Initialization date: `<YYYY-MM-DD | not yet completed>`
-- Last template harmonization: `<not yet performed | template version, commit hash and date>`
-- Last collaboration retrospective: `<not yet performed | reviewed period or milestone, date and relevant record>`
-- Intentional template deviations and relevant Decision Records: `<none | concise list>`
-
-Keep `PROJECT_SETUP.md` as initialization provenance. It describes the
-project's methodological roots; this section records its
-lifecycle status and the baselines used over time.
-
-During initialization, fill only the fields needed for the six fundamental
-answers, the first useful document outcome and its current source boundary.
-Leave later document, structure, media, feedback, render and publication detail
-explicitly undecided until the corresponding workflow needs it.
-
-## Project identity
-
-- Project name: TBD
-- Repository: TBD
-- Maintainer: TBD
-- Documentation type: TBD
-- Documentation type profile: TBD
-- Primary working language: TBD
-- Publication languages: TBD
-- Bilingual file model: parallel files, e.g. `topic.qmd` and `topic.de.qmd`
-- Authoritative language, if any: TBD
-- Version or milestone: TBD
-
-## Documentation purpose
-
-TBD: What should this documentation help readers understand, decide, or do?
-
-## Scope
-
-In scope:
-
-- TBD
-
-Out of scope:
-
-- TBD
-
-## Audience
-
-Audience decisions should drive structure, detail level, terminology, examples, screenshots, and verification depth.
-
-Primary audience:
-
-- TBD
-
-Expected prior knowledge:
-
-- TBD
-
-Reader tasks:
-
-- TBD
-
-Risks or misunderstandings to prevent:
-
-- TBD
-
-## External sources, project materials and sensitivity
-
-Known unchanged external files and sources:
-
-- TBD
-
-Input catalog and local location mapping:
-
-- TBD
-
-Synchronized external storage, availability and backup state:
-
-- TBD
-
-Potentially sensitive materials:
-
-- TBD
-
-Sanitization or redaction rules:
-
-- TBD
-
-Assistant-access approval:
-
-- TBD
-
-Git-versioning and ignore rules:
-
-- TBD
-
-Publication or external-sharing approval:
-
-- TBD
-
-Reviewed derivatives:
-
-- TBD
-
-Retained documentation materials and storage states:
-
-- TBD
-
-Promotion into maintained documentation or versioned binary material:
-
-- TBD
-
-Relevant never-versioned temporary work outside `temp/restricted/`:
-
-- TBD
-
-## Initial roadmap
-
-- Next small step: TBD
-- First documentation milestone: TBD
-- Review and validation objective: TBD
-- Intentional non-goals: TBD
-
-## Current work
-
-- Current version or latest completed state: TBD
-- Active milestone: TBD
-- Current focus: TBD
-- Latest completed documentation step: TBD
-- Active maintained source files: TBD
-- Latest validated render: TBD
-- Latest link, screenshot and explicit visual-inspection status: TBD
-- Active feedback file or review: TBD
-- Active review scope and source state: TBD
-- Feedback decision state and next action: TBD
-
-## Quarto model
-
-- Quarto project type: TBD
-- Required output formats: TBD
-- Generated output directories below `output/`: TBD
-- Render command: `quarto render`
-- Required toolchain notes: TBD
-
-## Feedback model
-
-- Expected feedback channels: TBD
-- DOCX review scope and render method: TBD
-- PDF review purpose and render method: TBD
-- External-feedback curation convention: TBD
-- Local generated review outputs: the applicable format directory below
-  `output/`
-- Local returned review files: directly below `review/`
-- Assistant access, Git versioning and publication rules for review files:
-  TBD
-
-## Documentation structure
-
-Document catalog:
-
-- `DOCUMENTS.md` - document-local contracts, lifecycle and next actions
-
-Planned structure:
-
-- TBD
-
-Open structure questions:
-
-- TBD
-
-## Screenshots and visuals
-
-Screenshot policy:
-
-- TBD
-
-Diagram policy:
-
-- TBD
-
-Visual-inspection requirements:
-
-- `<default: only through explicitly invoked $visual-inspection for named current renders and maintainer-selected formats; project-specific criteria>`
-
-## Links and references
-
-Internal link model:
-
-- TBD
-
-External reference model:
-
-- TBD
-
-Link check expectations:
-
-- TBD
-
-## Open decisions
-
-- TBD
-
-## Relevant documents
-
-- `PROJECT_SETUP.md` - retained initialization method and provenance
-- `TASK_HANDOFF.md` - compact versioned task checkpoint
-- `.agents/skills/` - automatic lifecycle and explicit specialized workflows
-- `TROUBLESHOOTING.md` - conditionally loaded portable environment recovery patterns
-- `SYNCHRONIZED_STORAGE.md` - provider-neutral external storage for large documentation files
-- `$sync-template` - source-template comparison and selected adoption
-- `$check-consistency` - internal documentation consistency diagnosis
-- `$perform-retrospective` - structured documentation-collaboration review
-- `DOCS_SETUP.md` - documentation setup and current model
-- `DOCUMENTS.md` - maintained document catalog and document-local contracts
-- `DOCUMENTATION_PROCESS.md` - ongoing documentation workflow
-- `FEEDBACK_WORKFLOW.md` - direct-source, DOCX and PDF review workflow
-- `AUDIENCE.md` - audience assumptions
-- `STYLE_GUIDE.md` - documentation style
-- `QUARTO.md` - source and render workflow
-- `decisions/` - durable documentation, project or architecture decisions
-- `input/` - unchanged external files and sources plus their catalog
-- `temp/` - never-versioned intermediate files
-- `materials/` - retained assistant-readable documentation files and catalog
-- `styles/` - maintained presentation source when needed
-- `output/` - ignored rendered or packaged outputs separated by format
-- `review/` - ignored returned annotated review files
-
-## Collaboration notes
-
-- The maintainer owns structure, technical correctness, and publication.
-- The assistant may provide feedback and consistency checks.
-- Maintainer decisions and clarification questions should be presented as
-  concise numbered lists when practical.
-- Staging and unstaging require a specific maintainer request or authorization
-  of the corresponding commit, but no control word. Protected Git actions
-  require a specific instruction containing `explicit`, `explicitly` or the
-  German word family `explizit`.
-
-## Next session
-
-- Recommended next step: TBD
-- Source files to continue from: TBD
-- Validation or review to perform next: TBD
-- Materials not approved for assistant inspection: TBD
-- Blocking maintainer decisions: TBD
+## Identity and initialization
+
+- Project: AGIT Conversation Notes; repository: agit-conversation-notes.
+- Repository URL: https://github.com/ctreffe/agit-conversation-notes.
+- Maintainer: Christian Treffenstaedt (existing license notice retained).
+- Role: derived working project, not source-template maintenance.
+- Initialization: completed on 2026-10-13; configured starting 2026-10-12.
+  Both adapted skills passed the required validator; final cleanup completed.
+- Source template: AI Documentation Template; inherited VERSION: 0.7.0 plus
+  inherited Unreleased changes.
+- Verified imported snapshot / initial synchronization baseline:
+  7af11ba2d132334baa9949666ae9391146649872 (this repository's initial commit).
+  The upstream template commit was not supplied and cannot be inferred from
+  this fresh initial commit. Verify it before upstream synchronization.
+- Last harmonization / collaboration retrospective: not performed.
+- Source-template and Governance clone mappings: Unset in ignored
+  RETROSPECTIVE_PATHS.local.md; no clone paths guessed or searched.
+- Intentional deviation: every conversation file, including authoritative QMD,
+  is permanently external and unversioned; see
+  [PDR-0001](decisions/PDR-0001-external-conversation-files.md) and
+  [CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md).
+- Retained initialization method: [PROJECT_SETUP.md](PROJECT_SETUP.md).
+
+## Purpose, audience and language
+
+AI-assisted workflow for turning speaker-attributed transcripts into structured
+conversation notes, with Quarto outputs and traceable document revision.
+Recordings are made with colleagues' consent and transcribed by university
+Whisper-v3 into speaker-attributed JSON. Recognition and attribution can be wrong.
+
+The intended document is a detailed thematic preparation of the discussed
+content, initially a personal memory aid. It does not report who said what.
+Source references enable verification without a speaker-by-speaker narrative.
+Names matter only where content needs them, such as a confirmed assignment.
+Default document language: German. Repository introductions and guides remain
+an English/German pair; conversation documents need no bilingual copies.
+
+## Scope and planned capability
+
+- In scope: rules, generic tooling/templates and workflow documentation for
+  external transcript -> external QMD -> external DOCX review -> corrected QMD.
+- Planned draft-conversation-notes: thematic synthesis; distinguish results,
+  decisions, tasks and open questions; link relevant transcript evidence; mark
+  uncertainties. Proposals are not decisions; absent facts are not invented.
+  This skill is not implemented or available for invocation.
+- Deferred: protocol schema, JSON variants, evidence granularity, drafting
+  method, review trace format and specific conversation access.
+- Non-goals: recording/transcription service, automatic speaker correction,
+  shared participant review, real-content processing during initialization,
+  publication, automatic transmission and sync setup. Installations require
+  separate approval; the local validator setup received that approval.
+
+## Storage, access and source authority
+
+[CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md) overrides inherited placement,
+promotion and versioning defaults for all conversation files, including fictional
+fixtures. Concrete paths use ignored CONVERSATION_PATHS.local.md; roots remain
+Unset. No external storage locations were created, enumerated or inspected.
+
+The maintainer considers intended transcripts non-sensitive. Exact access still
+needs selection before processing. Sharing, publication and transmission remain
+separate decisions. No real files are currently authorized. Project catalogs,
+handoffs, changelogs and Decision Records contain no concrete conversation
+content or metadata. External QMD remains authoritative without Git history.
+External baselines and review decisions provide traceability; backup/recovery
+arrangements are deferred to storage setup.
+
+## First useful outcome and roadmap
+
+- Generic initial contract: [DOCUMENTS.md](DOCUMENTS.md), DOC-0001.
+- Next: jointly design draft-conversation-notes and protocol schema.
+- First trial: small fictional transcript externally stored, reviewed thematic
+  structure, external QMD, external DOCX, one maintainer correction returned to
+  QMD and re-rendered. No real conversation is needed.
+- Success: faithful content and references, correct uncertainty/decision
+  handling, all files external and absent from Git, accepted correction present
+  in QMD and subsequent DOCX with external trace.
+- Trial: planned, not performed. No versioned milestone completed.
+
+## Quarto and feedback model
+
+- Repository _quarto.yml: optional workflow-documentation website only;
+  docs/ contains no conversations, HTML uses ignored output/html/.
+- Conversation model: separate external standalone QMD or external project;
+  initially DOCX, optional PDF/HTML deferred. Repository website configuration
+  must never control conversation rendering.
+- Verified runtime: Quarto 1.9.38 and its Pandoc 3.8.3.
+- Plain QMD -> DOCX needs no R, Python or TeX. PDF toolchain deferred.
+- Skill validation: approved ignored clone .venv, Python 3.12.14 and PyYAML 6.0.3
+  from requirements-tools.txt. Both adapted skills passed Test-CodexSkill.ps1.
+  No global Python changes; later installations still require separate authority.
+- Review: maintainer DOCX comments/Track Changes returned to external QMD.
+  Ambiguous or external feedback requires decisions.
+- Baseline/ledger stays outside Git; project status is generic only.
+- No current review file, validated render or visual inspection.
+
+## Current checkpoint and continuation
+
+Initialization contracts and both bilingual introduction/guide pairs are complete.
+Inherited histories were replaced with project-owned CHANGELOG/TASK_HANDOFF.
+The inherited one-time initialization/creation skills and template backlog were
+removed. Subsequent bounded work uses start-task and the current project handoff.
+
+Checks: required skill validator passed; local navigation, YAML and invocation
+policies checked; Quarto inspect selects only the two generic workflow pages;
+local mappings are ignored and Unset. No conversation artifacts were created.
+
+Next: jointly design skill/schema, then select external destinations and scoped
+access/write authority for the fictional trial. Verify the upstream template
+commit before later sync. Sync setup, backup and actual DOCX round-trip remain
+unperformed. No Git writes or publication occurred.

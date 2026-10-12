@@ -58,3 +58,11 @@ yarn-debug.log*
 yarn-error.log*
 
 **/*.quarto_ipynb
+
+# Permanent conversation boundary: content must remain external.
+# Accidental-placement safeguards, never authorized storage.
+CONVERSATION_PATHS.local.md
+/conversations/
+/transcripts/
+/conversation-work/
+/conversation-output/

@@ -1,45 +1,35 @@
 # Document Catalog
 
-This catalog is the durable index of maintained documents in a derived
-documentation project. Project-wide defaults remain authoritative in
-`PROJECT_CONTEXT.md`; each entry records only the confirmed document-local
-contract and identifies every inherited default explicitly.
+This versioned catalog describes generic workflow contracts only. It never lists
+concrete conversations, participant metadata, excerpts or private paths.
+Conversation-specific catalogs and review evidence live externally. Entries
+grant no access, outside writes, transmission or publication. Use add-document
+explicitly for later repository documentation; conversation registration stays
+external.
 
-`$start-project` completes the initial entry. Invoke `$add-document` explicitly
-for each later document or language-linked document set. A catalog entry does
-not by itself authorize access to source material, Git versioning, rendering or
-publication.
+## DOC-0001: Fictional conversation workflow trial
 
-The workflow offers lean setup or an explicitly selected `grill-me` interview.
-Either path confirms only unresolved document-local choices and identifies
-reviewed inherited defaults; route selection does not authorize catalog edits.
-
-## Lifecycle
-
-Use the maintainer-approved project lifecycle, normally `planned`, `draft`,
-`review`, `stable` or `archived`. Record the current state here; history belongs
-in the changelog or an applicable Decision Record.
-
-## Entry contract
-
-Copy this section once per maintained document or language-linked set. Replace
-every `TBD`; write `Inherited from PROJECT_CONTEXT.md: <field>` only when the
-project default was reviewed and accepted for this document.
-
-### DOC-0001: TBD title
-
-- Document ID: `DOC-0001`
-- Maintained source path or language-linked paths: TBD
-- Purpose: TBD
-- In scope: TBD
-- Out of scope: TBD
-- Dominant documentation type profile: TBD
-- Primary audience and reader task: TBD
-- Language relationship and authoritative language: TBD
-- Required and permitted output formats: TBD
-- Source, assistant-access and sensitivity constraints: TBD
-- Navigation placement: TBD
-- Validation and review expectations: TBD
-- Lifecycle status: TBD
-- Next action: TBD
-- Relevant Decision Records: none or TBD
+- ID: DOC-0001 identifies a generic planned trial, not a real conversation.
+- Maintained source: planned external QMD beneath conversation:root/sources/;
+  exact path selected locally before the trial.
+- Purpose: test transcript -> QMD -> DOCX -> revised QMD.
+- In scope: thematic content, source references, results, decisions, tasks,
+  open questions, uncertainty and one accepted correction.
+- Out of scope: real data, speaker-by-speaker reporting, final schema during
+  initialization, automatic approval, shared review and publication.
+- Profile: conversation summary; detailed schema deferred to skill design.
+- Audience/task: inherited from PROJECT_CONTEXT.md: personal memory aid;
+  verify discussed content and correct the draft.
+- Language: inherited from PROJECT_CONTEXT.md: German, no bilingual source set.
+- Required output: external DOCX. PDF/HTML only after deliberate selection.
+- Source/access: invented excerpt, created only after external destination/write
+  authorization. All files permanently external and unversioned.
+- Navigation: generic contract here; no repository website page for the trial.
+- Validation: content/evidence fidelity, uncertainty/decision handling, external
+  placement, DOCX technical checks, accepted edit in QMD and re-render.
+- Review: maintainer comments/Track Changes; external trace identifies source
+  baseline, output and applied correction.
+- Lifecycle: planned; no source or artifact created.
+- Next action: jointly design skill/schema, then select external storage and
+  exact authorized trial paths.
+- Decision: [PDR-0001](decisions/PDR-0001-external-conversation-files.md).

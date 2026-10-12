@@ -119,3 +119,12 @@ Folder creation and file moves inside a sync root need their own outside-write
 and transmission authority. Record durable storage decisions in existing
 project context or local Decision Records only when needed and authorized.
 Include storage details in a handoff only for a concrete continuation dependency.
+
+## AGIT Conversation Notes override
+
+CONVERSATION_STORAGE.md overrides generic source/output placement for conversation
+content: all QMD, outputs, review files and traces remain external and unversioned,
+including fictional trials. Use ignored CONVERSATION_PATHS.local.md; never put
+conversation entries into tracked input/material catalogs. Repository docs/styles
+remain generic. Sync setup/transmission is deferred; temporary files stay external
+and device-local. The helper does not validate QMD authority, render paths or backup.

@@ -283,3 +283,13 @@ original command; defer optional tools without blocking unrelated work.
 
 Check Python only for required documentation helpers; Quarto use alone does not
 require a new Python environment. Use non-sensitive synthetic verification.
+
+## AGIT Conversation Notes adaptation (2026-10-12)
+
+This derived project overrides generic repository-source, promotion, output and
+review placement for every conversation file. External QMD remains authoritative
+while permanently unversioned. CONVERSATION_STORAGE.md, the local mapping example
+and PDR-0001 define the exception; host paths remain ignored. Fictional trials also
+stay external. Sync setup, external writes and concrete file access are deferred.
+Drafting skill/schema is planned only. Lean routing was already selected.
+PROJECT_CONTEXT.md records the baseline/status; no upstream commit is invented.

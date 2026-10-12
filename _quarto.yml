@@ -1,3 +1,5 @@
+# Workflow docs only; conversation QMD is external and unversioned.
+# See CONVERSATION_STORAGE.md and ignored CONVERSATION_PATHS.local.md.
 project:
   type: website
   output-dir: output/html
@@ -5,7 +7,7 @@ project:
     - docs/**/*.qmd
 
 website:
-  title: "TBD Documentation"
+  title: "AGIT Conversation Notes — Workflow"
   navbar:
     left:
       - href: docs/index.qmd

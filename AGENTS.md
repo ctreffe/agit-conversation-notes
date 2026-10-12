@@ -67,3 +67,22 @@ checks. Whitespace and all-format rendering are not defaults before the
 milestone unless affected or required by a stated risk. Only explicit
 `$visual-inspection` inspects selected current renders. Report limits; rendering
 alone establishes neither correctness nor publication readiness.
+
+## Conversation workflow exception
+
+- Follow CONVERSATION_STORAGE.md before conversation tasks. All conversation
+  files, including fictional fixtures, JSON, working copies, QMD, outputs,
+  review evidence, logs and intermediates stay permanently unversioned outside
+  Git. Never copy content into project docs, catalogs, handoffs or decisions.
+- External QMD is authoritative despite being unversioned. Resolve exact source,
+  output/review/trace and external temporary locations through ignored
+  CONVERSATION_PATHS.local.md; Unset stops dependent work. Mapping/non-sensitive
+  classification grants no access, outside writes, transmission or sharing.
+- Apply this exception to drafting, rendering, revision and document registration.
+  Inherited repository input/materials/docs/temp/output/review folders are never
+  conversation fallback storage. Verify canonical paths/configuration, including
+  reparse points, caches and intermediates, before processing.
+- draft-conversation-notes is planned only. Summaries prepare thematic German
+  content for personal recall, using transcript evidence without speaker-by-speaker
+  narration; preserve uncertainty and distinguish proposals from decisions.
+  Detailed schema/method remains deferred.

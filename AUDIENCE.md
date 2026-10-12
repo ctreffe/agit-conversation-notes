@@ -1,58 +1,17 @@
 # Audience Model
 
-This file is a template for defining the audience of a technical documentation project. Audience definition is not secondary metadata; it determines structure, detail level, terminology, screenshots, examples, and QA criteria.
+Conversation summaries initially serve the maintainer as a personal memory aid.
+They provide a detailed, structured thematic account of the discussed content.
+Who said each sentence is not the organizing principle. Relevant source evidence
+must support verification, uncertainty and results/decisions/tasks/open questions.
 
-## Primary audience
+The maintainer knows the context but should not have to reconstruct it from
+speaker-by-speaker extracts. Transcript accuracy is not assumed. Explain unknown
+terms or mark ambiguity instead of supplying unsupported interpretation.
+Keep names only where needed, such as a confirmed task assignment.
 
-TBD: Who must be able to use this documentation successfully?
-
-## Secondary audience
-
-TBD: Who may need to inspect, review, approve, maintain, or extend the documentation?
-
-## Prior knowledge
-
-Readers are expected to know:
-
-- TBD
-
-Readers should not be expected to know:
-
-- TBD
-
-## Experience level
-
-Define whether the audience is expert, intermediate, occasional, new, or mixed. For tutorials and guides for less experienced users, list hidden assumptions that must be made explicit.
-
-Readers may need explicit support for:
-
-- Navigation.
-- Terminology.
-- Permissions and prerequisites.
-- Recognizing expected screen states.
-- Verifying successful completion.
-
-## Reader tasks
-
-The documentation must help readers:
-
-- TBD
-
-## Reader decisions
-
-The documentation must help readers decide:
-
-- TBD
-
-## Risk model
-
-The documentation should prevent:
-
-- Misconfiguration: TBD
-- Operational mistakes: TBD
-- Misinterpretation: TBD
-- Unnecessary support load: TBD
-
-## Tone and level of detail
-
-TBD: Define how direct, technical, explanatory, or procedural the documentation should be for this audience.
+Shared participant review is outside the initial model and needs a later sharing
+decision. Repository documentation serves workflow maintainers without concrete
+conversation content. English/German introductions and guides describe the same
+workflow. Prevent proposals becoming decisions, invented dates/owners and
+uncertain speaker labels becoming fact.

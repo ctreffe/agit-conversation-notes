@@ -40,3 +40,9 @@ Use the matching template as a starting point:
 - [DDR-0000-template.md](DDR-0000-template.md)
 - [PDR-0000-template.md](PDR-0000-template.md)
 - [ADR-0000-template.md](ADR-0000-template.md)
+
+## Accepted project decisions
+
+| Record | Status | Subject |
+| --- | --- | --- |
+| [PDR-0001](PDR-0001-external-conversation-files.md) | Accepted | All conversation files external and permanently unversioned; external QMD authoritative. |
