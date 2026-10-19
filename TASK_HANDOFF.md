@@ -1,28 +1,19 @@
 # Task Handoff
 
-- Date/status: 2026-10-13; completed approved persistent artifact placement.
-- Outcome: authoritative QMD, review DOCX and three retained revision evidence
-  files placed in the selected external sync project after scoped maintainer
-  write/transmission approval. All five copies verified by SHA-256; identity
-  marker and ordinary local paths checked. Original transcript unchanged.
-- Private state: exact selections and authoritative paths are in ignored
-  CONVERSATION_PATHS.local.md. Persistent baseline, clarification snapshot and
-  export ledger are below conversation:root/trace/. Local render checkpoint and
-  temporary processing stay below conversation:temp/; never synchronize temp.
-  Use the private mapping/ledger to resume; no conversation metadata belongs here.
-- Change scope: refreshed private mapping/trace and generic bilingual project
-  status. Prior clarification/footnote design and implementation retained;
-  DDR-0003 complements DDR-0002. No installations, Git actions or publication.
-- Evidence: placement hashes matched; persistent DOCX locally available and
-  verified by Test-ExternalStorage.ps1. Earlier drafting skill validation,
-  targeted links, DOCX archive/footnote/metadata checks and render baseline
-  remain valid because QMD/DOCX content is unchanged. Ignore coverage confirmed;
-  no temporary conversation files tracked and staging preserved.
-- Limits/deferred: provider synchronization and backup unverified. No visual
-  inspection, annotated review or accepted-correction round-trip. Ordinary commit
-  and milestone checks are not part of this placement task.
-- Continuation: maintainer reviews the persistent DOCX. Accepted comments/Track
-  Changes route through explicitly selected revise-document to the authoritative
-  QMD using the retained export baseline. No placement task work remains.
-- Checkpoint: zero completed full trials. Evaluate provisional QMD and footnote
-  density after the first completed review round-trip; revise by the second.
+- Date/status: 2026-10-19; completed selected template synchronization.
+- Scope/authority: explicit maintainer origin alignment and sync-template request
+  for the registered projects; selected outcomes and validation in
+  [TEMPLATE_SYNC.md](TEMPLATE_SYNC.md).
+- Outcome: explicit-only question research and report scaffold, current selective
+  sync accounting, simplified new storage guidance and preserved local boundaries.
+- Evidence: 11 changed skills, 56 synthetic storage assertions, selected links,
+  bilingual guidance and applicable local gates passed; see the ledger for limits.
+- Preserved: existing project identity/version, source paths, canonical mappings,
+  domain rules, inputs and ongoing content/device work. No private source,
+  real cloud, installation, production or publication operation.
+- Existing open evidence: Maintainer DOCX review and accepted-correction round-trip remain open. Zero completed full trials; evaluate the provisional layout after the first completed trial and revise by the second. Concrete conversation state remains solely in mapped unversioned trace.
+- [Previous domain checkpoint and its actual evidence](https://github.com/ctreffe/agit-conversation-notes/blob/5ac33c3ee1340ec97a83ca974a4c0e4f58f8ed2f/TASK_HANDOFF.md).
+- Continuation: no implementation remains for this selected adoption. Resume the
+  project/document task through start-task and current local authority; reconstruct
+  Git state at any later versioning boundary. This is not a project milestone.
+- Updated shared contexts: [conversation-workflow-trial](docs/conversation-workflow-trial/DOCUMENT_CONTEXT.md).

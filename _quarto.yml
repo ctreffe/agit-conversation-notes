@@ -4,7 +4,8 @@ project:
   type: website
   output-dir: output/html
   render:
-    - docs/**/*.qmd
+    - /docs/**/*.qmd
+    - "!/docs/**/DOCUMENT_CONTEXT.md"
 
 website:
   title: "AGIT Conversation Notes — Workflow"

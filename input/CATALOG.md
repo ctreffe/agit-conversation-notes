@@ -1,5 +1,12 @@
 # External File and Source Catalog
 
+For any actual or fictional conversation, [../CONVERSATION_STORAGE.md](../CONVERSATION_STORAGE.md)
+overrides the generic placement, catalog and promotion instructions below. All
+conversation contexts, reports, data, identifiers and metadata remain permanently
+unversioned in explicitly mapped storage. No implicit local fallback, Git promotion
+or tracked conversation catalog/handoff entry is permitted. Repository docs and
+these scaffolds remain conversation-free; populate only an approved unversioned copy.
+
 Record unchanged external documentation files and sources, including services,
 URLs and sources outside the repository. Put only Git-safe metadata here; use
 ignored `CATALOG.local.md` and `PATHS.local.md` for sensitive details and
@@ -13,3 +20,7 @@ Use stable public URLs directly and logical locations for private or
 device-specific sources. Resolve logical locations in `PATHS.local.md`, copied
 from the example. Never record credentials or private tokens. A catalog entry
 grants no additional access or publication permission.
+
+Assign these IDs to documents in their shared `DOCUMENT_CONTEXT.md`, with
+intended use and evidence baseline. Keep a shared source here once even when
+several documents use it; newly researched/derived files belong in `materials/`.

@@ -133,6 +133,7 @@ lies bei Bedarf nur den passenden Detailabschnitt.
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Aufgabenabhängig oder explizit | Rendert gepflegte Quarto-Quellen in den benötigten Formaten und prüft technische Ergebnisse und Ablage. |
 | [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explizit | Wertet freigegebenes kommentiertes DOCX- oder PDF-Feedback aus und überträgt akzeptierte Revisionen in gepflegte Quellen. |
 | [`review-document`](.agents/skills/review-document/SKILL.md) | Explizit | Prüft ein Dokument oder einen Abschnitt kritisch auf Korrektheit, erfolgreiche Bearbeitung der Leseraufgaben und Verständlichkeit; liefert belegte Befunde und Verbesserungsvorschläge. |
+| [`investigate-question`](.agents/skills/investigate-question/SKILL.md) | Explizit | Recherchiert konkrete Projektfragen, bewertet jede verwendete Quelle und speichert einen [Recherchebericht](templates/RESEARCH_REPORT.md) mit optionalen Daten. |
 | [`visual-inspection`](.agents/skills/visual-inspection/SKILL.md) | Explizit | Prüft benannte aktuelle HTML-, PDF- oder DOCX-Renderings visuell und berichtet genauen Prüfumfang und Grenzen. |
 | [`commit-milestone`](.agents/skills/commit-milestone/SKILL.md) | Explizit | Schließt einen geprüften Meilenstein mit Metadaten, umfassenden Prüfungen, Commit, annotiertem Versionstag und gezielten Upstream-Pushes ab, sofern nicht ausgeschlossen. |
 
@@ -220,3 +221,28 @@ PROJECT_CONTEXT.md und ist keine eigene Projektversion oder Rechteerklärung.
 Die erhaltenen grill-me/grilling-Skills von Matt Pocock behalten ihre MIT-Hinweise
 in ihren Skillverzeichnissen. Die Repository-Lizenz erteilt keine Freigabe zur
 Weitergabe oder Veröffentlichung von Gesprächsinhalten.
+
+## Fragenrecherche, Speicher und Template-Abgleich
+
+`investigate-question` wird ausschließlich bewusst unter diesem Namen aufgerufen.
+Der Skill grenzt eine Frage oder mehrere vorzugsweise zusammenhängende Fragen ein,
+bewertet jede verwendete Quelle einzeln und speichert stets einen
+[Recherchebericht](templates/RESEARCH_REPORT.md); optionale Daten erhalten eigene
+Herkunftsnachweise. Berichte und erzeugte Daten bleiben standardmäßig unversioniert.
+[materials/README.md](materials/README.md#research-storage-and-reuse) regelt die
+Nutzung bereits freigegebener Cloud-Pfade und den lokalen Rückfallpfad.
+[SYNCHRONIZED_STORAGE.md](SYNCHRONIZED_STORAGE.md) beschreibt das einfache neue
+Layout; vorhandene Zuordnungen und Wiederherstellungsregeln bleiben bestehen.
+[TEMPLATE_SYNC.md](TEMPLATE_SYNC.md) unterscheidet verglichene, ausgewählt
+übernommene und vollständig aufgelöste Stände samt offenen oder verworfenen Punkten.
+
+Ein Dokument und seine Sprachfassungen teilen sich einen internen
+`DOCUMENT_CONTEXT.md`. Er hält Entstehungs- und Aktualisierungsregeln, zugeordnete
+Quellen, offene Fragen und nächste Schritte fest. `add-document` befüllt ihn;
+`start-task` und `handoff-task` halten ihn im Arbeitsablauf aktuell. Der Katalog
+verantwortet den Lebenszyklus. Kontexte sind keine Veröffentlichungsressourcen.
+
+Für Gespräche hat [CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md) Vorrang:
+Auch Kontexte, Rechercheberichte, Daten und ihre Metadaten bleiben dauerhaft
+unversioniert in ausdrücklich zugeordnetem Speicher. Kein automatischer lokaler
+Rückfallpfad und keine Gesprächskennungen in versionierten Katalogen oder Übergaben.

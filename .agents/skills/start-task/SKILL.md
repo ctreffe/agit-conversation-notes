@@ -5,6 +5,22 @@ description: Start a new bounded repository task with lean context reconstructio
 
 # Start Task
 
+## Conversation storage takes precedence
+
+Read [CONVERSATION_STORAGE.md](../../../CONVERSATION_STORAGE.md) before any
+conversation-related work. For actual or fictional conversations, resolve the
+context, source catalog, report/data destinations and trace only through approved
+ignored CONVERSATION_PATHS.local.md and the selected unversioned catalog. Keep
+all IDs, context contents, research metadata and detailed next steps out of
+tracked catalogs, docs, decisions and TASK_HANDOFF.md. Their generic instructions
+below apply only to conversation-free workflow documentation. An unset mapping
+stops dependent work; never choose an implicit fallback or create a mapping.
+Update conversation context in its approved unversioned location at task entry
+and handoff; tracked handoff records generic workflow status only. Reports/data
+and contexts for conversations are permanently unversioned, not eligible for
+later Git promotion. Existing input/working/sources/output/review/trace layout
+remains authoritative; no new generic directory layout replaces it.
+
 Establish only the context needed for the requested objective.
 
 A clarification, status request or continuation of the same objective is not
@@ -24,7 +40,18 @@ domain and access gates still apply.
    criterion from the request. Ask only for missing information that materially
    affects the work; continue independent authorized work while awaiting it.
 4. Read the target and only directly applicable authority, domain, decision and
-   validation material. Prefer matched sections, changed hunks and bounded
+   validation material. For maintained-document work in an initialized
+   project, resolve its ID in `DOCUMENTS.md`
+   and read the linked `DOCUMENT_CONTEXT.md` before drafting or updating.
+   Read its current open questions, dependencies and next action; reconcile
+   them with the relevant task handoff and the current request. Resolve
+   consequential conflicts; do not reopen settled defaults or assume that
+   task completion closed all document follow-ups.
+   Use its assembly/refresh rules and assigned evidence; do not load other
+   documents by default. If context is missing, report the gap and reconstruct
+   only supported facts without silently migrating existing projects. Keep
+   accepted rule/evidence changes current there in the same task.
+   Prefer matched sections, changed hunks and bounded
    output before full files or diffs.
    Before a coordinated or context-sensitive patch, freshly read each exact
    target span. Build small hunks around stable semantic anchors and separate

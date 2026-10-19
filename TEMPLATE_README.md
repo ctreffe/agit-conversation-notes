@@ -122,6 +122,7 @@ read only a matching detail section when needed.
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Task-driven or explicit | Render maintained Quarto sources in the required formats and check technical output and placement. |
 | [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explicit | Evaluate authorized annotated DOCX or PDF feedback and transfer accepted revisions into maintained sources. |
 | [`review-document`](.agents/skills/review-document/SKILL.md) | Explicit | Critically review a document or section for correctness, reader success and clarity; return grounded findings and improvement proposals. |
+| [`investigate-question`](.agents/skills/investigate-question/SKILL.md) | Explicit | Investigate concrete project questions, assess each used source and save a [research report](templates/RESEARCH_REPORT.md) with optional data. |
 | [`visual-inspection`](.agents/skills/visual-inspection/SKILL.md) | Explicit | Inspect named current HTML, PDF or DOCX renders visually and report exact coverage and limits. |
 | [`commit-milestone`](.agents/skills/commit-milestone/SKILL.md) | Explicit | Close a reviewed milestone with metadata, comprehensive checks, a commit, annotated version tag and exact upstream pushes unless excluded. |
 
@@ -205,3 +206,26 @@ PROJECT_CONTEXT.md; it is not a separate project version or rights declaration.
 The retained grill-me/grilling skills by Matt Pocock keep their MIT notices in
 their skill directories. A repository license grants no conversation sharing or
 publication authority.
+
+## Question research, storage and template comparison
+
+`investigate-question` runs only when deliberately requested by name. It scopes
+one question or a preferably related set, evaluates every used source separately
+and always saves a [research report](templates/RESEARCH_REPORT.md); optional data
+retain separate provenance. Reports and generated data stay unversioned by default.
+[materials/README.md](materials/README.md#research-storage-and-reuse) governs reuse
+of approved cloud locations and the local fallback.
+[SYNCHRONIZED_STORAGE.md](SYNCHRONIZED_STORAGE.md) defines the simple new layout;
+existing mappings and restoration rules remain authoritative.
+[TEMPLATE_SYNC.md](TEMPLATE_SYNC.md) distinguishes compared, selected adopted and
+fully resolved baselines, including deferred and deliberately rejected items.
+
+A document and its language versions share an internal `DOCUMENT_CONTEXT.md`
+with assembly/update rules, assigned sources, open questions and next actions.
+`add-document` populates it; `start-task` and `handoff-task` maintain it through
+the workflow. The catalog owns lifecycle status. Contexts are not publication resources.
+
+For conversations, [CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md) takes
+precedence: contexts, research reports, data and their metadata remain permanently
+unversioned in explicitly mapped storage. No automatic local fallback or
+conversation identifiers in tracked catalogs or handoffs.

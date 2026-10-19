@@ -5,68 +5,78 @@ description: Set up optional external project storage, connect a host or check s
 
 # Manage External Storage
 
-Run only after an explicit `$manage-external-storage` invocation or deliberate
-maintainer selection. Use the current project when its identity and scope are
-known; otherwise establish an exact authorized project path. Select either
-setup/host connection or a targeted check. Read the
-[opt-in guide](../../../SYNCHRONIZED_STORAGE.md) for the convention and helper.
+## Conversation storage takes precedence
 
-## Establish scope
+Read [CONVERSATION_STORAGE.md](../../../CONVERSATION_STORAGE.md) before any
+conversation-related work. For actual or fictional conversations, resolve the
+context, source catalog, report/data destinations and trace only through approved
+ignored CONVERSATION_PATHS.local.md and the selected unversioned catalog. Keep
+all IDs, context contents, research metadata and detailed next steps out of
+tracked catalogs, docs, decisions and TASK_HANDOFF.md. Their generic instructions
+below apply only to conversation-free workflow documentation. An unset mapping
+stops dependent work; never choose an implicit fallback or create a mapping.
+Update conversation context in its approved unversioned location at task entry
+and handoff; tracked handoff records generic workflow status only. Reports/data
+and contexts for conversations are permanently unversioned, not eligible for
+later Git promotion. Existing input/working/sources/output/review/trace layout
+remains authoritative; no new generic directory layout replaces it.
 
-Use an exact maintainer-supplied project path, not repository discovery. Apply
-its closest AGENTS.md and storage guidance; read DATA_PRIVACY.md or SECURITY.md
-and EXECUTION_SAFETY.md first where required. Establish allowed metadata,
-file classifications and intended action. Governance does not override local
-authority. Never inspect intake, restricted content, private worker state or
-protected projects to determine whether they are safe.
+Run after explicit invocation or deliberate maintainer selection for setup,
+host connection or a targeted storage problem. Routine work using an existing
+approved mapping does not invoke this skill. Read the relevant sections of
+[SYNCHRONIZED_STORAGE.md](../../../SYNCHRONIZED_STORAGE.md), not an unrelated
+project inventory.
 
-Read only safe catalog entries and the exact permitted local mappings. Keep
-absolute paths and provider details in ignored host files. Do not enumerate
-the sync root, other projects or entire catalogs containing sensitive metadata.
-Invocation grants no access, destination writes, installation, transmission,
-Git or publication authority. Ask only for authority missing for a concrete
-next action; continue independent permitted work. If the project's rules need
-a control word, propose one minimum copy-ready destination/action instruction.
+## Scope and authority
 
-## Setup or connect a host
+Use the known current project or an exact maintainer-supplied project path.
+Apply its closest rules and DATA_PRIVACY.md or SECURITY.md/EXECUTION_SAFETY.md
+where required. Read only permitted catalog entries and exact ignored mappings.
+Never inspect restricted data, intake, credentials, private worker state or
+protected projects to decide whether they are safe. Do not enumerate the sync
+root, other projects or whole sensitive catalogs. A mapping grants no access,
+destination-write, transmission, Git or publication authority; reuse existing
+authority and ask only for what the concrete action lacks.
 
-Reuse existing decisions and mappings. Establish the stable non-sensitive
-project ID, selected input/material scope, optional output, conflict handling
-and backup responsibility only as needed. Resolve logical roots to this host's
-exact directories. Preserve existing mappings and markers; do not overwrite
-or invent an identity when the marker conflicts.
+## Setup or connect
 
-Prepare local mapping changes and the exact proposed directory layout. Obtain
-any missing outside-write and provider-transmission authority before creating
-folders or moving files inside a synchronized directory. Keep input unchanged;
-use external materials for retained approved working files and never sync temp.
-Record a durable storage decision in existing project context or a local
-Decision Record only when authorized. A read-only check needs no new setup.
+Reuse supplied identity, project ID, mappings and approved scope. Ask only for
+missing decisions; a known mapping needs no new setup questionnaire. Prepare
+the simple input/materials/optional-output layout and proposed local mappings.
+The external area is for approved agent-readable, unversioned files; keep
+repository-only classifications in the repository. Preserve existing markers
+and legacy mappings; resolve identity conflicts before any dependent operation.
 
-## Targeted check
+Obtain missing outside-write/provider authority before creating folders or
+moving files. Use one stable catalog ID and actual location per artifact.
+Keep originals unchanged; transformations become separately cataloged materials.
+Do not synchronize temp or copy an entire repository hierarchy. Never migrate
+existing files implicitly. Keep absolute paths/provider details in ignored
+PATHS.local.md files. Connecting another host normally changes only those
+mappings; record durable choices in existing context/decisions, not a second
+storage catalog. New research defaults follow the material guide.
 
-Confirm input/material mappings resolve to the intended project directory.
-Choose only exact approved files needed for this request; an empty selection
-checks the marker only. For ordinary supported local paths, use
-[scripts/Test-ExternalStorage.ps1](../../../scripts/Test-ExternalStorage.ps1)
-with that absolute project directory, expected ID and relative files. Optional
-expected SHA-256 values must be approved and match selected files; hashing is
-content access. The helper outputs fixed statuses and selection indices only.
+## Check a concrete dependency
 
-On identity mismatch, unavailable/placeholder paths or unsupported reparse
-points, stop dependent file use. Report the specific fixed status and request
-an operator check if needed; do not automatically hydrate, scan, copy or fall
-back to a provider API. The helper checks local metadata and optional integrity,
-not cloud convergence. Report sync as checked only from separately reviewed
-provider evidence; otherwise distinguish unchecked from technically unverifiable.
+Resolve only required IDs and exact paths. Reuse still-current checks within
+the task; refresh after mapping, host, availability or conflict changes. Use
+[Test-ExternalStorage.ps1](../../../scripts/Test-ExternalStorage.ps1) with the
+exact project directory, expected ID and approved relative files; an empty
+selection checks the marker. Optional hashes require content-access approval.
+For creation, missing new files are expected: separately verify the approved
+parent/write scope rather than treating missing as failed existing-file use.
 
-Report the selected result, actual checks, limitations and any concrete next
-step. Handoff storage details only when the current continuation depends on
-them. Do not add checks or required sync fields to start-task, start-project,
-general handoffs or background workflows.
+On mismatch, unavailable/placeholder or unsupported linked paths, stop dependent
+use; do not hydrate, scan, overwrite or invoke provider APIs. New research may
+use its documented local fallback and must catalog its actual location; required
+existing evidence cannot be replaced by an invented report. Distinguish local
+availability/integrity from cloud convergence: report SyncStatus as unchecked
+unless independently verified provider evidence exists. Keep output to fixed
+statuses and safe metadata, not raw paths, private contents or hashes.
 
-## Domain boundary
-
-Treat screenshots, exports and reference documents according to their access
-classification. Edited retained media are materials; maintained docs/styles
-remain authoritative. Storage checks do not render or approve publication.
+Report the resolved operation, actual checks and remaining limits. Handoff only
+storage dependencies relevant to continuation. No background synchronization,
+automatic task-entry check, installation, credential use or publication follows
+from this skill. Where a control-word authorization is missing, propose a
+minimum copy-ready instruction for the exact destination/action and consequence;
+the suggestion is not authorization.

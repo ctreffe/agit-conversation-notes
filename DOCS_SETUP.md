@@ -1,5 +1,12 @@
 # Documentation Setup
 
+For any actual or fictional conversation, [CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md)
+overrides the generic placement, catalog and promotion instructions below. All
+conversation contexts, reports, data, identifiers and metadata remain permanently
+unversioned in explicitly mapped storage. No implicit local fallback, Git promotion
+or tracked conversation catalog/handoff entry is permitted. Repository docs and
+these scaffolds remain conversation-free; populate only an approved unversioned copy.
+
 AGIT Conversation Notes was configured starting 2026-10-12 and initialization
 completed on 2026-10-13; see [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).
 
@@ -59,3 +66,18 @@ Reproduce on another clone through
 [VALIDATION.md](VALIDATION.md), obtaining installation approval there.
 No completed DOCX correction round-trip is recorded. Revision-extraction libraries are
 selected during concrete tooling design; PDF and visual tooling are deferred.
+
+## Internal document contexts
+
+[DOCUMENTS.md](DOCUMENTS.md) is the document/language-set index and lifecycle owner.
+The linked `DOCUMENT_CONTEXT.md` owns the detailed contract, assembly/update
+method, assigned catalog source IDs, evidence baseline and next actions.
+Existing flat QMD source paths stay unchanged; their context is under
+`docs/<document-slug>/`. New additions normally group context and sources there.
+Populate the context during explicit `add-document`, read it at task entry and
+refresh affected open questions and next steps before handoff. Reconstruct only
+supported historical facts; record missing methods as gaps. Shared sources remain
+centralized in input/material catalogs, with per-document assignments in contexts.
+Keep contexts, research reports and scaffolds out of navigation, includes and
+copied publication resources. Root-anchor render patterns and inspect their actual
+input scope; render exclusions alone do not prevent resource copying.

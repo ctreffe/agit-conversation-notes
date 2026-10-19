@@ -1,5 +1,12 @@
 # Project Materials
 
+For any actual or fictional conversation, [../CONVERSATION_STORAGE.md](../CONVERSATION_STORAGE.md)
+overrides the generic placement, catalog and promotion instructions below. All
+conversation contexts, reports, data, identifiers and metadata remain permanently
+unversioned in explicitly mapped storage. No implicit local fallback, Git promotion
+or tracked conversation catalog/handoff entry is permitted. Repository docs and
+these scaffolds remain conversation-free; populate only an approved unversioned copy.
+
 Synchronized external materials use provider-neutral `sync:` roots and storage
 `external`; see [SYNCHRONIZED_STORAGE.md](../SYNCHRONIZED_STORAGE.md).
 
@@ -24,9 +31,51 @@ device-specific paths. Never version credentials, private share tokens or
 absolute local paths.
 
 Examples include cropped screenshots, OCR extracts, converted reference
-documents and retained review preparations. Move accepted textual content to
+documents, retained review preparations, research reports and researched
+JSON/CSV data. Research follows the storage and reuse rule below. Use
+[the report scaffold](../templates/RESEARCH_REPORT.md) to preserve question-level
+findings, provenance and refresh rules. Document contexts assign catalog IDs to
+one or more documents without copying shared files. Retained research remains
+working evidence rather than automatically accepted document text.
+
+Move accepted textual content to
 `docs/`; keep reviewed binary documentation material in `materials/versioned/`
 after Git approval and preserve its provenance. Presentation source belongs in
 `styles/`. Generated review copies and finished publication outputs belong in
 the applicable format directory below `output/`; returned annotated review
 files remain separate under `review/`.
+
+## Question research
+
+Retain question research reports and optional datasets as separately cataloged
+materials, under the storage rule below. Use the
+[report scaffold](../templates/RESEARCH_REPORT.md) for concrete questions,
+individual source assessments with evidence/reasons/dates, methods and limits.
+Keep prior report/source references when later assessments change. New data
+retain schema and record/field provenance; publication remains separate.
+
+## Research storage and reuse
+
+New research reports and generated data sources stay outside Git by default.
+Prefer `sync:<project-id>/materials/research/` only when that project's mapping,
+identity and approved write/provider scope already cover these materials and
+the destination is locally available. Use the selected project's existing
+catalog and ignored mapping; do not discover cloud folders or set up storage
+implicitly. This use of an approved mapping does not invoke a setup skill.
+
+Otherwise save under ignored `materials/local/research/` and catalog the actual
+local location and any availability limitation. A missing, mismatched,
+placeholder or unsupported external destination is not permission to hydrate,
+move or transmit. If an externally stored artifact is required for the task,
+report the gap rather than silently claiming successful external delivery.
+Do not move earlier artifacts automatically. Separate file-specific approval
+is needed to version research content; a cloud location is not Git or publication
+approval. Keep reports and generated datasets separately cataloged with stable
+IDs, provenance and references to prior assessments.
+
+Before later reuse, resolve the required artifact's ID and location, verify the
+relevant availability and access, and reuse still-current evidence from this
+task. Record a missing report as an evidence gap; never invent its contents or
+assessment. Check only needed artifacts, not every catalog or project. Use
+[SYNCHRONIZED_STORAGE.md](../SYNCHRONIZED_STORAGE.md) when setup or a mapping
+problem actually needs attention.

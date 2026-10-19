@@ -59,6 +59,7 @@ yarn-error.log*
 
 **/*.quarto_ipynb
 
+/.quarto/
 # Conversation content is permanently unversioned and excluded from GitHub.
 # Deliberately mapped local storage is allowed; never force-add its contents.
 CONVERSATION_PATHS.local.md
@@ -66,3 +67,4 @@ CONVERSATION_PATHS.local.md
 /transcripts/
 /conversation-work/
 /conversation-output/
+/materials/CATALOG.local.md

@@ -5,9 +5,26 @@ description: Inspect named current rendered HTML, PDF or DOCX documentation surf
 
 # Visual Inspection
 
+## Conversation storage takes precedence
+
+Read [CONVERSATION_STORAGE.md](../../../CONVERSATION_STORAGE.md) before any
+conversation-related work. For actual or fictional conversations, resolve the
+context, source catalog, report/data destinations and trace only through approved
+ignored CONVERSATION_PATHS.local.md and the selected unversioned catalog. Keep
+all IDs, context contents, research metadata and detailed next steps out of
+tracked catalogs, docs, decisions and TASK_HANDOFF.md. Their generic instructions
+below apply only to conversation-free workflow documentation. An unset mapping
+stops dependent work; never choose an implicit fallback or create a mapping.
+Update conversation context in its approved unversioned location at task entry
+and handoff; tracked handoff records generic workflow status only. Reports/data
+and contexts for conversations are permanently unversioned, not eligible for
+later Git promotion. Existing input/working/sources/output/review/trace layout
+remains authoritative; no new generic directory layout replaces it.
+
 Run only when the maintainer explicitly invokes `$visual-inspection`. Establish
 the named document, exact current render, selected formats and intended routes,
-pages and viewports. Read `DOCUMENTS.md` and only the applicable format,
+pages and viewports. Resolve `DOCUMENTS.md` and its shared document context
+for the local contract, then read only the applicable format,
 screenshot and disclosure guidance. Preserve source, output and Git state.
 
 Refuse missing, stale, ambiguous or unselected output. Do not render a missing

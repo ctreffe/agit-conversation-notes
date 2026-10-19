@@ -5,8 +5,29 @@ description: Render a maintained Quarto document or report through the repositor
 
 # Render Document
 
+## Conversation storage takes precedence
+
+Read [CONVERSATION_STORAGE.md](../../../CONVERSATION_STORAGE.md) before any
+conversation-related work. For actual or fictional conversations, resolve the
+context, source catalog, report/data destinations and trace only through approved
+ignored CONVERSATION_PATHS.local.md and the selected unversioned catalog. Keep
+all IDs, context contents, research metadata and detailed next steps out of
+tracked catalogs, docs, decisions and TASK_HANDOFF.md. Their generic instructions
+below apply only to conversation-free workflow documentation. An unset mapping
+stops dependent work; never choose an implicit fallback or create a mapping.
+Update conversation context in its approved unversioned location at task entry
+and handoff; tracked handoff records generic workflow status only. Reports/data
+and contexts for conversations are permanently unversioned, not eligible for
+later Git promotion. Existing input/working/sources/output/review/trace layout
+remains authoritative; no new generic directory layout replaces it.
+
 Confirm the authoritative source, requested or required format, Quarto project
-configuration and documented output location. Apply local source-access,
+configuration and documented output location. For a cataloged document,
+resolve its context from `DOCUMENTS.md` for required formats and validation
+rules; navigation-only pages use the project configuration. Keep
+`DOCUMENT_CONTEXT.md`, research reports and data not approved for publication
+out of rendered pages, includes and copied resources; inspect the actual
+output scope when resource/render rules change. Apply local source-access,
 environment and disclosure rules before rendering. Use the existing project
 toolchain and do not install or update dependencies without approval.
 

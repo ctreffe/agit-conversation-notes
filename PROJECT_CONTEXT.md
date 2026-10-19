@@ -1,5 +1,15 @@
 # Project Context
 
+## Template synchronization and context ownership
+
+[TEMPLATE_SYNC.md](TEMPLATE_SYNC.md) owns the current comparison, adoption,
+rejections and validation state. Earlier synchronization sections below are
+historical evidence only. This file owns durable project intent, constraints,
+roadmap and project-wide open decisions; TASK_HANDOFF.md owns the current task
+checkpoint. Update either only when its authoritative facts change.
+Document contexts own assembly/update methods, assigned evidence and
+document-specific next steps; the document catalog owns lifecycle status.
+
 ## Identity and initialization
 
 - Project: AGIT Conversation Notes; repository: agit-conversation-notes.
@@ -12,8 +22,10 @@
   inherited Unreleased changes.
 - Verified imported snapshot / initial synchronization baseline:
   7af11ba2d132334baa9949666ae9391146649872 (this repository's initial commit).
-  The upstream template commit was not supplied and cannot be inferred from
-  this fresh initial commit. Verify it before upstream synchronization.
+  Exact imported-tree comparison on 2026-10-19 verified upstream commit
+  `490b57e8ef0cdef02cdc5285cd6edcc027005f6d`; both trees are
+  `41623aefbcaa6e313a4d5ecf59e79c4cd6699323`. This is provenance,
+  not the current selected adoption checkpoint; see TEMPLATE_SYNC.md.
 - Last harmonization / collaboration retrospective: not performed.
 - Source-template and Governance clone mappings: Unset in ignored
   RETROSPECTIVE_PATHS.local.md; no clone paths guessed or searched.
