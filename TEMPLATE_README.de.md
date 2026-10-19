@@ -5,7 +5,7 @@
 >
 > Dieses Projekt nutzt KI-Unterstützung für Dokumentationspraktiken, abgegrenzte
 > Workflows, Quellennachweise und Review. [COLLABORATION.md](COLLABORATION.md)
-> dokumentiert die Maintainer-Autorität und die externe Gesprächsquellenregel.
+> dokumentiert die Maintainer-Autorität und die unversionierte Gesprächsquellenregel.
 
 [English guide](TEMPLATE_README.md) · [Projekteinführung](README.de.md)
 
@@ -28,15 +28,27 @@ Einmalskills wurden entfernt. Der reguläre abgegrenzte Einstieg nutzt start-tas
 
 ## Gesprächsworkflow
 
-Der geplante Skill draft-conversation-notes soll ausführliche deutsche thematische
-Zusammenfassungen als persönliche Gedächtnisstütze erstellen. Er ordnet nicht
+Der [Skill draft-conversation-notes](.agents/skills/draft-conversation-notes/SKILL.md)
+enthält Anweisungen für ausführliche deutsche thematische Zusammenfassungen als
+persönliche Gedächtnisstütze. Er ordnet nicht
 danach, wer was gesagt hat. Relevante Transkriptstellen dienen der Überprüfung;
 Namen erscheinen nur, wo sie nötig sind. Ergebnisse, Beschlüsse, Aufgaben und
 offene Fragen werden unterschieden, Unsicherheiten markiert, Vorschläge von
 Beschlüssen getrennt und fehlende Angaben nicht erfunden.
-Skill und detailliertes Schema sind noch nicht implementiert.
+Zuerst werden Unklarheiten durch nummerierte Kontextfragen in aufeinanderfolgenden
+Blöcken von höchstens zehn Punkten geklärt. Danach bleiben wichtige Argumente,
+Begründungen und Alternativen erhalten; Gesprächsdatum/Beteiligte werden festgehalten,
+die Gliederung folgt den Inhalten. Sinnvolle Befunde/Hervorhebungen, Kategorien,
+Tabellen und Übersichten sind optional; Nachweise stehen in kompakten Fußnoten.
+Die vorläufige QMD wird nach dem ersten abgeschlossenen Testprojekt geprüft und
+spätestens nach dem zweiten überarbeitet. Originalzitate
+erscheinen nur bei wichtiger Formulierung oder verbleibender Unklarheit. Die
+[generische QMD-Vorlage](.agents/skills/draft-conversation-notes/assets/conversation-notes.qmd)
+wird an einem freigegebenen unversionierten Ort kopiert/befüllt. Beim
+dokumentierten ersten Test sind Klärung, Entwurf und DOCX-Export abgeschlossen;
+Durchsicht und Korrekturrückführung stehen noch aus.
 
-Die erste geplante Etappe nutzt einen kleinen fiktiven Ausschnitt extern:
+Ein optionaler generischer Test kann einen kleinen fiktiven Ausschnitt extern nutzen:
 geprüfte Struktur -> maßgebliche QMD -> DOCX -> Maintainer-Kommentare/Änderungen ->
 akzeptierte Korrekturen in QMD -> geprüfter Neurender. Reale Dateien sind nicht nötig.
 
@@ -51,11 +63,15 @@ Gespräche werden nicht im versionierten Katalog registriert.
 [CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md) ersetzt geerbte Speicher- und
 Versionierungsdefaults. Alle Gesprächsdateien, JSON, Derivate, QMD, Ausgaben,
 Review-Rückläufe, Snapshots, Nachweise, Logs und temporären Dateien bleiben
-dauerhaft extern und unversioniert, auch fiktive Tests. Externe QMD bleibt ohne
-Git-Historie maßgeblich. Inhalte gelangen niemals in Repository-Verzeichnisse
-oder Projektaufzeichnungen; eine Versionierungsausnahme gibt es nicht.
+dauerhaft unversioniert und außerhalb von GitHub, auch fiktive Tests. Ignorierte
+lokale Repository-Ablagen sind bei bewusster Zuordnung und geprüftem Git-Ausschluss
+zulässig. Unversionierte QMD bleibt ohne Git-Historie maßgeblich. Gesprächsinhalte
+gelangen niemals in versionierte Vorlagen, Dokumentation oder Projektaufzeichnungen;
+sie werden niemals durch erzwungenes Hinzufügen versioniert.
 
-Die ignorierte CONVERSATION_PATHS.local.md steht zunächst auf Unset. Zugriff auf
+Die ignorierte CONVERSATION_PATHS.local.md ordnet standardmäßig den dauerhaften
+externen Sync-Speicher und das lokale ignorierte Repository-temp/conversation-work/
+für Zwischenstände zu. Zugriff auf
 konkrete Dateien und externe Schreibaktionen werden je Aufgabe freigegeben.
 Nicht-sensitive Einstufung und Pfadzuordnung erlauben keinen Zugriff.
 Sync-Speicher wird separat eingerichtet; Übermittlung, Weitergabe,
@@ -113,6 +129,7 @@ lies bei Bedarf nur den passenden Detailabschnitt.
 | [`check-consistency`](.agents/skills/check-consistency/SKILL.md) | Explizit | Diagnostiziert interne Widersprüche zwischen Intention, Roadmap, Entscheidungen, Inhalten und Dokumentation und entwickelt abgegrenzte Optionen. |
 | [`perform-retrospective`](.agents/skills/perform-retrospective/SKILL.md) | Explizit | Wertet Zusammenarbeitsevidenz aus und trennt Projektbefunde von wiederverwendbaren Template- oder Familienkandidaten. |
 | [`add-document`](.agents/skills/add-document/SKILL.md) | Explizit | Ergänzt ein gepflegtes Dokument oder verknüpfte Sprachfassungen einschließlich Katalogmetadaten und Navigation. |
+| [draft-conversation-notes](.agents/skills/draft-conversation-notes/SKILL.md) | Agent oder explizit | Klärt externe Transkripte in Blöcken von höchstens zehn Punkten und erstellt inhaltsgeleitete deutsche QMD mit Datum/Beteiligten, optionalen Hervorhebungen und Fußnoten. |
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Aufgabenabhängig oder explizit | Rendert gepflegte Quarto-Quellen in den benötigten Formaten und prüft technische Ergebnisse und Ablage. |
 | [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explizit | Wertet freigegebenes kommentiertes DOCX- oder PDF-Feedback aus und überträgt akzeptierte Revisionen in gepflegte Quellen. |
 | [`review-document`](.agents/skills/review-document/SKILL.md) | Explizit | Prüft ein Dokument oder einen Abschnitt kritisch auf Korrektheit, erfolgreiche Bearbeitung der Leseraufgaben und Verständlichkeit; liefert belegte Befunde und Verbesserungsvorschläge. |
@@ -178,7 +195,9 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 [REPOSITORY.md](REPOSITORY.md) beschreibt die aktuelle Struktur. docs/ und
 _quarto.yml enthalten nur generische Workflowdokumentation; optionale HTML-Ausgabe
 bleibt ignoriert unter output/html/. Geerbte input-Leitlinien bleiben unverändert.
-Repository-materials/temp/output/review sind niemals Gesprächsersatzspeicher.
+Repository-Ablagen dürfen Gesprächsdateien nur an bewusst zugeordneten,
+ignorierten und unversionierten Orten aufnehmen. temp/conversation-work/ ist
+die standardmäßige temporäre Ablage.
 
 Quarto 1.9.38 und Pandoc 3.8.3 sind vorhanden. Einfache externe QMD -> DOCX braucht
 kein TeX/R/Python. [QUARTO.md](QUARTO.md) beschreibt das externe Befehlsmuster,

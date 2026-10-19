@@ -63,3 +63,12 @@ the preserved historical schema is not the current workflow. Further detail is o
 - **Prevent or limit:** No global Python/ACL/temp-policy changes; action and
   download authority remain separate. Verify the original skill-validation
   outcome with Test-CodexSkill.ps1, not merely successful package import.
+
+## KI-0007: Windows sandbox blocks Quarto's local Deno project cache
+
+- **Recognize:** An authorized render fails with PermissionDenied at Deno.openKv
+  while initializing .quarto/project-cache inside the selected render project.
+- **Fix:** Verify source/configuration, output, cache and temporary paths; request
+  narrow platform escalation for the already authorized exact render command.
+- **Prevent or limit:** Keep the project and TEMP/TMP/TMPDIR in mapped unversioned
+  storage; no ACL/global-policy changes, installs or additional transmission.

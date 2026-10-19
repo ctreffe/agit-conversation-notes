@@ -59,8 +59,8 @@ yarn-error.log*
 
 **/*.quarto_ipynb
 
-# Permanent conversation boundary: content must remain external.
-# Accidental-placement safeguards, never authorized storage.
+# Conversation content is permanently unversioned and excluded from GitHub.
+# Deliberately mapped local storage is allowed; never force-add its contents.
 CONVERSATION_PATHS.local.md
 /conversations/
 /transcripts/

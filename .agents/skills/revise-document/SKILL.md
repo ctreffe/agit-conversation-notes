@@ -23,24 +23,27 @@ workflow, distinguishing technical rendering, content review, separately
 invoked visual inspection and publication approval. Report incorporated,
 deferred and rejected items plus checks and remaining limitations.
 
-## AGIT external conversation scope
+## AGIT unversioned conversation scope
 
 Read CONVERSATION_STORAGE.md and FEEDBACK_WORKFLOW.md at the repository root
-before conversation revision. Resolve exact authorized external review/QMD,
+before conversation revision. Resolve exact authorized unversioned review/QMD,
 baseline, extraction, trace and temporary locations via ignored
-CONVERSATION_PATHS.local.md. Require scoped access and outside-write authority;
-an Unset or unavailable mapping stops dependent work. Ensure canonical paths,
-reparse points and all intermediates remain outside Git.
+CONVERSATION_PATHS.local.md. Require scoped access and authority for outside
+writes; an Unset or unavailable mapping stops dependent work. Check canonical
+paths and reparse points. All files/intermediates stay unversioned and off GitHub;
+for mapped repository locations verify ignore coverage and absence of tracked
+conversation files. Temporary processing uses ignored temp/conversation-work/.
 
-Keep returned review files unchanged. Compare current external QMD to the
-externally retained export snapshot/hash; reconcile drift before applying
+Keep returned review files unchanged. Compare current unversioned QMD to the
+retained unversioned export snapshot/hash; reconcile drift before applying
 accepted revisions. Speaker labels remain fallible; thematic content preparation
 is the goal. Do not invent missing facts or turn proposals into decisions.
 
-Apply accepted corrections to authoritative external QMD, which stays permanently
+Apply accepted corrections to authoritative QMD, which stays permanently
 unversioned. Keep comments, Track Changes, extracts, baselines, source references
-and revision decisions externally. Never copy conversation files/content into
-repository directories, catalogs, Decision Records, changelog or handoff.
+and revision decisions in mapped unversioned storage (external sync by default).
+Never copy conversation content into versioned templates, documentation, catalogs,
+Decision Records, changelog or handoff; never force-add conversation files.
 A workflow-level decision may be recorded only without concrete conversation
-content. Re-render the affected external format and retain external traceability;
+content. Re-render the affected format and retain unversioned traceability;
 report generic project progress and validation limits only.

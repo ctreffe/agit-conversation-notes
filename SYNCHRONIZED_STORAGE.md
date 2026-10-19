@@ -123,8 +123,11 @@ Include storage details in a handoff only for a concrete continuation dependency
 ## AGIT Conversation Notes override
 
 CONVERSATION_STORAGE.md overrides generic source/output placement for conversation
-content: all QMD, outputs, review files and traces remain external and unversioned,
-including fictional trials. Use ignored CONVERSATION_PATHS.local.md; never put
+content: all QMD, outputs, review files and traces remain unversioned and off
+GitHub, including fictional trials. Persistent storage defaults to the external
+sync project; deliberately mapped ignored repository locations are also allowed.
+Use ignored CONVERSATION_PATHS.local.md; never put
 conversation entries into tracked input/material catalogs. Repository docs/styles
-remain generic. Sync setup/transmission is deferred; temporary files stay external
-and device-local. The helper does not validate QMD authority, render paths or backup.
+remain generic. Temporary files use ignored repository temp/conversation-work/,
+remain device-local and are never synchronized. The helper does not validate QMD
+authority, render paths, Git exclusion or backup. Transmission remains separately scoped.

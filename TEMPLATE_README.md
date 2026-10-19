@@ -5,7 +5,7 @@
 >
 > This project uses AI assistance for documentation practices, scoped workflows,
 > source traceability and review. [COLLABORATION.md](COLLABORATION.md) records
-> maintainer authority and the external conversation-source exception.
+> maintainer authority and the unversioned conversation-source exception.
 
 [Deutscher Leitfaden](TEMPLATE_README.de.md) · [Project introduction](README.md)
 
@@ -28,14 +28,23 @@ skills were removed. Routine bounded entry is start-task.
 
 ## Conversation workflow
 
-The planned draft-conversation-notes skill will prepare detailed German thematic
-summaries for the maintainer's personal recall. It does not organize by who said
+The [draft-conversation-notes skill](.agents/skills/draft-conversation-notes/SKILL.md)
+provides instructions for detailed German thematic summaries for personal recall. It does not organize by who said
 what. Relevant transcript references support checking; names are included only
 when needed. Distinguish results, decisions, tasks and open questions, mark
 uncertainty, keep suggestions distinct from decisions and invent no missing data.
-The skill and detailed schema are not implemented.
+First clarify ambiguity through contextual numbered questions in sequential
+batches of at most ten. Then preserve important arguments, reasons and alternatives;
+record actual conversation date/participants and adapt structure to the content.
+Meaningful findings/highlights, categories, tables and overviews are optional;
+use compact source footnotes. Review the provisional QMD after the first completed
+test project and revise it no later than after the second. Original quotes appear only when wording matters or uncertainty
+persists. The [generic QMD asset](.agents/skills/draft-conversation-notes/assets/conversation-notes.qmd)
+is copied/populated at an approved unversioned location. The recorded first
+trial has completed clarification, drafting and DOCX export; review and the
+correction round-trip remain pending.
 
-The planned first trial uses a small fictional transcript externally: reviewed
+An optional generic test can use a small fictional transcript externally: reviewed
 structure -> authoritative QMD -> DOCX -> maintainer comments/Track Changes ->
 accepted corrections to QMD -> checked re-render. No real files are required.
 
@@ -50,11 +59,14 @@ register concrete conversations in the versioned catalog.
 [CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md) overrides inherited placement
 and versioning defaults. All conversation JSON, derivatives, QMD, rendered formats,
 returned review copies, snapshots, trace, logs and temporary files remain
-permanently external and unversioned, including fictional trials. External QMD
-remains authoritative without Git history. Never copy content to repository
-directories or project records; no versioning exception is provided.
+permanently unversioned and off GitHub, including fictional trials. Ignored local
+repository locations are allowed when deliberately mapped and checked for Git
+exclusion. Unversioned QMD remains authoritative without Git history. Never put
+conversation content in versioned templates, docs or project records; never force-add it.
 
-Use ignored CONVERSATION_PATHS.local.md, initially Unset. Exact file access and
+Use ignored CONVERSATION_PATHS.local.md: persistent external sync storage by
+default, device-local ignored repository temp/conversation-work/ for intermediates.
+Exact file access and
 outside writes must be authorized per task. Non-sensitive classification and
 mapping do not grant access. Sync storage is separately configured; transmission,
 sharing, publication, backup and access remain separate decisions. Do not sync
@@ -106,6 +118,7 @@ read only a matching detail section when needed.
 | [`check-consistency`](.agents/skills/check-consistency/SKILL.md) | Explicit | Diagnose internal contradictions between intent, roadmap, decisions, content and documentation; develop bounded options. |
 | [`perform-retrospective`](.agents/skills/perform-retrospective/SKILL.md) | Explicit | Review collaboration evidence and distinguish project findings from reusable template or family candidates. |
 | [`add-document`](.agents/skills/add-document/SKILL.md) | Explicit | Add a maintained document or linked language versions, including catalog metadata and navigation. |
+| [draft-conversation-notes](.agents/skills/draft-conversation-notes/SKILL.md) | Agent or explicit | Clarify external transcripts in batches of at most ten and draft content-led German QMD with date/participants, optional highlights and footnotes. |
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Task-driven or explicit | Render maintained Quarto sources in the required formats and check technical output and placement. |
 | [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explicit | Evaluate authorized annotated DOCX or PDF feedback and transfer accepted revisions into maintained sources. |
 | [`review-document`](.agents/skills/review-document/SKILL.md) | Explicit | Critically review a document or section for correctness, reader success and clarity; return grounded findings and improvement proposals. |
@@ -168,7 +181,8 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 [REPOSITORY.md](REPOSITORY.md) describes the current layout. docs/ and _quarto.yml
 contain only generic workflow documentation; their optional HTML output stays
 in ignored output/html/. Existing input guidance remains unchanged. Repository
-materials/temp/output/review are never fallback conversation locations.
+folders may hold conversation files only in deliberately mapped ignored/untracked
+locations. temp/conversation-work/ is the default temporary location.
 
 Quarto 1.9.38 and Pandoc 3.8.3 are available. Plain external QMD -> DOCX needs no
 TeX/R/Python. [QUARTO.md](QUARTO.md) documents the external command pattern, still

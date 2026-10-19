@@ -72,17 +72,26 @@ alone establishes neither correctness nor publication readiness.
 
 - Follow CONVERSATION_STORAGE.md before conversation tasks. All conversation
   files, including fictional fixtures, JSON, working copies, QMD, outputs,
-  review evidence, logs and intermediates stay permanently unversioned outside
-  Git. Never copy content into project docs, catalogs, handoffs or decisions.
+  review evidence, logs and intermediates stay permanently unversioned and off
+  GitHub. Ignored local repository storage is allowed. Never copy content into
+  versioned project docs, catalogs, handoffs or decisions; never force-add it.
 - External QMD is authoritative despite being unversioned. Resolve exact source,
-  output/review/trace and external temporary locations through ignored
+  output/review/trace and temporary locations through ignored
   CONVERSATION_PATHS.local.md; Unset stops dependent work. Mapping/non-sensitive
   classification grants no access, outside writes, transmission or sharing.
 - Apply this exception to drafting, rendering, revision and document registration.
-  Inherited repository input/materials/docs/temp/output/review folders are never
-  conversation fallback storage. Verify canonical paths/configuration, including
-  reparse points, caches and intermediates, before processing.
-- draft-conversation-notes is planned only. Summaries prepare thematic German
+  Persistent storage defaults to the external sync project; temporary processing
+  uses ignored temp/conversation-work/. Other repository conversation locations
+  must be deliberately mapped, ignored and untracked, never implicit fallback.
+  Verify canonical paths/configuration, including reparse points, caches and
+  intermediates, and exclusion from Git tracking before processing.
+- Use draft-conversation-notes for transcript clarification and thematic QMD drafts.
+  Summaries prepare thematic German
   content for personal recall, using transcript evidence without speaker-by-speaker
   narration; preserve uncertainty and distinguish proposals from decisions.
-  Detailed schema/method remains deferred.
+  Follow the clarification batches, actual date/participants header, flexible
+  content-led structure and footnote model in DOCUMENTATION_PROCESS.md. Findings,
+  highlights and recaps are optional. Review/revise the provisional QMD after
+  the first and no later than the second completed test project.
+  Its generic asset is never populated
+  with conversation content in the repository.

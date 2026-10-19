@@ -1,7 +1,12 @@
 # PDR-0001: Keep all conversation files external and unversioned
 
-Status: Accepted
+Status: Superseded by PDR-0002
 Date: 2026-10-12
+
+The maintainer clarified on 2026-10-13 that the permanent boundary concerns
+versioning and GitHub, not physical placement. See
+[PDR-0002](PDR-0002-unversioned-conversation-storage.md). The original record below
+is retained as history of the overly restrictive placement interpretation.
 
 ## Context
 

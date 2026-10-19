@@ -45,4 +45,8 @@ Use the matching template as a starting point:
 
 | Record | Status | Subject |
 | --- | --- | --- |
-| [PDR-0001](PDR-0001-external-conversation-files.md) | Accepted | All conversation files external and permanently unversioned; external QMD authoritative. |
+| [PDR-0001](PDR-0001-external-conversation-files.md) | Superseded by PDR-0002 | Earlier blanket external-placement interpretation; retained as history. |
+| [PDR-0002](PDR-0002-unversioned-conversation-storage.md) | Accepted | Conversation files unversioned and off GitHub; ignored repository storage allowed, external sync default and local temp convention. |
+| [DDR-0001](DDR-0001-thematic-notes-and-clarification.md) | Superseded by DDR-0002 | Earlier fixed thematic/recap layout; retained as decision history. |
+| [DDR-0002](DDR-0002-content-led-provisional-notes.md) | Accepted | Flexible content-led notes with date/participants, optional highlights and review/revision by the second test project. |
+| [DDR-0003](DDR-0003-explanatory-clarification-footnotes.md) | Accepted | Compact specialist-context explanations from clarification answers in footnotes, distinct from original transcript evidence. |

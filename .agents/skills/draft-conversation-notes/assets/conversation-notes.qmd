@@ -1,0 +1,41 @@
+---
+title: "Gesprächsnotizen — Entwurf"
+lang: de
+format:
+  docx:
+    toc: false
+    number-sections: false
+---
+
+<!-- Provisional generic starter. Copy/adapt only at an authorized unversioned
+working location (external or deliberately mapped ignored repository storage); never populate this repository asset with conversation content.
+Use a fitting document title and confirmed conversation date/participants.
+Ask about missing metadata; deliberately unresolved values stay marked unknown.
+Choose headings, prose, lists and optional highlights from actual content.
+No mandatory opening overview, category sections, table or closing recap.
+Review after the first completed test project and revise by the second. -->
+
+**Datum:** {{Belegtes oder bestätigtes Gesprächsdatum; sonst ausdrücklich unklar.}}
+
+**Beteiligte:** {{Belegte oder bestätigte Beteiligte; sonst ausdrücklich unklar.}}
+
+{{Inhaltliche Aufbereitung passend zum Gespräch: wichtige Inhalte, Argumente,
+Begründungen und Alternativen, verdichtet ohne Bedeutungsänderung. Deskriptive
+Themenüberschriften nur dort, wo sie den Inhalt sinnvoll gliedern.}}[^quelle-01]
+
+<!-- Optional: lightly emphasize actual results, decisions, tasks or open questions
+near the relevant content with bold labels. No empty categories or required blocks.
+An opening overview or closing recap is useful only when it adds value.
+Quote original wording only where wording matters or uncertainty persists.
+Optional explanatory notes retain useful specialist/internal context from the
+clarification answers without lengthening the narrative. Attach at first useful
+occurrence; preserve uncertainty and trace to the private clarification record.
+Generic example to adapt only when needed:
+[^wissen-01]: Erläuterung aus der Klärung: {{Knappe Begriffserklärung oder
+    relevanter Hintergrund; Sicherheit entsprechend der Klärungsantwort.}}
+Source notes retain actual locators. A combined note is allowed when concise.
+Replace/remove placeholders/comments; footnote IDs must be unique and grounded. -->
+
+[^quelle-01]: {{Tatsächlicher Transkriptbeleg: vorhandene Zeit-/Segmentangaben
+    oder klar bezeichnete Quellposition. Maintainer-Korrekturen getrennt
+    als Klärung aus dem unversionierten Korrekturstand kennzeichnen.}}

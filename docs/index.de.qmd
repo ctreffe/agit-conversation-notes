@@ -6,13 +6,22 @@ lang: de
 # Workflow
 
 Diese Seite beschreibt den generischen Projektworkflow ohne Gesprächsinhalte.
-Geplant sind deutsche thematische Zusammenfassungen als persönliche
-Gedächtnisstütze aus fehleranfälligen Whisper-v3-JSON-Dateien der Uni.
+Entwurfsskill und generische QMD-Vorlage unterstützen deutsche thematische
+Zusammenfassungen als persönliche Gedächtnisstütze aus fehleranfälligen
+Whisper-v3-JSON-Dateien der Uni.
 
 Alle Gesprächsdateien, einschließlich maßgeblicher QMD und fiktiver Testdaten,
-bleiben dauerhaft extern und unversioniert. DOCX dient zunächst der Durchsicht;
-akzeptierte Korrekturen gehen zurück in die externe QMD. Entwurfsskill und Schema
-werden nach der Initialisierung gemeinsam konzipiert.
+bleiben dauerhaft unversioniert und außerhalb von GitHub. Bewusst zugeordnete
+ignorierte Repository-Ablagen sind zulässig; dauerhafte Dateien liegen
+standardmäßig im externen Sync-Speicher, temporäre Dateien im ignorierten lokalen
+temp/conversation-work/. DOCX dient zunächst der Durchsicht; akzeptierte Korrekturen
+gehen zurück in die maßgebliche unversionierte QMD. Klärung kommt vor der
+Aufbereitung; Gesprächsdatum/Beteiligte geben Orientierung, die Gliederung folgt
+den Inhalten. Sinnvolle Hervorhebungen und Übersichten sind optional, mit kompakten
+Quellenfußnoten. Die vorläufige Vorlage wird nach dem ersten Test geprüft und
+spätestens nach dem zweiten überarbeitet. Der erste fiktive Gesprächstest steht aus.
 
 Projekteinführungen und erhaltene Leitfäden enthalten die verbindlichen
-Speicher-/Zugriffsregeln. Ein Gesprächstest oder eine Veröffentlichung erfolgte nicht.
+Speicher-/Zugriffsregeln. Der dokumentierte erste Entwurf/Export wartet auf
+Durchsicht und eine abgeschlossene Korrekturrückführung; eine Veröffentlichung
+erfolgte nicht.

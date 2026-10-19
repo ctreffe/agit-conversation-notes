@@ -108,9 +108,11 @@ clearly distinguished from sources. A successful render alone is insufficient.
 
 ## AGIT Conversation Notes exception
 
-External, permanently unversioned QMD is authoritative for conversation notes.
+Selected permanently unversioned QMD is authoritative for conversation notes.
 Git holds generic workflow rules/tools only. All artifacts and revision evidence,
-including fictional trials, stay external under CONVERSATION_STORAGE.md and
+including fictional trials, stay unversioned and off GitHub under CONVERSATION_STORAGE.md and
 ignored CONVERSATION_PATHS.local.md. No concrete content enters tracked catalogs,
-decisions, handoffs or status. The maintainer wants thematic German preparation
+decisions, handoffs or status. Deliberately mapped ignored repository storage is
+allowed; persistent files default to external sync, temporary files to ignored
+device-local temp/conversation-work/. The maintainer wants thematic German preparation
 for personal recall. Access, outside writes, transmission/publication stay separate.

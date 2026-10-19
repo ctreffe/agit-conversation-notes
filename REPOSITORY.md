@@ -2,7 +2,8 @@
 
 Git contains skills, scripts, generic templates, configuration and conversation-
 free project documentation. All concrete conversation files, including fictional
-trials, remain permanently external and unversioned. External QMD is authoritative;
+trials, remain permanently unversioned and off GitHub. Deliberately mapped ignored
+repository locations are allowed; selected unversioned QMD is authoritative;
 [CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md) is binding.
 
 ## Layout
@@ -13,15 +14,19 @@ trials, remain permanently external and unversioned. External QMD is authoritati
 - PROJECT_CONTEXT.md / DOCS_SETUP.md / DOCUMENTS.md: project defaults and generic
   planned contract; no conversation catalog or review ledger.
 - PROJECT_SETUP.md: retained initialization method.
-- CONVERSATION_STORAGE.md: binding external-storage deviation.
+- CONVERSATION_STORAGE.md: binding conversation versioning/storage deviation.
 - CONVERSATION_PATHS.local.example.md: generic mapping example; ignored
-  CONVERSATION_PATHS.local.md: host paths, initially Unset.
+  CONVERSATION_PATHS.local.md: host paths; persistent sync and local temp mappings.
 - .agents/skills/, scripts/, styles/: reusable methods/tooling/generic styles.
+- .agents/skills/draft-conversation-notes/assets/conversation-notes.qmd: generic
+  drafting template, copied/populated only at authorized unversioned locations.
 - docs/ / _quarto.yml: optional conversation-free workflow website.
 - decisions/: durable generic DDR/PDR/ADR records and templates.
 - input/: inherited classification guidance; unchanged, no conversation import.
-- materials/, temp/, output/, review/: generic documentation areas only,
-  never conversation storage or processing fallback.
+- materials/, output/, review/: generic guidance plus deliberately mapped ignored
+  local storage when selected; never populate their versioned guidance with content.
+- temp/conversation-work/: ignored device-local conversation intermediates;
+  never synchronized or versioned. Do not inspect temp/restricted/.
 - CHANGELOG.md: project-owned Unreleased history; TASK_HANDOFF.md: current bounded
   task checkpoint. No inherited template backlog is retained.
 

@@ -20,21 +20,23 @@ inspection evidence as part of routine rendering. Report the exact source,
 format, output, checks, warnings and skipped review surfaces, and do not infer
 publication approval from a successful render.
 
-## AGIT external conversation scope
+## AGIT unversioned conversation scope
 
 Before rendering a conversation document, read CONVERSATION_STORAGE.md and
-QUARTO.md at the repository root. Resolve the exact external QMD, format-specific
+QUARTO.md at the repository root. Resolve the exact selected unversioned QMD, format-specific
 output, resources, cache/log and temporary destinations through ignored
 CONVERSATION_PATHS.local.md. An Unset or unavailable mapping stops dependent work.
-Require scoped access and outside-write authority. Check canonical paths and
-containing Quarto configuration, including reparse points, so every artifact and
-intermediate remains outside Git. Work in the external source context and never
-copy content into repository input/materials/docs/temp/output/review folders.
+Require scoped access and authority for writes outside the repository. Check
+canonical paths, reparse points and containing Quarto configuration. Every
+artifact and intermediate stays unversioned and off GitHub; verify ignore
+coverage and absence of tracked conversation files for mapped repository paths.
+Use ignored temp/conversation-work/ for temporary processing. Work in the selected
+source context; never populate versioned templates or documentation with content.
 
-External QMD remains authoritative and permanently unversioned. Initially render
+The selected QMD remains authoritative and permanently unversioned. Initially render
 DOCX only, unless another format is specifically selected. Retain review baseline
-and source/output evidence in external trace/; keep all content-bearing diagnostics
-external. Report only generic workflow status into project docs/handoffs.
+and source/output evidence in mapped unversioned trace/; keep content-bearing diagnostics
+unversioned. Persistent storage defaults to the external sync project. Report only generic workflow status into project docs/handoffs.
 The repository _quarto.yml is for conversation-free workflow pages, never the
 conversation render configuration. Follow existing no-install/no-publication
 and separately explicit visual-inspection boundaries.

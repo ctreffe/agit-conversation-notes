@@ -6,13 +6,20 @@ lang: en
 # Workflow
 
 This page documents the generic project workflow without conversation content.
-The project plans German thematic summaries for personal recall from fallible
-university Whisper-v3 JSON.
+The drafting skill and generic QMD template support German thematic summaries
+for personal recall from fallible university Whisper-v3 JSON.
 
 All conversation files, including authoritative QMD and fictional trial data,
-remain permanently external and unversioned. DOCX is the initial review format;
-accepted corrections return to external QMD. The drafting skill and schema will
-be jointly designed after initialization.
+remain permanently unversioned and off GitHub. Deliberately mapped ignored
+repository storage is allowed; persistent files default to external sync and
+temporary files to ignored device-local temp/conversation-work/.
+DOCX is the initial review format; accepted corrections return to authoritative
+unversioned QMD. Clarification precedes synthesis;
+actual date/participants provide orientation, and structure follows the content.
+Useful highlights and recaps are optional, with compact source footnotes.
+Review the provisional template after the first test and revise it by the second.
+The first fictional conversation trial remains pending.
 
 Repository introductions and retained guides contain binding storage/access
-rules. No conversation trial or publication has occurred.
+rules. The recorded first draft/export awaits review and a completed correction
+round-trip; no publication has occurred.

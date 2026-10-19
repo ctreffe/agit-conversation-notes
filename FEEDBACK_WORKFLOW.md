@@ -2,10 +2,12 @@
 
 ## Authoritative source and storage
 
-External conversation QMD remains authoritative despite being unversioned.
+Selected conversation QMD remains authoritative despite being unversioned.
 Rendered formats and annotations are review evidence. All review files, extracts,
-baseline snapshots and decisions stay external; repository review/, output/ and
-temp/ are never conversation storage. Follow
+baseline snapshots and decisions stay unversioned and off GitHub. Persistent
+storage defaults to external sync; mapped ignored repository locations are allowed
+after verifying Git exclusion. Use ignored temp/conversation-work/ for temporary
+extraction. Never populate versioned guidance or records with conversation content. Follow
 [CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md).
 Repository-documentation feedback concerns only conversation-free workflow rules.
 
@@ -17,7 +19,7 @@ Repository-documentation feedback concerns only conversation-free workflow rules
    external trace/. Git commit IDs do not identify an external source baseline.
 3. Keep returned copies unchanged in external review/. Identify reviewer and
    reconcile changes since export before incorporation.
-4. Extract comments/Track Changes locally into external temporary storage.
+4. Extract comments/Track Changes locally into mapped ignored temporary storage.
    Never put conversation extracts or decisions into repository records/logs.
 5. Clear maintainer instructions may be applied when intent/source is unambiguous.
    Uncurated external feedback needs acceptance, rejection, qualification or

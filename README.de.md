@@ -28,39 +28,65 @@ Inhalte, zunächst als persönliche Gedächtnisstütze. Wer welchen Satz gesagt 
 bestimmt nicht die Struktur. Transkriptstellen ermöglichen Überprüfung; Namen
 sind nur relevant, wo sie nötig sind, etwa für bestätigte Aufgaben.
 
-## Geplanter Ablauf
+## Ablauf
 
 Externe JSON -> externe QMD -> externe DOCX zur Durchsicht -> akzeptierte
 Kommentare/Änderungen zurück in die maßgebliche QMD -> geprüfter Neurender.
 
-Der geplante Skill draft-conversation-notes soll Ergebnisse, Beschlüsse, Aufgaben
-und offene Fragen unterscheiden, Nachweise erhalten und Unsicherheiten markieren.
-Vorschläge dürfen nicht zu Beschlüssen und fehlende Angaben nicht erfunden werden.
-Skill und Protokollschema werden gemeinsam konzipiert; sie sind nicht implementiert.
+[draft-conversation-notes](.agents/skills/draft-conversation-notes/SKILL.md) klärt
+zuerst Transkriptunklarheiten mit nummerierten Kontextfragen in Blöcken von
+höchstens zehn Punkten und erstellt dann die deutsche thematische QMD.
+Wichtige Argumente, Begründungen und Alternativen bleiben erhalten;
+Wiederholungen und Gesprächsfüllwörter werden verdichtet. Gesprächsdatum und
+Beteiligte stehen in einem kurzen Kopf. Die Gliederung folgt den Inhalten;
+sinnvolle Befunde/Hervorhebungen, Kategorien und Übersichten sind optional.
+Kompakte Fußnoten liefern Quellennachweise.
+Klärungsantworten liefern zusätzlich knappe Erläuterungsfußnoten zu Fachbegriffen
+und internen Zusammenhängen, wo sie das Verständnis erleichtern.
+Die vorläufige QMD wird nach dem ersten
+Testprojekt geprüft und spätestens nach dem zweiten überarbeitet.
+Vorschläge werden nicht zu Beschlüssen, fehlende Angaben nicht erfunden. Die
+[generische QMD-Vorlage](.agents/skills/draft-conversation-notes/assets/conversation-notes.qmd)
+wird vor dem Befüllen an einen freigegebenen unversionierten Arbeitsort kopiert.
+Der erste Gesprächstest hat einen QMD-Entwurf und DOCX erzeugt, die jetzt im
+freigegebenen externen Sync-Projekt liegen; Durchsicht und Korrekturrückführung
+stehen noch aus.
 
-## Dauerhafte Speichergrenze
+## Dauerhafte Versionierungsgrenze
 
-Alle Gesprächsdateien bleiben außerhalb von Git und dauerhaft unversioniert:
+Alle Gesprächsdateien bleiben dauerhaft unversioniert und außerhalb von GitHub:
 JSON, Derivate, QMD, DOCX/PDF/HTML, kommentierte Kopien, Nachweise, Zwischenstände
-und fiktive Testdateien. Externe QMD bleibt maßgeblich. Git enthält nur Skills,
+und fiktive Testdateien. Sie dürfen innerhalb des Projektordners in bewusst
+gewählten ignorierten Ablagen liegen. Die ausgewählte unversionierte QMD bleibt
+maßgeblich. Der versionierte Git-Bestand enthält nur Skills,
 Skripte, generische Vorlagen, Konfiguration und gesprächsfreie Projektdokumentation.
 
 [CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md) definiert diese bewusste
-Docs-Template-Abweichung. Die ignorierte CONVERSATION_PATHS.local.md ordnet
-externe Speicherorte zu und steht auf Unset. Konkreter Zugriff, externe
-Schreibaktionen, Sync-Übermittlung, Weitergabe und Veröffentlichung bleiben
-getrennte Entscheidungen. Sync-Einrichtung erfolgt später.
+Docs-Template-Abweichung und die Klarstellung in PDR-0002. Die ignorierte
+CONVERSATION_PATHS.local.md ordnet den dauerhaften externen Sync-Projektordner
+und das lokale Repository-temp/conversation-work/ zu. Beide sind auf diesem Gerät
+eingerichtet; der entfernte Synchronisationsstand ist ungeprüft. Weitere bewusst
+zugeordnete ignorierte lokale Ablagen sind nach Prüfung des Git-Ausschlusses
+zulässig. Konkreter Zugriff, externe Schreibaktionen, Sync-Übermittlung, Weitergabe
+und Veröffentlichung bleiben getrennte Entscheidungen. Temporäre Dateien werden
+nie synchronisiert; Gesprächsinhalte werden nie für einen Commit vorgemerkt,
+committet oder durch erzwungenes Hinzufügen versioniert.
 
 ## Stand und nächster Schritt
 
 Projektregeln und externe Render-/Revisionsanweisungen sind eingerichtet.
 Quarto 1.9.38/Pandoc 3.8.3 sind vorhanden. Die separat freigegebene lokale
-Validator-Umgebung enthält Python 3.12.14/PyYAML 6.0.3; beide Skills sind validiert.
-Keine Verarbeitung realer Dateien, Gesprächsrenders, Git-Schreibaktion oder
-Veröffentlichung erfolgte. Keine Projektversion/Etappe ist abgeschlossen.
+Validator-Umgebung enthält Python 3.12.14/PyYAML 6.0.3; beide angepassten Skills
+und der neue Entwurfsskill sind validiert. Pandoc hat QMD-Struktur und Fußnoten
+geparst. Ein ausgewähltes Transkript wurde geklärt und ein QMD-/DOCX-Entwurf
+technisch geprüft. Maßgebliche QMD, DOCX und aufbewahrte Revisionsnachweise liegen
+im freigegebenen externen Sync-Projekt; die Kopien sind per SHA-256 geprüft.
+Seine Inhalte bleiben unversioniert; eine Veröffentlichung erfolgte nicht.
+Der entfernte Synchronisationsstand ist ungeprüft.
+Keine versionierte Projektetappe ist abgeschlossen.
 
-Als Nächstes Skill/Schema gemeinsam konzipieren, dann einen kleinen fiktiven
-Ausschnitt mit externer Speicherung, DOCX-Review und Korrekturrückführung prüfen.
+Als Nächstes die DOCX durchsehen und akzeptierte Korrekturen in die maßgebliche
+QMD zurückführen.
 Der generische Testvertrag steht in [DOCUMENTS.md](DOCUMENTS.md), Voraussetzungen
 in [DOCS_SETUP.md](DOCS_SETUP.md). Repository-docs/ enthält nur Workflowleitlinien.
 

@@ -289,7 +289,12 @@ require a new Python environment. Use non-sensitive synthetic verification.
 This derived project overrides generic repository-source, promotion, output and
 review placement for every conversation file. External QMD remains authoritative
 while permanently unversioned. CONVERSATION_STORAGE.md, the local mapping example
-and PDR-0001 define the exception; host paths remain ignored. Fictional trials also
-stay external. Sync setup, external writes and concrete file access are deferred.
-Drafting skill/schema is planned only. Lean routing was already selected.
+and PDR-0002 define the clarified exception; host paths remain ignored. Conversation
+files stay unversioned and off GitHub, including fictional trials. Ignored local
+repository placement is allowed; persistent storage defaults to external sync
+and temporary processing to ignored device-local temp/conversation-work/.
+External writes and concrete file access retain their task-specific scopes.
+At initialization the drafting skill/schema were planned only. After subsequent
+maintainer agreement, draft-conversation-notes and its generic QMD asset were
+implemented on 2026-10-13. Lean routing was already selected.
 PROJECT_CONTEXT.md records the baseline/status; no upstream commit is invented.
