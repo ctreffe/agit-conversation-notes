@@ -4,6 +4,10 @@ Project-owned workflow changes. No conversation contents belong here.
 
 ## [Unreleased]
 
+- Embed resources in conversation-free workflow HTML and document the explicit
+  embedding option for separately authorized external HTML; retain all storage
+  and conversation-access boundaries.
+
 - Retain useful specialist/internal explanations from clarification rounds in
   concise footnotes, distinct from source evidence and preserving uncertainty.
   Extend the drafting instructions and generic starter; record DDR-0003.

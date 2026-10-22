@@ -39,6 +39,33 @@ containing external Quarto project before use. Plain DOCX uses bundled Pandoc
 without TeX/R/Python. Optional PDF/HTML need deliberate scope/toolchain selection.
 All outputs and intermediates remain unversioned; local repository paths must be ignored.
 
+## HTML resource portability
+
+The conversation-free repository website enables
+`format.html.embed-resources: true` by default. Static pages carry their image,
+style and script resources; other website pages, search indexes and downloads
+remain separate. Deliver the complete site when those functions are needed.
+
+An external source does not inherit this repository's website configuration.
+Only after optional HTML is separately selected for exact authorized mapped
+source/output locations, use this static command pattern:
+
+    quarto render <authorized-external-source.qmd> --to html -M embed-resources:true --no-execute --output-dir <authorized-external-html-directory>
+
+Keep DOCX as the initial review format and follow CONVERSATION_STORAGE.md for
+every source, resource, cache, output and trace. This workflow change authorizes
+no conversation, mapping access, external write or remote fetch. The command
+pattern is not acceptance of any actual external project's configuration.
+
+Inspect image, script, stylesheet and CSS loading references. Check a copy of
+the selected static HTML away from adjacent asset folders; verify without
+network access before claiming offline operation. Dynamic services and runtime
+dependencies remain separate. Document deliberate overrides with their reason,
+delivery dependencies and bounded checks. Keep all conversation-specific
+exceptions and evidence in mapped unversioned trace, never in repository docs.
+Larger HTML files are a tradeoff; do not delete unrelated generated resources.
+See [Quarto's embedding guidance](https://quarto.org/docs/output-formats/html-basics.html#self-contained).
+
 ## Review evidence
 
 Check exit status, warnings, missing resources, actual placement and DOCX

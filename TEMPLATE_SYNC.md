@@ -5,9 +5,9 @@
 - Verified source: https://github.com/ctreffe/ai-template-docs.
 - Initial project provenance: [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).
 - Previous full comparison: `490b57e8ef0cdef02cdc5285cd6edcc027005f6d`; later selected follow-ups were reviewed again.
-- Last compared upstream commit/date: `b6bb9c44ca5e403481d5153cfd5a674696159fc5` / 2026-10-19.
-- Latest selected adoption checkpoint: `b6bb9c44ca5e403481d5153cfd5a674696159fc5`; selected outcomes below independently validated on 2026-10-19.
-- Fully resolved through: `b6bb9c44ca5e403481d5153cfd5a674696159fc5` for the recorded source delta and earlier selected follow-ups; no deferred/conflicting adoption item remains.
+- Last compared upstream commit/date: `c2ba938932f16cc67ab6d710489c662c04683a17` / 2026-10-22.
+- Latest selected adoption checkpoint: `c2ba938932f16cc67ab6d710489c662c04683a17`; QHTML-001/QHTML-002 validated independently on 2026-10-22; earlier accepted outcomes retained.
+- Fully resolved through: `c2ba938932f16cc67ab6d710489c662c04683a17` for the recorded source delta and earlier selections; new source task/release records deliberately rejected below, with no deferred/conflicting adoption item.
 - [Pre-sync lineage, earlier selections, domain evidence and limitations](https://github.com/ctreffe/agit-conversation-notes/blob/5ac33c3ee1340ec97a83ca974a4c0e4f58f8ed2f/PROJECT_CONTEXT.md).
   No unresolved deferred/conflicting adoption item was carried from that record;
   deferred operational/domain tests remain open, not new template-adoption evidence.
@@ -86,3 +86,40 @@ conversation identifiers/content never enter tracked context, catalog or handoff
 Full milestone/build/render/visual/domain tests, actual cloud convergence and
 receiving-device/backup checks remain outside this ordinary workflow sync.
 Existing pending document/device/production evidence is not completed by these tests.
+
+## Selected Quarto HTML sync — 2026-10-22
+
+Compared source `b6bb9c44ca5e403481d5153cfd5a674696159fc5..c2ba938932f16cc67ab6d710489c662c04683a17`.
+No earlier deferred/conflicting adoption item remains. Prior deliberate
+rejections retain their review conditions; this scope does not reopen project
+initialization, releases or broader source adoption.
+
+| Change ID | Source path/concept | Outcome | Local application or reason | Next review condition |
+| --- | --- | --- | --- | --- |
+| QHTML-001 | `_quarto.yml` HTML embedding | adopted | Enable embedding only for generic workflow HTML; document the explicit flag for separately authorized external HTML. Retain DOCX-first review and permanent unversioned conversation storage. | Changed HTML format/resource needs. |
+| QHTML-002 | `QUARTO.md` portability guidance | adapted | Selected loading-reference, detached delivery and deliberate-exception checks fit the local output/access rules. | Changed delivery or runtime dependencies. |
+| QHTML-003 | Source `CHANGELOG.md` | rejected | Keep project history; add a project-owned sync entry instead of importing source release history. | Separately selected source-history need. |
+| QHTML-004 | Source `TASK_HANDOFF.md` | rejected | Record this project's actual task; never import the source-template checkpoint. | Separately selected project task. |
+| QHTML-SKILLS | Complete skill-directory/metadata inventory | already present | Shared metadata match; completed initialization/creation definitions stay absent; documented local skills remain. No upstream skill change. | New source skill delta or changed local method. |
+| QHTML-README | Source README pairs and adapted workflow guides | already present | Source README pair unchanged across this delta; preserve project introductions and adapted guide pairs. | New source README delta or selected project change. |
+
+### Independent evidence and limits
+
+- Semantic comparison with the entry project configuration confirmed only the
+  selected embedding addition (or the existing setting); no output scope,
+  default format, hook, filter, style or PDF profile was changed.
+- A fresh ignored, conversation-free static fixture used a copy of the local
+  configuration with synthetic render selection/navigation and local SVG/CSS/JS.
+  Effective Quarto 1.9.38 configuration and explicit HTML render passed.
+  The detached HTML had no external loading refs or CSS URLs among inspected
+  markup/styles; no render warnings. Existing local hooks/filters were retained.
+- Technical fixture evidence: `temp/quarto-html-sync-4f09cff4/results.json`.
+  No maintained reader document, actual/fictional conversation, private input,
+  screenshot, external mapping or material was processed.
+- A separate generic technical probe verified the documented CLI embedding
+  flag without repository website inheritance; no conversation fixture was used.
+- Skill/README source deltas are empty; shared local skill metadata match.
+  No skill edits, installs, browser/offline checks, visual/disclosure review,
+  full milestone gate, live cloud or project-content render was selected.
+  Static success does not establish whole-site or dynamic runtime portability.
+  Source/link review is recorded with this task; earlier domain work stays open.
