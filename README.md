@@ -84,6 +84,12 @@ The generic trial contract
 is [DOCUMENTS.md](DOCUMENTS.md); tooling prerequisites are in
 [DOCS_SETUP.md](DOCS_SETUP.md). Repository docs/ contains workflow guidance only.
 
+## Capturing ideas
+
+Use `record-idea` to retain requested existing ideas in [IDEAS.md](IDEAS.md);
+`perform-retrospective` jointly develops improvements from project experience.
+See [TEMPLATE_README.md](TEMPLATE_README.md) for current methods and local boundaries.
+
 ## License
 
 [MIT](LICENSE). Existing copyright/attribution is retained.

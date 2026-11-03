@@ -106,3 +106,12 @@ alone establishes neither correctness nor publication readiness.
   the first and no later than the second completed test project.
   Its generic asset is never populated
   with conversation content in the repository.
+
+## Adopted ongoing template methods
+
+- Use `record-idea` for a clear request to retain/update an idea in the owning
+  backlog. Discussion alone does not authorize capture. `IDEAS.md` is separate
+  from roadmap commitments; preserve its local IDs and project-owned content.
+- `perform-retrospective` remains explicit and jointly develops improvements;
+  selected capture delegates to `record-idea`. Cross-repository destination writes
+  retain their exact control-word authority; source access is not transfer approval.

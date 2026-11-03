@@ -32,3 +32,13 @@ through current project/document authority and the
 [previous project checkpoint](https://github.com/ctreffe/agit-conversation-notes/blob/5907f2d758584b04dbcecd2a519a937570c7e14f/TASK_HANDOFF.md).
 Releases, tags, publication and storage migration remain separately controlled.
 Use live Git state for later versioning decisions.
+
+## Template synchronization checkpoint — 2026-11-03
+
+The selected current-source workflow adoption is completed with independent
+focused evidence recorded in [TEMPLATE_SYNC.md](TEMPLATE_SYNC.md).
+This checkpoint concerns template adoption only. The preceding project outcome,
+pending work, authority limits and any paused continuation remain unchanged.
+No source release/task history, template idea entries, operational execution or
+protected Git action is imported. Local source provenance includes a working-tree
+overlay rather than an invented commit. See the ledger for per-change outcomes.

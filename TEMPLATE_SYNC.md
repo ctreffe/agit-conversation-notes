@@ -5,9 +5,9 @@
 - Verified source: https://github.com/ctreffe/ai-template-docs.
 - Initial project provenance: [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).
 - Previous full comparison: `490b57e8ef0cdef02cdc5285cd6edcc027005f6d`; later selected follow-ups were reviewed again.
-- Last compared upstream commit/date: `c2ba938932f16cc67ab6d710489c662c04683a17` / 2026-10-22.
-- Latest selected adoption checkpoint: `c2ba938932f16cc67ab6d710489c662c04683a17`; QHTML-001/QHTML-002 validated independently on 2026-10-22; earlier accepted outcomes retained.
-- Fully resolved through: `c2ba938932f16cc67ab6d710489c662c04683a17` for the recorded source delta and earlier selections; new source task/release records deliberately rejected below, with no deferred/conflicting adoption item.
+- Last compared upstream commit/date: `c2ba938932f16cc67ab6d710489c662c04683a17` / 2026-11-03; exact local overlay below.
+- Latest selected adoption checkpoint: `c2ba938932f16cc67ab6d710489c662c04683a17` plus local source snapshot `81aa1b1e4bb0e06e9acf560bf7d6054be0e42001b60b3a1a5efdf580a7538c00`; NOV03 outcomes independently validated on 2026-11-03.
+- Fully resolved through: `c2ba938932f16cc67ab6d710489c662c04683a17` plus the identified local working-tree snapshot for the reviewed source delta and earlier applicable selections; deliberate rejections retained; no deferred/conflicting adoption item remains.
 - [Pre-sync lineage, earlier selections, domain evidence and limitations](https://github.com/ctreffe/agit-conversation-notes/blob/5ac33c3ee1340ec97a83ca974a4c0e4f58f8ed2f/PROJECT_CONTEXT.md).
   No unresolved deferred/conflicting adoption item was carried from that record;
   deferred operational/domain tests remain open, not new template-adoption evidence.
@@ -123,3 +123,75 @@ initialization, releases or broader source adoption.
   full milestone gate, live cloud or project-content render was selected.
   Static success does not establish whole-site or dynamic runtime portability.
   Source/link review is recorded with this task; earlier domain work stays open.
+
+## Selected synchronization — 2026-11-03
+
+Status: completed for the selected source-workflow adoption, with the
+independent focused evidence below. Operational/domain limits remain separate.
+
+The maintainer selected the current local source with project adaptations.
+Compared from `c2ba938932f16cc67ab6d710489c662c04683a17` through source HEAD `c2ba938932f16cc67ab6d710489c662c04683a17`.
+The working-tree overlay is not a commit. Snapshot: `81aa1b1e4bb0e06e9acf560bf7d6054be0e42001b60b3a1a5efdf580a7538c00`.
+The [portable source manifest](template-sync/2026-11-03-source.json) records its
+LF-normalized hashes and complete source-delta paths. No fetch or remote
+freshness claim is included.
+
+| Change ID | Source path/concept | Outcome | Local application or reason | Review condition |
+| --- | --- | --- | --- | --- |
+| NOV03-001 | `.agents/skills/perform-retrospective/SKILL.md` | adapted | Verified source delta; project-specific boundaries retained. | Next source or local-rule change. |
+| NOV03-002 | `.agents/skills/record-idea/SKILL.md` | adopted | Verified source delta; project-specific boundaries retained. | Next source or local-rule change. |
+| NOV03-003 | `.agents/skills/record-idea/agents/openai.yaml` | adopted | Verified source delta; project-specific boundaries retained. | Next source or local-rule change. |
+| NOV03-004 | `.agents/skills/start-project/SKILL.md` | rejected | Initialization is complete; retained setup stays provenance. | Next source or local-rule change. |
+| NOV03-005 | `.agents/skills/sync-template/SKILL.md` | adopted | Verified source delta; project-specific boundaries retained. | Next source or local-rule change. |
+| NOV03-006 | `AGENTS.md` | adapted | Project-specific ongoing guidance/catalog integration; local authority retained. | Next source or local-rule change. |
+| NOV03-007 | `CHANGELOG.md` | rejected | Keep project-owned history and continuation; record this sync locally. | Next source or local-rule change. |
+| NOV03-008 | `COLLABORATION.md` | adapted | Project-specific ongoing guidance/catalog integration; local authority retained. | Next source or local-rule change. |
+| NOV03-009 | `IDEAS.md` | rejected | Never import source-template entries; preserve/create project-owned backlog separately. | Next source or local-rule change. |
+| NOV03-010 | `PROJECT_SETUP.md` | rejected | Initialization is complete; retained setup stays provenance. | Next source or local-rule change. |
+| NOV03-011 | `README.de.md` | adapted | Project-specific ongoing guidance/catalog integration; local authority retained. | Next source or local-rule change. |
+| NOV03-012 | `README.md` | adapted | Project-specific ongoing guidance/catalog integration; local authority retained. | Next source or local-rule change. |
+| NOV03-013 | `RETROSPECTIVE_PATHS.example.md` | adopted | Verified source delta; project-specific boundaries retained. | Next source or local-rule change. |
+| NOV03-014 | `TASK_HANDOFF.md` | rejected | Keep project-owned history and continuation; record this sync locally. | Next source or local-rule change. |
+| NOV03-015 | `templates/IDEAS.md` | adopted | Verified source delta; project-specific boundaries retained. | Next source or local-rule change. |
+| NOV03-IDEAS | Project-owned IDEAS.md and stable IDs | adapted | New empty backlog where absent; existing entries preserved. No source-template idea import. | Clear local idea-capture request or changed ownership. |
+| NOV03-INVENTORY | All skill directories and invocation metadata | adapted | Preserve local-only/project-owned methods; completed creation/initialization definitions stay absent. | New source/local skill delta. |
+
+No earlier deferred/conflicting adoption item was found in the current ledger.
+Earlier deliberate rejections remain history: source release/task/version
+metadata and completed initialization are still excluded. The newly selected
+project backlog changes only the old assumption that no local idea intake was
+needed; template-owned entries remain rejected.
+
+Follow CONVERSATION_STORAGE.md. Versioned ideas and retrospective evidence
+must remain conversation-free. Actual and fictional conversation content,
+identifiers, contexts, metadata and outputs stay permanently unversioned in
+approved mapped storage; never place them in IDEAS.md or a tracked transfer.
+This sync grants no access to any conversation.
+
+Operational/domain evidence and pending project work are unchanged. This sync
+does not start tests, services, storage setup, data processing or publication.
+
+### Independent validation — 2026-11-03
+
+- 3 changed/new skills passed this project's `scripts/Test-CodexSkill.ps1`
+  wrapper with the existing managed Governance Python and pinned PyYAML 6.0.3.
+  No environment or package was installed.
+- Full ongoing skill topology and invocation-policy comparison passed,
+  preserving documented project-owned exceptions and local-only skills.
+- Both focused intake/reflection source contracts passed. These are instruction
+  and structural checks, not a live retrospective or automatic-routing trial.
+- Markdown links: 93 local target(s) across 15 file(s).
+- 2 local target(s) remain unverified by scope or access policy.
+- Both README pairs retain aligned heading hierarchies; targeted bilingual
+  meaning, catalog availability, role/navigation and rights were reviewed.
+- Hash checks confirm the exact edit plan, preserved untargeted control files,
+  unchanged existing idea entries, retained project continuation and local-only
+  skills. HEAD, branch, worktree list and empty staging stayed unchanged.
+
+No real/sensitive data, conversation, catalog contents, private mapping or
+operational state was inspected. No real initialization, storage setup, runtime
+test, installation, cloud operation, publication or protected Git action ran.
+Full project/domain/release/milestone and family gates were not run except the
+explicitly required static local gate above. Existing operational evidence gaps
+remain project-owned and are not adoption blockers for these source methods.
+No selected source-workflow implementation remains.

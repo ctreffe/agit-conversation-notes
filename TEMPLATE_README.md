@@ -111,12 +111,13 @@ read only a matching detail section when needed.
 | [`handoff-task`](.agents/skills/handoff-task/SKILL.md) | Agent or explicit | Save the task outcome, evidence and next step in a compact `TASK_HANDOFF.md`. |
 | [`commit-changes`](.agents/skills/commit-changes/SKILL.md) | Agent or explicit | Create an ordinary scoped commit and perform its normal upstream push with explicit commit authorization, unless push is excluded. |
 | [`record-decision`](.agents/skills/record-decision/SKILL.md) | Agent or explicit | Document a durable decision using the applicable record type; source-template decisions route to Governance. |
+| [`record-idea`](.agents/skills/record-idea/SKILL.md) | Agent or explicit | Capture existing ideas on a clear retention request in the owning backlog; transfer authority remains separate. |
 | [`reuse-fixes`](.agents/skills/reuse-fixes/SKILL.md) | Agent or explicit | Reuse this repository's confirmed fixes, retain concise prevention and ask only for missing authority or blocking decisions. |
 | [`review-project`](.agents/skills/review-project/SKILL.md) | Explicit | Produce a comprehensive neutral inventory of project state and evidence gaps. |
 | [`manage-external-storage`](.agents/skills/manage-external-storage/SKILL.md) | Explicit | Set up optional external storage, connect a host or check selected local files. |
 | [`sync-template`](.agents/skills/sync-template/SKILL.md) | Explicit | Compare a derived project with its verified source template and adopt selected updates while preserving project adaptations. |
 | [`check-consistency`](.agents/skills/check-consistency/SKILL.md) | Explicit | Diagnose internal contradictions between intent, roadmap, decisions, content and documentation; develop bounded options. |
-| [`perform-retrospective`](.agents/skills/perform-retrospective/SKILL.md) | Explicit | Review collaboration evidence and distinguish project findings from reusable template or family candidates. |
+| [`perform-retrospective`](.agents/skills/perform-retrospective/SKILL.md) | Explicit | Jointly develop improvement ideas from an agreed project period; record-idea handles selected capture. |
 | [`add-document`](.agents/skills/add-document/SKILL.md) | Explicit | Add a maintained document or linked language versions, including catalog metadata and navigation. |
 | [draft-conversation-notes](.agents/skills/draft-conversation-notes/SKILL.md) | Agent or explicit | Clarify external transcripts in batches of at most ten and draft content-led German QMD with date/participants, optional highlights and footnotes. |
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Task-driven or explicit | Render maintained Quarto sources in the required formats and check technical output and placement. |
@@ -197,6 +198,15 @@ CHANGELOG and TASK_HANDOFF now contain project-owned state. The inherited backlo
 and one-time setup/creation skills were removed; setup provenance is retained.
 Later template sync requires the original upstream commit to be verified; the
 imported snapshot is not claimed as that commit.
+
+## Ideas and ongoing methods
+
+Use `record-idea` to retain existing ideas on a clear request in [IDEAS.md](IDEAS.md),
+without promising timing, priority or implementation. `perform-retrospective`
+jointly develops improvements from an agreed project period. Preserve local ideas;
+never import template-owned entries or restore completed initialization.
+Cross-repository capture still needs exact destination/action control-word
+authority. Local privacy, source, security and publication rules remain binding.
 
 ## License
 

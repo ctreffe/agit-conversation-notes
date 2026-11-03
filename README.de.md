@@ -90,6 +90,13 @@ QMD zurückführen.
 Der generische Testvertrag steht in [DOCUMENTS.md](DOCUMENTS.md), Voraussetzungen
 in [DOCS_SETUP.md](DOCS_SETUP.md). Repository-docs/ enthält nur Workflowleitlinien.
 
+## Ideen festhalten
+
+Halte auf Wunsch vorhandene Ideen über `record-idea` in [IDEAS.md](IDEAS.md)
+fest; `perform-retrospective` entwickelt Verbesserungen gemeinsam aus dem Verlauf.
+Für die aktuellen Methoden und lokalen Grenzen siehe
+[TEMPLATE_README.de.md](TEMPLATE_README.de.md).
+
 ## Lizenz
 
 [MIT](LICENSE). Bestehende Copyright-/Herkunftshinweise bleiben erhalten.

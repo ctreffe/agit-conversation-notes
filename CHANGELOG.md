@@ -4,6 +4,11 @@ Project-owned workflow changes. No conversation contents belong here.
 
 ## [Unreleased]
 
+- Synchronize current ai-template-docs workflow guidance on 2026-11-03,
+  including project-owned idea capture/reflection and compatible optional
+  methods. Preserve local authority, existing ideas and domain/runtime gates;
+  TEMPLATE_SYNC.md records exact source snapshot, outcomes and evidence.
+
 - Embed resources in conversation-free workflow HTML and document the explicit
   embedding option for separately authorized external HTML; retain all storage
   and conversation-access boundaries.

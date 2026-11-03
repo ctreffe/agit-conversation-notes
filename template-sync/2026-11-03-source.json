@@ -1,0 +1,42 @@
+{
+  "source_repository": "ai-template-docs",
+  "source_head": "c2ba938932f16cc67ab6d710489c662c04683a17",
+  "compared_from": "c2ba938932f16cc67ab6d710489c662c04683a17",
+  "source_snapshot_sha256": "81aa1b1e4bb0e06e9acf560bf7d6054be0e42001b60b3a1a5efdf580a7538c00",
+  "hash_convention": "SHA-256 of UTF-8 text without BOM, CRLF normalized to LF",
+  "source_working_tree_overlay": {
+    ".agents/skills/perform-retrospective/SKILL.md": "2417a9ca381591e781a4dde2619a6dce8dd73dcfbdd8961b1be32840cce59a59",
+    ".agents/skills/record-idea/SKILL.md": "16de4530e130945ce6a85e8aadcff4ff4f86fabc220046e25b1b443238848a8e",
+    ".agents/skills/record-idea/agents/openai.yaml": "8619a54e8c098122a7f3881394f84ca89b684366e848233a29ad18b6ec363935",
+    ".agents/skills/start-project/SKILL.md": "46b2e96efc4a149bac8ae277bfad58f891a065d5bc6ac738a7d40f858f509cf1",
+    ".agents/skills/sync-template/SKILL.md": "3183117c9369bebf52f44f4c057de3cd6579d04ba2441106b7b339773fd5a719",
+    "AGENTS.md": "894d917d9dc825c286c686f130a100554e265e822685a57d32d2ef429c56bb1f",
+    "CHANGELOG.md": "74da2c1a010373ce2b8a10eb8f940253c085322353d04c244b65a9ed0bd90d7d",
+    "COLLABORATION.md": "b466ca0791168ec0cad2c2765d4c525f0e753636c85506190ecc488455e94e73",
+    "IDEAS.md": "6849ab2479317c78948d3de1ca1b5e85e3f2adb4b65297580aa62f48c0687c71",
+    "PROJECT_SETUP.md": "6a10db95bc03c486c251a3f42db6f27a191931b3e4ff0c291b4cdeb4b47945c5",
+    "README.de.md": "2d9b4e3d0a02865bd8bf57745fb20387820759e6953558bce15dae24234af49f",
+    "README.md": "7c56d743113a9573005cd7b81af4e3cc786bf7590da07c689e2e4bbc35ece47e",
+    "RETROSPECTIVE_PATHS.example.md": "c50e5eb14db0e60dcef596d540f793b6d0daa19277889b0a95bc0568803aef25",
+    "TASK_HANDOFF.md": "652aae316d8b26459bfa794ee28c5cf2352bb80f48310b19f37456811aba84a9",
+    "templates/IDEAS.md": "ec31f539adfe732b7f0592e78e82801897addcb75a396d42a2f733e4e6988a6b"
+  },
+  "source_delta": [
+    ".agents/skills/perform-retrospective/SKILL.md",
+    ".agents/skills/record-idea/SKILL.md",
+    ".agents/skills/record-idea/agents/openai.yaml",
+    ".agents/skills/start-project/SKILL.md",
+    ".agents/skills/sync-template/SKILL.md",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "COLLABORATION.md",
+    "IDEAS.md",
+    "PROJECT_SETUP.md",
+    "README.de.md",
+    "README.md",
+    "RETROSPECTIVE_PATHS.example.md",
+    "TASK_HANDOFF.md",
+    "templates/IDEAS.md"
+  ],
+  "note": "Local source snapshot; no remote freshness, commit or release is implied."
+}
