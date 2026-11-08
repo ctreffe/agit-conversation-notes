@@ -58,3 +58,11 @@ No actual source is assigned to this generic contract. A fictional trial remains
 optional; no source or output is created here. The project-wide current trial's
 generic progress and remaining review/correction round-trip stay in
 PROJECT_CONTEXT.md, with concrete evidence only in private unversioned trace.
+
+## Generic output contract
+
+The selected DOCX and any approved PDF/HTML companions share the mapped
+output/<document-slug>/ folder under [QUARTO.md](../../QUARTO.md#selected-output-layout).
+Preserve other formats using --no-clean or mapped isolated staging. Exact source,
+output selection and path/trace updates remain private and task-specific.
+This generic rule creates no trial and closes no pending review/correction step.

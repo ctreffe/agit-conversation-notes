@@ -81,3 +81,11 @@ centralized in input/material catalogs, with per-document assignments in context
 Keep contexts, research reports and scaffolds out of navigation, includes and
 copied publication resources. Root-anchor render patterns and inspect their actual
 input scope; render exclusions alone do not prevent resource copying.
+
+## Current output destinations
+
+The generic workflow site uses output/website/ as a complete site tree.
+Conversation deliverables use mapped output/<document-slug>/, with DOCX first
+and optional companion formats together. See [QUARTO.md](QUARTO.md#selected-output-layout)
+for preservation, collision and exact migration gates. This updates delivery
+guidance only; initialization and trial review status remain unchanged.

@@ -29,6 +29,11 @@ tmp/
 /review/*
 !/review/README.md
 
+# Local Codex profile and recovery state
+/.codex/config.toml
+/.codex/restricted-storage.original.toml
+/RESTRICTED_STORAGE.local.md
+
 # External files and sources
 /input/intake/**
 !/input/intake/README.md
@@ -60,6 +65,13 @@ yarn-error.log*
 **/*.quarto_ipynb
 
 /.quarto/
+
+# Non-secret device-specific Git route bindings and evidence
+/GIT_TRANSPORT.local.md
+
+# Approved local Codex configuration transaction state
+/CODEX_CONFIG.local.md
+/.codex/config-recovery/
 # Conversation content is permanently unversioned and excluded from GitHub.
 # Deliberately mapped local storage is allowed; never force-add its contents.
 CONVERSATION_PATHS.local.md

@@ -44,8 +44,8 @@ publication approval from a successful render.
 ## AGIT unversioned conversation scope
 
 Before rendering a conversation document, read CONVERSATION_STORAGE.md and
-QUARTO.md at the repository root. Resolve the exact selected unversioned QMD, format-specific
-output, resources, cache/log and temporary destinations through ignored
+QUARTO.md at the repository root. Resolve the exact selected unversioned QMD,
+document-specific output folder, resources, cache/log and temporary destinations through ignored
 CONVERSATION_PATHS.local.md. An Unset or unavailable mapping stops dependent work.
 Require scoped access and authority for writes outside the repository. Check
 canonical paths, reparse points and containing Quarto configuration. Every
@@ -55,7 +55,10 @@ Use ignored temp/conversation-work/ for temporary processing. Work in the select
 source context; never populate versioned templates or documentation with content.
 
 The selected QMD remains authoritative and permanently unversioned. Initially render
-DOCX only, unless another format is specifically selected. Retain review baseline
+DOCX only, unless another format is specifically selected. Keep selected companion
+formats in the mapped output/<document-slug>/ folder. Use --no-clean for shared
+output, or approved isolated temporary staging and selected-artifact transfer.
+Check collisions and preserve other formats and unrelated files. Retain review baseline
 and source/output evidence in mapped unversioned trace/; keep content-bearing diagnostics
 unversioned. Persistent storage defaults to the external sync project. Report only generic workflow status into project docs/handoffs.
 The repository _quarto.yml is for conversation-free workflow pages, never the

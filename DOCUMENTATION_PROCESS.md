@@ -158,3 +158,12 @@ Research runs only after explicit `investigate-question` invocation. Save a repo
 from templates/RESEARCH_REPORT.md for one or several related operationalized
 questions, with individual source assessments and per-question answers/gaps.
 Use materials/README.md#research-storage-and-reuse for placement and metadata.
+
+## Workflow maintenance and milestone closure
+
+Keep generic project context, accepted Decision Records and applicable Unreleased
+entries current during workflow work. Keep conversation context and evidence only
+in approved unversioned storage. VERSION, release changelog and completion metadata
+are synchronized at selected milestone closure; no trial completion follows from
+a template sync. Generated review formats share the mapped document output folder
+under [QUARTO.md](QUARTO.md#selected-output-layout), preserving companion formats.

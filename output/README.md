@@ -1,10 +1,12 @@
-# Generated Documentation Outputs
+# Generated Workflow Outputs
 
-Store generated documentation below a directory named for its format, for
-example `output/html/`, `output/pdf/` or `output/docx/`. Generated content is
-ignored by default; this README is the only tracked file in `output/`.
+The complete conversation-free website belongs in ignored output/website/.
+Keep its page/resource tree together. Use --no-clean where output must survive;
+never clean unrelated documents or formats to refresh a selected artifact.
+This README is the only tracked file in output/.
 
-Freshly generated files prepared for review remain in the applicable format
-directory. Returned files with comments, Track Changes or PDF annotations
-belong directly in `review/`. Maintained `docs/`, `materials/versioned/` and
-`styles/` content remains authoritative according to its documented role.
+Conversation outputs follow [CONVERSATION_STORAGE.md](../CONVERSATION_STORAGE.md)
+and approved mappings: output/<document-slug>/ holds DOCX and selected PDF/HTML
+companions. There is no implicit repository fallback. Concrete file names,
+contexts and migration evidence remain permanently unversioned. Returned review
+copies stay in their mapped review/ location. See [QUARTO.md](../QUARTO.md).

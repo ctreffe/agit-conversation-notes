@@ -112,6 +112,8 @@ read only a matching detail section when needed.
 | [`commit-changes`](.agents/skills/commit-changes/SKILL.md) | Agent or explicit | Create an ordinary scoped commit and perform its normal upstream push with explicit commit authorization, unless push is excluded. |
 | [`record-decision`](.agents/skills/record-decision/SKILL.md) | Agent or explicit | Document a durable decision using the applicable record type; source-template decisions route to Governance. |
 | [`record-idea`](.agents/skills/record-idea/SKILL.md) | Agent or explicit | Capture existing ideas on a clear retention request in the owning backlog; transfer authority remains separate. |
+| [`manage-codex-config`](.agents/skills/manage-codex-config/SKILL.md) | Agent or explicit | Selected project settings/protection; preserve conversation boundaries. |
+| [`manage-restricted-storage`](.agents/skills/manage-restricted-storage/SKILL.md) | Explicit | Selected project settings/protection; preserve conversation boundaries. |
 | [`reuse-fixes`](.agents/skills/reuse-fixes/SKILL.md) | Agent or explicit | Reuse this repository's confirmed fixes, retain concise prevention and ask only for missing authority or blocking decisions. |
 | [`review-project`](.agents/skills/review-project/SKILL.md) | Explicit | Produce a comprehensive neutral inventory of project state and evidence gaps. |
 | [`manage-external-storage`](.agents/skills/manage-external-storage/SKILL.md) | Explicit | Set up optional external storage, connect a host or check selected local files. |
@@ -153,6 +155,31 @@ render or visual change does not trigger this workflow. Missing output is not
 rendered or replaced, and the report names inspected pages, routes, viewports,
 findings and limitations. Visual inspection does not certify accessibility,
 technical correctness, disclosure approval or publication readiness.
+
+## Current template methods
+
+The inherited [template mission](PHILOSOPHY.md#template-mission) describes shared
+methods; PROJECT_CONTEXT.md owns this project's thematic personal-recall purpose.
+Explicit reviews/retrospectives assess alignment under maintainer domain control.
+Specialist-source changes require deliberate selection; no intent is rewritten.
+
+Use [manage-codex-config](.agents/skills/manage-codex-config/SKILL.md) as the one
+writer for requested project settings and selected storage deltas under
+[CODEX_CONFIGURATION.md](CODEX_CONFIGURATION.md). Explicit storage work owns
+protection, activation and usability. This adoption changes no actual config,
+profile or adapter. Initialization stays complete; private mapping is no access grant.
+Git workflows consult [GIT_TRANSPORT.md](GIT_TRANSPORT.md) and assess
+[COMMIT_PACKAGES.md](COMMIT_PACKAGES.md) with unchanged authority and staging.
+
+Keep the agreed chat/project anchor. Temporary worktrees belong in the owning
+project's ignored temp/worktrees/, outside generic cleanup; their source versioning
+uses normal Git authority. PDR-0002 permanently excludes all conversation files.
+See [worktree rules](COLLABORATION.md#project-anchor-and-temporary-worktrees).
+
+Keep the generic site in output/website/ and mapped conversation formats together
+in output/<document-slug>/. DOCX remains first. [QUARTO.md](QUARTO.md#selected-output-layout)
+owns preservation/collision rules. Existing-file migration needs exact selection;
+no source, catalog or private trace moves into versioned project documentation.
 
 ## Git Index and Protected Git Actions
 

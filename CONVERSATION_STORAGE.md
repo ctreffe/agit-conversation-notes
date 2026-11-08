@@ -40,12 +40,17 @@ The generic layout below is a storage contract, not a fixed protocol schema:
       input/       # unchanged originals; scoped access only
       working/     # prepared transcripts and retained derivatives
       sources/     # authoritative, editable QMD
-      output/docx/ # initially required review output
-      output/pdf/  # optional, only when selected
-      output/html/ # optional, only when selected
+      output/<document-slug>/ # DOCX first; selected PDF/HTML companions together
       review/      # unchanged returned annotated copies
       trace/       # private baseline snapshots and revision decisions
     <repository>/temp/conversation-work/ # ignored disposable processing, never synchronized
+
+Use shallow document folders for newly selected outputs and approved migrations
+of existing outputs. Preserve companion formats with `--no-clean` or isolated
+mapped temporary staging; check collisions before replacement. Existing file
+moves require an exact approved list, byte checks and updated authorized private
+path/trace references. Never place those lists or concrete slugs in versioned files.
+See [QUARTO.md](QUARTO.md#selected-output-layout).
 
 Before use, require exact maintainer-selected files and actions. Canonicalize
 actual paths, including reparse points and inherited Quarto configuration. For

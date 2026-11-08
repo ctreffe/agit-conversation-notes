@@ -8,8 +8,10 @@ metadata must never enter tracked files. This mapping is navigation only.
 | conversation:root | Unset |
 | conversation:temp | temp/conversation-work/ relative to this repository |
 
-Relative persistent locations: input/, working/, sources/, output/docx/,
-optional output/pdf/ and output/html/, review/, trace/.
+Relative persistent locations: input/, working/, sources/,
+output/<document-slug>/ (DOCX first; selected PDF/HTML companions together),
+review/, trace/. Concrete slugs and migration lists stay only in approved
+unversioned mapping/context/trace. Preserve other formats on each render.
 The temporary root is device-local, outside any synchronized directory, and
 ignored/untracked. Repository temp/conversation-work/ is the default.
 Exact file selection and access/write authority must be established per task.

@@ -34,7 +34,10 @@ restricted and credential content stays outside this area. The rule does not
 reclassify existing files or authorize access to a whole cloud account.
 Existing `input/local/` mappings remain supported for exact approved files;
 legacy intake/restricted areas remain closed. No automatic move or migration.
-Optional subject/document folders may organize content without changing its role.
+Within these approved roots, prefer shallow document or subject folders and
+keep companion formats together. Follow
+[document and subproject folders](REPOSITORY.md#document-and-subproject-folders)
+for naming and technical exceptions; catalog identity and access remain unchanged.
 
 Put a stable non-sensitive ID of 1–64 letters, digits, underscores or hyphens
 on the first line of `PROJECT_ID.txt`; an optional format version follows.
@@ -55,7 +58,10 @@ move changes location. Link transformations to the original input ID in `Based o
 never modify an input in place or keep silently competing copies. Document
 assignments use IDs; they do not duplicate source files. Repository source,
 configuration, approved versioned assets and domain-specific maintained data
-remain in their established repository locations. Do not synchronize `temp/`; it stays disposable and device-local. Cloud synchronization is not Git history, backup or publication.
+remain in their established repository locations. Do not synchronize `temp/`; keep it device-local. Preserve worktrees under the
+[worktree contract](COLLABORATION.md#project-anchor-and-temporary-worktrees);
+only designated intermediates are disposable. Cloud synchronization is not Git
+history, backup or publication.
 
 Versioned catalogs contain only safe logical references. Ignored
 `input/PATHS.local.md` and `materials/PATHS.local.md` map logical roots to this

@@ -12,7 +12,7 @@ The project separates repository workflow documentation from conversation render
 ## Repository workflow documentation
 
 _quarto.yml renders only conversation-free docs/ entry pages as an optional
-bilingual HTML website in ignored output/html/. Never include external
+bilingual HTML website in ignored output/website/. Never include external
 conversation sources. No website is published by initialization.
 
 ## Unversioned conversation documents
@@ -31,7 +31,7 @@ The initial plain-text trial needs no executable chunks or external fetches.
 
 The locally checked Quarto 1.9.38 CLI supports this command pattern:
 
-    quarto render <authorized-external-source.qmd> --to docx --no-execute --output-dir <authorized-external-docx-directory>
+    quarto render <authorized-external-source.qmd> --to docx --no-execute --no-clean --output-dir <authorized-document-output-directory>
 
 Output directories are input/project-relative unless absolute; resolve them
 deliberately. This pattern is not yet a tested project render recipe. Check any
@@ -50,7 +50,7 @@ An external source does not inherit this repository's website configuration.
 Only after optional HTML is separately selected for exact authorized mapped
 source/output locations, use this static command pattern:
 
-    quarto render <authorized-external-source.qmd> --to html -M embed-resources:true --no-execute --output-dir <authorized-external-html-directory>
+    quarto render <authorized-external-source.qmd> --to html -M embed-resources:true --no-execute --no-clean --output-dir <authorized-document-output-directory>
 
 Keep DOCX as the initial review format and follow CONVERSATION_STORAGE.md for
 every source, resource, cache, output and trace. This workflow change authorizes
@@ -90,3 +90,25 @@ centralized in input/material catalogs, with per-document assignments in context
 Keep contexts, research reports and scaffolds out of navigation, includes and
 copied publication resources. Root-anchor render patterns and inspect their actual
 input scope; render exclusions alone do not prevent resource copying.
+
+## Selected output layout
+
+Keep the complete generic workflow site under `output/website/`, including its
+page/resource tree. Render it with `quarto render --to html --no-clean`. Website
+structure is a technical exception to shallow document delivery folders.
+
+In approved mapped conversation storage, use `output/<document-slug>/` for DOCX
+and any separately selected companion PDF/HTML. DOCX remains the first review
+format. Keep concrete slugs, paths, source/output hashes and migration evidence
+only in the approved unversioned mapping/context/trace, never in this repository's
+versioned files. [ADR-0001](decisions/ADR-0001-document-output-layout.md) records
+the generic rule without selecting conversation files or changing PDR-0002.
+
+Before each render, resolve the exact source/configuration and document destination.
+Use `--no-clean` for a shared output folder; if the selected renderer cannot safely
+share it, stage in mapped device-local temporary storage and transfer only the
+selected artifact and necessary companions. Check collisions before replacement;
+preserve other formats and unrelated files. No whole-folder cleanup is implied.
+Existing outputs require an exact approved move list and byte-preservation checks;
+update only their authorized mapping/configuration/trace references. Source QMD,
+original transcripts and returned review files keep their existing roles.

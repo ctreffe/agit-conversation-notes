@@ -90,6 +90,13 @@ Use `record-idea` to retain requested existing ideas in [IDEAS.md](IDEAS.md);
 `perform-retrospective` jointly develops improvements from project experience.
 See [TEMPLATE_README.md](TEMPLATE_README.md) for current methods and local boundaries.
 
+## Output placement
+
+The generic workflow site uses output/website/. Approved mapped conversation
+outputs share output/<document-slug>/, with DOCX first and selected PDF/HTML
+companions. Existing migrations require exact file selection; concrete mappings
+and trace stay permanently unversioned. See [QUARTO.md](QUARTO.md#selected-output-layout).
+
 ## License
 
 [MIT](LICENSE). Existing copyright/attribution is retained.

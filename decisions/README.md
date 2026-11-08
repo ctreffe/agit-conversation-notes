@@ -50,3 +50,4 @@ Use the matching template as a starting point:
 | [DDR-0001](DDR-0001-thematic-notes-and-clarification.md) | Superseded by DDR-0002 | Earlier fixed thematic/recap layout; retained as decision history. |
 | [DDR-0002](DDR-0002-content-led-provisional-notes.md) | Accepted | Flexible content-led notes with date/participants, optional highlights and review/revision by the second test project. |
 | [DDR-0003](DDR-0003-explanatory-clarification-footnotes.md) | Accepted | Compact specialist-context explanations from clarification answers in footnotes, distinct from original transcript evidence. |
+| [ADR-0001](ADR-0001-document-output-layout.md) | Accepted | Generic website and mapped document output folders; PDR-0002 and exact file selection retained. |

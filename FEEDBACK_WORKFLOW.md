@@ -33,3 +33,11 @@ Direct source comments remain possible. Optional PDF annotations require careful
 source mapping. Visual inspection remains separately explicit.
 Access, sharing, transmission and publication are separate decisions.
 Conversation review files are permanently excluded from Git without exceptions.
+
+## Generated review output placement
+
+Keep generated DOCX and selected companion formats in the approved mapped
+output/<document-slug>/ folder. Preserve companion formats on rerender, retain
+source/output relationships in unversioned trace and keep returned originals
+in mapped review/. Follow [QUARTO.md](QUARTO.md#selected-output-layout); no generic
+repository output directory is a fallback for conversation files.

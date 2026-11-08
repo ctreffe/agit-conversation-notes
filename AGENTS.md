@@ -15,6 +15,16 @@ Resident contract.
   selections.
 - Maintainers own intent, information architecture, technical truth and
   publication decisions. Maintained sources outrank generated review files.
+- Preserve the agreed chat/task project directory, rules and skill context;
+  never switch them autonomously, including through tool side effects. Before
+  worktree operations or recovery from context drift, read COLLABORATION.md.
+  Temporary worktrees stay under the owning project's ignored temp/ (prefer
+  temp/worktrees/), outside generic cleanup; their source follows normal Git rules.
+- Carry the agreed task independently to a verified result within existing
+  authority. Ask only for missing authority, consequential direction choices or
+  real blockers; continue independent authorized work while waiting. Reuse prior
+  grants within their scope. Preserve access boundaries and explicitly invoked
+  workflows; autonomy grants no additional authority.
 - Authorized reads and edits are allowed. Commits, tags, pushes, pulls, merges,
   rebases, resets, reverts, branches, stashes, destructive restores,
   publication and direct `.git/` changes each require an instruction containing
@@ -65,6 +75,20 @@ Resident contract.
   supplies necessary evidence. Invoke initialization, document addition,
   visual inspection, review, `investigate-question`, sync, consistency,
   retrospective, revision, local creation and `commit-milestone` explicitly.
+
+- Use `manage-codex-config` for requested project-local configuration and
+  setup/storage deltas; one owner preserves existing settings and recovery.
+  Ordinary task entry does not configure the client.
+
+- Invoke `manage-restricted-storage` deliberately for approved project profile
+  setup, activation checks or rollback. The existing catalog grants no
+  access to closed zones.
+
+## Writing
+
+Write as long as needed and as short as possible for the purpose and audience.
+Understanding comes first; retain essential reasoning, evidence and instructions.
+See [STYLE_GUIDE.md](STYLE_GUIDE.md) for details and domain limits.
 
 ## Validation
 

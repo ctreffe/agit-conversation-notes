@@ -97,6 +97,14 @@ fest; `perform-retrospective` entwickelt Verbesserungen gemeinsam aus dem Verlau
 Für die aktuellen Methoden und lokalen Grenzen siehe
 [TEMPLATE_README.de.md](TEMPLATE_README.de.md).
 
+## Ausgabeablage
+
+Die generische Workflow-Website nutzt output/website/. Freigegebene zugeordnete
+Gesprächsausgaben liegen gemeinsam in output/<document-slug>/, mit DOCX zuerst
+und ausgewählten PDF-/HTML-Begleitformaten. Bestehende Dateien brauchen eine exakte
+Umzugsauswahl; konkrete Zuordnungen und Nachweise bleiben dauerhaft unversioniert.
+Siehe [QUARTO.md](QUARTO.md#selected-output-layout).
+
 ## Lizenz
 
 [MIT](LICENSE). Bestehende Copyright-/Herkunftshinweise bleiben erhalten.

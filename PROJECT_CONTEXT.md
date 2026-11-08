@@ -10,6 +10,13 @@ checkpoint. Update either only when its authoritative facts change.
 Document contexts own assembly/update methods, assigned evidence and
 document-specific next steps; the document catalog owns lifecycle status.
 
+## Current delivery contract
+
+[ADR-0001](decisions/ADR-0001-document-output-layout.md) records the selected
+website/document output layout. [QUARTO.md](QUARTO.md#selected-output-layout) owns
+render destinations and preservation rules. PDR-0002 and DOCX-first review remain
+authoritative; concrete migration evidence belongs only in approved private trace.
+
 ## Identity and initialization
 
 - Project: AGIT Conversation Notes; repository: agit-conversation-notes.

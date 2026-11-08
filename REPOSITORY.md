@@ -71,3 +71,21 @@ centralized in input/material catalogs, with per-document assignments in context
 Keep contexts, research reports and scaffolds out of navigation, includes and
 copied publication resources. Root-anchor render patterns and inspect their actual
 input scope; render exclusions alone do not prevent resource copying.
+
+## Temporary Worktree Exception
+
+Keep the agreed chat/project anchor. Separately authorized temporary Git worktrees
+belong under the owning project's ignored temp/worktrees/, outside generic cleanup.
+Their repository source follows normal Git rules; conversation files remain
+permanently unversioned under PDR-0002. Worktree placement never grants conversation
+access. See [worktree rules](COLLABORATION.md#project-anchor-and-temporary-worktrees).
+
+## Document and subproject folders
+
+Prefer shallow document/subject folders within each approved role and access root,
+keeping companion formats together. The generic site uses output/website/; mapped
+conversation outputs use output/<document-slug>/. IDs remain metadata, not mandatory
+folder names. Keep input originals, retained working material, authoritative sources,
+outputs and returned review copies distinct. Necessary build/site/resource trees
+are technical exceptions. No mapping, storage or source change is automatic;
+follow [the delivery contract](QUARTO.md#selected-output-layout) and exact file gates.

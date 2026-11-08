@@ -123,6 +123,8 @@ lies bei Bedarf nur den passenden Detailabschnitt.
 | [`commit-changes`](.agents/skills/commit-changes/SKILL.md) | Agent oder explizit | Erstellt einen regulären abgegrenzten Commit und führt den normalen Upstream-Push mit expliziter Commit-Freigabe aus, sofern der Push nicht ausgeschlossen wurde. |
 | [`record-decision`](.agents/skills/record-decision/SKILL.md) | Agent oder explizit | Dokumentiert eine dauerhafte Entscheidung im passenden Record-Typ; Entscheidungen des Quelltemplates werden an Governance geroutet. |
 | [`record-idea`](.agents/skills/record-idea/SKILL.md) | Agent oder explizit | Hält auf klaren Erfassungswunsch vorhandene Ideen im zuständigen Backlog fest; Transferrechte bleiben separat. |
+| [`manage-codex-config`](.agents/skills/manage-codex-config/SKILL.md) | Agent oder explizit | Ausgewählte Einstellungen/Schutz; Gesprächsgrenzen erhalten. |
+| [`manage-restricted-storage`](.agents/skills/manage-restricted-storage/SKILL.md) | Explizit | Ausgewählte Einstellungen/Schutz; Gesprächsgrenzen erhalten. |
 | [`reuse-fixes`](.agents/skills/reuse-fixes/SKILL.md) | Agent oder explizit | Verwendet bestätigte Lösungen dieses Repositorys wieder, hält knappe Vorbeugung fest und fragt nur bei fehlender Freigabe oder blockierenden Entscheidungen nach. |
 | [`review-project`](.agents/skills/review-project/SKILL.md) | Explizit | Erstellt eine umfassende neutrale Bestandsaufnahme des Projektzustands und der Evidenzlücken. |
 | [`manage-external-storage`](.agents/skills/manage-external-storage/SKILL.md) | Explizit | Richtet optionalen externen Speicher ein, bindet einen Host an oder prüft ausgewählte lokale Dateien. |
@@ -166,6 +168,35 @@ diesen Ablauf nicht aus. Fehlender Output wird weder gerendert noch ersetzt;
 der Bericht benennt geprüfte Seiten, Routen, Viewports, Befunde und Grenzen.
 Die visuelle Inspektion bestätigt weder Barrierefreiheit, technische
 Korrektheit, Offenlegungsfreigabe noch Publikationsreife.
+
+## Aktuelle Template-Methoden
+
+Die geerbte [Template-Mission](PHILOSOPHY.md#template-mission) beschreibt gemeinsame
+Methoden; PROJECT_CONTEXT.md hält den Zweck thematischer persönlicher Erinnerungsnotizen.
+Ausdrückliche Reviews/Retrospektiven prüfen den Missionsbezug unter fachlicher
+Kontrolle des Maintainers. Ein anderer Quelltyp braucht bewusste Auswahl;
+die Projektabsicht wird nicht umgeschrieben.
+
+[manage-codex-config](.agents/skills/manage-codex-config/SKILL.md) ist der einzige
+Schreiber für angefragte Projekteinstellungen und ausgewählte Storage-Änderungen
+nach [CODEX_CONFIGURATION.md](CODEX_CONFIGURATION.md). Ausdrückliche Storage-Arbeit
+verantwortet Schutz, Aktivierung und Nutzbarkeit. Die Übernahme ändert keine
+tatsächliche Konfiguration, Profile oder Adapter. Initialisierung bleibt abgeschlossen;
+private Pfadzuordnung gewährt keinen Zugriff. Git-Workflows verwenden
+[GIT_TRANSPORT.md](GIT_TRANSPORT.md) und bewerten [COMMIT_PACKAGES.md](COMMIT_PACKAGES.md)
+bei unveränderten Befugnissen und unverändertem Staging.
+
+Der vereinbarte Chat-/Projektkontext bleibt erhalten. Temporäre Worktrees liegen
+im ignorierten temp/worktrees/ des besitzenden Projekts außerhalb allgemeiner
+Bereinigung; ihre Quellen unterliegen normaler Git-Autorisierung. PDR-0002 schließt
+alle Gesprächsdateien dauerhaft aus. Siehe
+[Worktree-Regeln](COLLABORATION.md#project-anchor-and-temporary-worktrees).
+
+Die generische Website liegt in output/website/, zugeordnete Gesprächsformate gemeinsam
+in output/<document-slug>/. DOCX bleibt der erste Review-Weg. [QUARTO.md](QUARTO.md#selected-output-layout)
+regelt Erhalt anderer Formate und Kollisionen. Bestehende Dateien werden nur nach
+exakter Auswahl verschoben; Quellen, Kataloge und private Nachweise gelangen nicht
+in versionierte Projektdokumentation.
 
 ## Git-Index und geschützte Git-Aktionen
 
