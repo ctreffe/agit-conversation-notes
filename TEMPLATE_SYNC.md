@@ -1,5 +1,71 @@
 # Template synchronization state
 
+## Selected synchronization — 2026-11-15
+
+Status: completed for the selected continuing-workflow source adoption.
+Independent source/skill/link and preservation evidence was obtained on 2026-11-15.
+This is a working-tree adoption checkpoint, not a commit or runtime qualification.
+
+- Verified source: https://github.com/ctreffe/ai-template-docs.
+- Previous compared baseline: `95b7cf2f18f059875f6bbe8dc50b477b94a6e937`.
+- Compared clean source: `4a82af292ee0bd0c9ef332a908c15dcc5667217d`; no working-tree overlay.
+- Scope: TVDR-0089 continuing-workflow guidance, plus current-state consistency.
+- This ledger is the sole durable synchronization record. Earlier snapshots and
+  deliberate rejections below remain historical evidence; no separate manifest.
+
+| Source path / concept | Outcome | Local application or reason |
+| --- | --- | --- |
+| `.agents/skills/manage-codex-config/SKILL.md` | adapted | Approved default/client-load or required Git-operation guidance, preserving local rules. |
+| `.agents/skills/manage-restricted-storage/SKILL.md` | adapted | Approved default/client-load or required Git-operation guidance, preserving local rules. |
+| `.agents/skills/manage-restricted-storage/references/codex-permissions.md` | adopted | Approved default/client-load or required Git-operation guidance, preserving local rules. |
+| `.agents/skills/manage-restricted-storage/references/profile-usability.md` | adopted | Approved default/client-load or required Git-operation guidance, preserving local rules. |
+| `CODEX_CONFIGURATION.md` | adapted | Approved default/client-load or required Git-operation guidance, preserving local rules. |
+| `GIT_TRANSPORT.md` | adopted | Approved default/client-load or required Git-operation guidance, preserving local rules. |
+| `.agents/skills/start-project/SKILL.md`, `PROJECT_SETUP.md` | rejected | Initialization is complete; absent initializer stays absent and retained setup remains provenance. |
+| Source `CHANGELOG.md`, `TASK_HANDOFF.md` | rejected | Source release/task history is not project history or the current project task. |
+| Earlier rejected/deferred/conflicting changes | reviewed unchanged | No carried deferred/conflicting adoption item; prior deliberate rejections remain applicable. |
+| Source `README.md`, `README.de.md` | reviewed unchanged | No new source delta; retained TEMPLATE_README guides and project introductions remain distinct. |
+| Active skills and adjacent metadata | reviewed | 23 ongoing skills; initializer/creation skills intentionally absent. Local-only skills: draft-conversation-notes. |
+
+Local adaptations, project decisions, current work, license/version, native Git
+routes, actual config/protection state and storage mappings remain authoritative.
+Review included current guidance and prior ledger classifications, not merely
+new-file comparison. No private-source, real-data, cloud, runtime or host test,
+config activation, installation, staging, commit or push is part of adoption.
+
+Validation, independently obtained for this project:
+
+- Both changed skills passed this repository's scripts/Test-CodexSkill.ps1 using
+  the existing Governance-managed Python/PyYAML 6.0.3 interpreter via -PythonPath;
+  no environment activation or installation. Skill metadata outside these edits
+  and the active inventory remain preserved.
+- Governance's exact-file Markdown check passed 10 local targets across
+  manage-codex-config, both profile references, CODEX_CONFIGURATION.md and
+  GIT_TRANSPORT.md, including the new procedural anchors; no skipped target.
+- Source-delta and local-adaptation review, exact planned-byte readback and
+  before/after preservation checks passed. Existing HEAD, main branch and empty
+  index are unchanged. Current project work and non-selected skills are preserved.
+- Full suites, whitespace/milestone gates, runtime/render/host tests, actual
+  configuration loading/activation and private-source checks were not run.
+  Historical domain evidence remains dated; no new operational acceptance.
+
+Project-specific preservation: Preserve custom draft-conversation-notes, DOCX-first review and CONVERSATION_STORAGE.md. All actual or fictional conversation content, paths and metadata remain permanently outside versioned review.
+
+Selected resulting file bytes (SHA-256, before any later edit):
+
+| Path | SHA-256 |
+| --- | --- |
+| `.agents/skills/manage-codex-config/SKILL.md` | `ed2937431205880bcb6501815da9bc1f28886ece755541545c339246249f28c7` |
+| `.agents/skills/manage-restricted-storage/SKILL.md` | `0d0e342279c36df52d849f0a24b139b6d7040b1d7b037a90b5010275b019cd2b` |
+| `.agents/skills/manage-restricted-storage/references/codex-permissions.md` | `927bed4a6114ef6396db046bddf45bba4580bef123c4d6e124eb2e87dfcc9160` |
+| `.agents/skills/manage-restricted-storage/references/profile-usability.md` | `7b2969ef8e54a95f9b8a2fce7e252a190b0c34b287ad0d850008f84a8c48996d` |
+| `CODEX_CONFIGURATION.md` | `59af58f929b73117daee4c6f8e0fd0c9d96a387934c053f52adbf095fcbfb526` |
+| `GIT_TRANSPORT.md` | `689fc5f50241939f01e9e6db33970fc39992b82f3270c9208a741d53b870d278` |
+
+Reconsider selected outcomes when their source contract or local requirements
+change. Rejected initialization/history items require a separately selected
+new initialization or project-history scope; template recency alone is insufficient.
+
 ## Sync-state storage
 
 TEMPLATE_SYNC.md is the sole durable owner of source revisions, baseline/overlay
@@ -14,9 +80,9 @@ This storage correction changes no adoption checkpoint or project authority.
 - Verified source: https://github.com/ctreffe/ai-template-docs.
 - Initial project provenance: [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).
 - Previous full comparison: `490b57e8ef0cdef02cdc5285cd6edcc027005f6d`; later selected follow-ups were reviewed again.
-- Last compared upstream commit/date: `95b7cf2f18f059875f6bbe8dc50b477b94a6e937` / 2026-11-08; clean local source.
-- Latest selected adoption checkpoint: `95b7cf2f18f059875f6bbe8dc50b477b94a6e937`; NOV08 selected workflow/output methods independently validated on 2026-11-08.
-- Fully resolved through: `95b7cf2f18f059875f6bbe8dc50b477b94a6e937` for compared source changes, adopted/adapted or deliberately rejected below; no deferred/conflicting adoption item remains.
+- Last compared upstream commit/date: `4a82af292ee0bd0c9ef332a908c15dcc5667217d` / 2026-11-15; clean local source.
+- Latest selected adoption checkpoint: `4a82af292ee0bd0c9ef332a908c15dcc5667217d`; NOV15 outcomes validated on 2026-11-15 in the working tree.
+- Fully resolved through: `4a82af292ee0bd0c9ef332a908c15dcc5667217d` for compared changes, adopted/adapted or deliberately rejected; no outstanding deferred/conflicting adoption item.
 - [Pre-sync lineage, earlier selections, domain evidence and limitations](https://github.com/ctreffe/agit-conversation-notes/blob/5ac33c3ee1340ec97a83ca974a4c0e4f58f8ed2f/PROJECT_CONTEXT.md).
   No unresolved deferred/conflicting adoption item was carried from that record;
   deferred operational/domain tests remain open, not new template-adoption evidence.
