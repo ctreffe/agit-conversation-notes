@@ -1,8 +1,12 @@
 # Project Setup
 
+> Historical evidence retained on 2026-11-15. Dates, validation and task
+> instructions below describe their original scope, not current authority.
+> Start with the repository AGENTS.md and PROJECT_CONTEXT.md for current work.
+
 Use this file when creating a concrete documentation project from the template.
 
-Keep `PROJECT_SETUP.md` in derived projects as documentation of the
+Keep `provenance/PROJECT_SETUP.md` in derived projects as documentation of the
 initialization method. Record completion, source-template baseline and later
 harmonizations in `PROJECT_CONTEXT.md`; remove it
 only as a deliberate, documented maintainer exception.
@@ -190,7 +194,7 @@ not an instruction to ask every item during the initial maintainer turn.
    - Complete the initial document contract in `DOCUMENTS.md`.
    - Adapt `FEEDBACK_WORKFLOW.md`, `AUDIENCE.md`, `STYLE_GUIDE.md`,
      `SCREENSHOTS.md` and `LINKS.md`.
-   - Keep `PROJECT_SETUP.md` as initialization provenance.
+   - Keep `provenance/PROJECT_SETUP.md` as initialization provenance.
    - Record the initial template version and commit, initialization status,
      later harmonization baseline and intentional deviations in
      `PROJECT_CONTEXT.md`.

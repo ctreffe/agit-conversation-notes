@@ -80,3 +80,6 @@ CONVERSATION_PATHS.local.md
 /conversation-work/
 /conversation-output/
 /materials/CATALOG.local.md
+
+# Device-local ordinary synchronized project root
+/storage.local.json

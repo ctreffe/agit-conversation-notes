@@ -37,7 +37,7 @@ verified previous and current source README content with its adapted guide:
 - source `README.md` maps to project `TEMPLATE_README.md`;
 - source `README.de.md` maps to project `TEMPLATE_README.de.md`.
 
-Follow "Project READMEs and retained template guides" in `PROJECT_SETUP.md`.
+Follow "Project READMEs and retained template guides" in `provenance/PROJECT_SETUP.md`.
 Do not copy upstream READMEs over project `README.md` or `README.de.md`.
 Preserve guide adaptations, local rules and project decisions; adopt selected
 workflow changes while retaining the actual file/skill inventory, guide

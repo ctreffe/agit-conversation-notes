@@ -565,3 +565,26 @@ None.
 | `IDEAS.md` | `6849ab2479317c78948d3de1ca1b5e85e3f2adb4b65297580aa62f48c0687c71` |
 | `RETROSPECTIVE_PATHS.example.md` | `c50e5eb14db0e60dcef596d540f793b6d0daa19277889b0a95bc0568803aef25` |
 | `templates/IDEAS.md` | `ec31f539adfe732b7f0592e78e82801897addcb75a396d42a2f733e4e6988a6b` |
+
+## 2026-11-15 selected storage and structure adaptation
+
+The maintainer selected the six findings in Governance's storage/structure review;
+TVDR-0093 records the shared convention. This is a selected working-tree adaptation,
+not a new upstream baseline, full template synchronization or milestone closure.
+Existing compared/adopted/resolved revisions and source-path hashes above retain
+their dated meaning; no remote or protected Git action is implied.
+
+The ordinary synchronized project area now has one ignored storage.local.json
+project_root; input, materials and selected output derive from it. The example,
+helper, guidance and selected workflow skills follow that contract. Independent
+sources and stronger domain-specific boundaries retain their separate mappings.
+Completed PROJECT_SETUP.md is retained under provenance/ with repaired current references.
+
+Conversation roots and private access/processing rules remain independent; the ordinary configuration is not a replacement conversation mapping.
+
+The changed skills passed the pinned Codex skill validator; the ordinary helper passed invented-only behavior checks including JSON configuration, hashes, unavailable files and junction refusal. Changed PowerShell sources passed parsing.
+Safe-scope source links were checked across the selected change. These results
+do not establish actual confidential-source readiness, provider convergence,
+second-device acceptance, deployment, publication or a real project render.
+Actual local payload copies were neither read nor removed. Unselected runtime,
+protection, full-family and milestone gates remain outside this task's evidence.

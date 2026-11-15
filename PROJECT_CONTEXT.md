@@ -42,7 +42,7 @@ authoritative; concrete migration evidence belongs only in approved private trac
   ignored temp/conversation-work/. See
   [PDR-0002](decisions/PDR-0002-unversioned-conversation-storage.md) and
   [CONVERSATION_STORAGE.md](CONVERSATION_STORAGE.md).
-- Retained initialization method: [PROJECT_SETUP.md](PROJECT_SETUP.md).
+- Retained initialization method: [PROJECT_SETUP.md](provenance/PROJECT_SETUP.md).
 
 ## Purpose, audience and language
 
